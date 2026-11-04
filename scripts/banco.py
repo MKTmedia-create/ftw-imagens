@@ -207,7 +207,7 @@ ACENTOS = {
     'calcio': 'Cálcio', 'colageno': 'Colágeno', 'magnesio': 'Magnésio', 'curcuma': 'Cúrcuma', 'omega': 'Ômega',
     'pacoca': 'Paçoca', 'gratis': 'Grátis', 'unitaria': 'Unitária', 'pre': 'Pré', 'mamao': 'Mamão', 'maracuja': 'Maracujá',
     'cha': 'Chá', 'cafe': 'Café', 'bone': 'Boné', 'bones': 'Bonés', 'capsulas': 'Cápsulas', 'acessorios': 'Acessórios',
-    'atomico': 'Atômico', 'energetico': 'Energético', 'radioativo': 'Radioativo', 'unid': 'unid',
+    'coq': 'Coqueteleira', 'leging': 'Legging', 'sache': 'Sachê', 'unitario': 'Unitário', 'atomico': 'Atômico', 'energetico': 'Energético', 'radioativo': 'Radioativo', 'unid': 'unid',
 }
 SIGLAS = {'BCAA', 'ZMA', 'HMB', 'NAC', 'NTR', 'FTW', 'D3', 'Q10', 'MCT', 'PA', 'ML', 'T2', 'B12', 'C', 'D'}
 PASTAS_TECNICAS = {'antigo', 'atualizacao_abril_2026', 'vistas', '_vistas'}
@@ -234,6 +234,7 @@ def bonito_tokens(toks):
     txt = ' '.join(pretty_token(x) for x in toks)
     txt = re.sub(r'\bWhey 100\b', 'Whey 100%', txt)
     txt = re.sub(r'\bWhey 35\b', 'Whey 35%', txt)
+    txt = re.sub(r'\bDiaboVerde\b', 'Diabo Verde', txt)
     for sem, com in ACENTOS.items():  # palavras compostas: Banana-Acai
         txt = re.sub(rf'(?<=-){sem}\b|\b{sem}(?=-)', com, txt, flags=re.I)
     return txt
@@ -300,6 +301,22 @@ def gerar_catalogo():
                 mini.unlink()
     def ordem(t):
         return unicodedata.normalize('NFKD', t).encode('ascii', 'ignore').decode().lower()
+    # nomes iguais em pastas diferentes: deixa claro qual e qual
+    iguais = {}
+    for g in grupos.values():
+        iguais.setdefault((g['m'], g['n'], g['v']), []).append(g)
+    for lst in iguais.values():
+        if len(lst) < 2:
+            continue
+        for g in lst:
+            if re.search(r'(^|/)_?VISTAS(/|$)', g['p']):
+                g['n'] += ' Vistas'
+        resto = {}
+        for g in lst:
+            resto.setdefault(g['n'], []).append(g)
+        for r in resto.values():
+            for k, g in enumerate(sorted(r, key=lambda x: x['p'])[1:], start=2):
+                g['n'] += f' ({k})'
     lista = sorted(grupos.values(), key=lambda g: (list(ROTULO_MARCA).index(g['m']), ordem(g['l']), ordem(g['n']), g['v'] == 'antigo'))
     cat = dict(gerado=datetime.now(timezone.utc).isoformat(timespec='seconds'), rotulos=ROTULO_MARCA,
                total=sum(len(g['i']) for g in lista), grupos=lista)
