@@ -10,7 +10,8 @@ Página para o time: https://mktmedia-create.github.io/ftw-imagens/
 | `miniaturas/` | Miniaturas da página de busca. |
 | Releases do GitHub | Arquivos originais em alta. |
 | `entrada/` | Onde entram imagens novas ou atualizadas. |
-| `dados/links_novos.csv` | Planilha com todos os links, novos e antigos. |
+| `dados/links_novos.csv` | Planilha com todos os links, novos e antigos, com PA e EAN. |
+| `dados/produtos.csv` | PA, EAN e dados de cadastro de cada pasta. Pode ser editada. |
 
 ## Atualizar uma imagem
 
@@ -27,3 +28,9 @@ Apague o arquivo em `produtos/` e envie ao GitHub. Ele sai da página na próxim
 ## Embalagem antiga
 
 Qualquer imagem dentro de uma pasta chamada `Antigo` fica marcada como antiga e escondida por padrão na página.
+
+## Corrigir PA ou EAN
+
+Edite `dados/produtos.csv`, coloque o código certo e, em `status`, escreva `ok`. Depois envie ao GitHub.
+
+Este repositório é público: nunca inclua preço, custo, margem ou dados de tabela comercial.

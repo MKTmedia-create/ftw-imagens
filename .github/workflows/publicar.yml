@@ -2,7 +2,7 @@ name: Publicar banco de imagens
 on:
   push:
     branches: [main]
-    paths: ['entrada/**', 'produtos/**', 'site/**', 'scripts/**', '.github/workflows/publicar.yml']
+    paths: ['entrada/**', 'produtos/**', 'site/**', 'scripts/**', 'dados/produtos.csv', '.github/workflows/publicar.yml']
   workflow_dispatch:
 permissions:
   contents: write

@@ -272,8 +272,18 @@ def selo_versao(partes):
 
 
 # ---------- catalogo ----------
+def ler_produtos():
+    """dados/produtos.csv: PA, EAN e dados de cadastro por pasta. Sem precos, custos ou margens."""
+    arq = DADOS / 'produtos.csv'
+    if not arq.exists():
+        return {}
+    with open(arq, encoding='utf-8-sig', newline='') as f:
+        return {r['pasta']: r for r in csv.DictReader(f, delimiter=';')}
+
+
 def gerar_catalogo():
     meta = ler_originais()
+    produtos = ler_produtos()
     grupos = {}
     for arq in sorted(PRODUTOS.rglob('*')):
         if not arq.is_file() or arq.suffix.lower() not in ('.jpg', '.jpeg', '.png', '.webp'):
@@ -299,6 +309,14 @@ def gerar_catalogo():
             chave = mini.relative_to(MINIATURAS).with_suffix('').as_posix()
             if not any((PRODUTOS / f'{chave}{x}').exists() for x in ('.jpg', '.png')):
                 mini.unlink()
+    for g in grupos.values():
+        c = produtos.get(g['p'])
+        if not c:
+            continue
+        dados = dict(pa=c['pa'], ean=c['ean'], ds=c['descricao'], ct=c['categoria'], cx=c['caixa_embarque'],
+                     ncm=c['ncm'], tb=c['na_tabela_jul2026'], st=c['status'])
+        g.update({k: v for k, v in dados.items() if v})
+
     def ordem(t):
         return unicodedata.normalize('NFKD', t).encode('ascii', 'ignore').decode().lower()
     # nomes iguais em pastas diferentes: deixa claro qual e qual
@@ -325,11 +343,11 @@ def gerar_catalogo():
     # planilha de-para para o time de e-commerce
     with open(DADOS / 'links_novos.csv', 'w', newline='', encoding='utf-8-sig') as f:
         w = csv.writer(f, delimiter=';')
-        w.writerow(['marca', 'produto', 'versao', 'arquivo', 'link_site', 'link_original', 'miniatura', 'link_antigo'])
+        w.writerow(['marca', 'produto', 'pa', 'ean', 'descricao', 'versao', 'arquivo', 'link_site', 'link_original', 'miniatura', 'link_antigo'])
         for g in lista:
             for it in g['i']:
                 chave = f"{g['p']}/{it['a'].rsplit('.', 1)[0]}"
-                w.writerow([ROTULO_MARCA[g['m']], g['n'], g['v'], it['a'], f"{BASE_SITE}/produtos/{g['p']}/{it['a']}",
+                w.writerow([ROTULO_MARCA[g['m']], g['n'], g.get('pa', ''), g.get('ean', ''), g.get('ds', ''), g['v'], it['a'], f"{BASE_SITE}/produtos/{g['p']}/{it['a']}",
                             it.get('o', ''), f"{BASE_SITE}/miniaturas/{chave}.webp", meta.get(chave, {}).get('origem', '')])
     shutil.copy(DADOS / 'links_novos.csv', ARQ_CATALOGO.parent / 'links_novos.csv')
     return cat
