@@ -384,7 +384,7 @@ function desenharPainel(){
   const avisos = [];
   if(velho) avisos.push('Embalagem antiga. Não use em materiais novos nem no site sem confirmar com a Criação.');
   if(conferir) avisos.push('EAN em conferência: as fontes internas divergem. Confirme antes de cadastrar.');
-  if(g.tb === 'nao') avisos.push('Fora da tabela comercial de Jul/2026.');
+  if(g.tb === 'nao') avisos.push('Este produto não está na tabela comercial B2B. Confirme se segue em linha.');
   const ficha = linhaFicha('EAN', ean, {cod:!!g.ean, copiar:!!g.ean}) + linhaFicha('PA', g.pa, {cod:true, copiar:true}) + linhaFicha('DUN-14', g.dun, {cod:true, copiar:true}) + linhaFicha('Unidades por caixa', g.qc)
     + linhaFicha('Descrição na tabela', g.ds, {larga:true}) + linhaFicha('Categoria', g.ct) + linhaFicha('Caixa de embarque', g.cx, {larga:true}) + linhaFicha('NCM', g.ncm, {cod:true});
   P.innerHTML = `
