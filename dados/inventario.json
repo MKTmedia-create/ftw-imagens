@@ -1,0 +1,608 @@
+{
+ "total": 2077,
+ "ok": 2077,
+ "falhas": [],
+ "total_gb": 8.05,
+ "sem_tamanho": 0,
+ "maior_mb": 52.7,
+ "mediana_mb": 3.46,
+ "acima_100mb": 0,
+ "por_aba": {
+  "Acessorios": {
+   "n": 190,
+   "gb": 0.7
+  },
+  "Delicious": {
+   "n": 581,
+   "gb": 2.24
+  },
+  "DiaboVerde": {
+   "n": 474,
+   "gb": 1.73
+  },
+  "FTW": {
+   "n": 832,
+   "gb": 3.37
+  }
+ },
+ "amostra": [
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Amino-9/Amino-9_300g_Algodao_Doce/Amino-9_300g_Algodao_Doce_0001.png",
+   "mb": 2.9,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 148,
+   "png2000_kb": 2171,
+   "webp1200_kb": 79,
+   "png1200_kb": 842
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/CALCIO_D3_600_180_Caps/CALCIO_D3_600_180_Caps_0002.png",
+   "mb": 3.55,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 224,
+   "png2000_kb": 2584,
+   "webp1200_kb": 88,
+   "png1200_kb": 922
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Creatina_Monohidratada_120c/Creatina_Monohidratada_120c_0004.png",
+   "mb": 5.59,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 427,
+   "png2000_kb": 4278,
+   "webp1200_kb": 142,
+   "png1200_kb": 1561
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Creatina_Ultra_100g/Creatina_Ultra_100g_0002.png",
+   "mb": 4.57,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 349,
+   "png2000_kb": 3358,
+   "webp1200_kb": 131,
+   "png1200_kb": 1198
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Glutamina/Glutamina_Pote_150g/Glutamina_Pote_150g_0004.png",
+   "mb": 3.34,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 177,
+   "png2000_kb": 2523,
+   "webp1200_kb": 97,
+   "png1200_kb": 995
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/MELATONINA_20ml/Melatonina_Gotas_20ml_0010.png",
+   "mb": 2.48,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 137,
+   "png2000_kb": 1826,
+   "webp1200_kb": 69,
+   "png1200_kb": 693
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Omega_3_Super_60c/Omega_3_Super_60c_0002.png",
+   "mb": 1.11,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": true,
+   "webp2000_kb": 173,
+   "png2000_kb": 1075,
+   "webp1200_kb": 86,
+   "png1200_kb": 482
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Plutonium/Plutonium_Pote_300g_Uva/Plutonium_Pote_300g_Uva_0002.png",
+   "mb": 3.4,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 186,
+   "png2000_kb": 2501,
+   "webp1200_kb": 98,
+   "png1200_kb": 974
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Whey_10025_Pote_450g/Whey_10025_Pote_450g_Chocolate/Whey_10025_Pote_450g_Chocolate_0003.png",
+   "mb": 3.71,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 285,
+   "png2000_kb": 3253,
+   "webp1200_kb": 137,
+   "png1200_kb": 1273
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Whey_10025_Pote_900g/Whey_10025_Pote_900g_Chocolate/Whey_10025_Pouch_900g_Chocolate_0005.png",
+   "mb": 3.36,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 187,
+   "png2000_kb": 2464,
+   "webp1200_kb": 80,
+   "png1200_kb": 891
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Whey_10025_Pouch_900g/COOKIES/Whey_10025_Pouch_900g_Cookies0003.png",
+   "mb": 6.43,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 569,
+   "png2000_kb": 4769,
+   "webp1200_kb": 249,
+   "png1200_kb": 1794
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Whey_10025_Pouch_Branco_1kg/Whey_10025_Pouch_Branco_1kg_Morango/Whey_10025_Pouch_Branco_1kg_Morango_0006.png",
+   "mb": 4.46,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 256,
+   "png2000_kb": 3504,
+   "webp1200_kb": 103,
+   "png1200_kb": 1293
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Whey_3525_Pouch_1kg/Atualizacao_Abril_2026/BAUNILHA/Whey_3525_Pouch1kg_Baunilha_0005.png",
+   "mb": 3.24,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 188,
+   "png2000_kb": 2751,
+   "webp1200_kb": 90,
+   "png1200_kb": 1010
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Whey_Double_Protein_35g/Whey_Double_Protein_35g_Chocolate/Whey_Double_Protein_35g_Chocolate_0006.png",
+   "mb": 3.67,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 240,
+   "png2000_kb": 3216,
+   "webp1200_kb": 112,
+   "png1200_kb": 1227
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Whey_Double_Protein_900g/Whey_Double_Protein_900g_Morango/Whey_Double_Protein_900g_Morango_0005.png",
+   "mb": 3.36,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 188,
+   "png2000_kb": 2453,
+   "webp1200_kb": 79,
+   "png1200_kb": 886
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Whey_Ultra_Pote_900g/Whey_Ultra_Pote_900g_Baunilha/Whey_Ultra_Pote_900g_Baunilha_0004.png",
+   "mb": 6.87,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 616,
+   "png2000_kb": 5118,
+   "webp1200_kb": 253,
+   "png1200_kb": 1872
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/FTW/Whey_Ultra_Pouch_900g/Whey_Ultra_Pouch_900g_Doce_de_Leite/Whey_Ultra_Pouch_900g_Doce_de_Leite_0002.png",
+   "mb": 3.22,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 189,
+   "png2000_kb": 2728,
+   "webp1200_kb": 84,
+   "png1200_kb": 989
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/DiaboVerde/Dilabol_Black/Dilabol_Black_120c/Dilabol_Black_120c_0001.png",
+   "mb": 2.43,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 109,
+   "png2000_kb": 1863,
+   "webp1200_kb": 58,
+   "png1200_kb": 713
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/DiaboVerde/Dilabol_Pump_300g/Dilabol_Pump_300g_Pobreloco_Morango_Twist/Dilabol_Pump_300g_Pobreloco_Morango_Twist_0002.png",
+   "mb": 3.84,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 273,
+   "png2000_kb": 2900,
+   "webp1200_kb": 118,
+   "png1200_kb": 1083
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/DiaboVerde/Massive_Mass_2.5kg/Diabo_Verde_Massive_Mass_2.5kg_Baunilha/Diabo_Verde_Massive_Mass_2.5kg_Baunilha_0003.png",
+   "mb": 6.07,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 454,
+   "png2000_kb": 4837,
+   "webp1200_kb": 206,
+   "png1200_kb": 1826
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_150g/Pre_Workout_150g_Frutas_Amarelas/Pre_Workout_150g_Frutas_Amarelas_0004.png",
+   "mb": 3.26,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 226,
+   "png2000_kb": 2553,
+   "webp1200_kb": 108,
+   "png1200_kb": 971
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_300g/Pre_Workout_300g_Diploko_Blueberry_Radioativo/Pre_Workout_300g_Diploko_Blueberry_Radioativo_0.png",
+   "mb": 2.98,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 277,
+   "png2000_kb": 2616,
+   "webp1200_kb": 133,
+   "png1200_kb": 1016
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Amostras_Gr%C3%A1tis/Pre_Workout_10g_Morango_Atomico/Pre_Workout_10g_Morango_Atomico_0001.png",
+   "mb": 3.47,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 387,
+   "png2000_kb": 3008,
+   "webp1200_kb": 170,
+   "png1200_kb": 1158
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Amostras_Gr%C3%A1tis/Pr%C3%A9_Workout_10g_Energ%C3%A9tico/Pr%C3%A9_Workout_10g_Energ%C3%A9tico_0002.png",
+   "mb": 2.48,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 136,
+   "png2000_kb": 2258,
+   "webp1200_kb": 71,
+   "png1200_kb": 861
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Maca_Verde/Pr%C3%A9_Workout_269_ML_Maca_Verde_0001.png",
+   "mb": 1.88,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 95,
+   "png2000_kb": 1736,
+   "webp1200_kb": 52,
+   "png1200_kb": 654
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoCrazy/ThermoCrazy_60c/ThermoCrazy_60c_0002.png",
+   "mb": 3.16,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 193,
+   "png2000_kb": 2455,
+   "webp1200_kb": 77,
+   "png1200_kb": 890
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Uva/Creatina_Delicious_5g_Uva_0001.png",
+   "mb": 2.65,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 188,
+   "png2000_kb": 2314,
+   "webp1200_kb": 97,
+   "png1200_kb": 904
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Pa%C3%A7oca/Delicious_Pa%C3%A7oca_Com_Cobertura_Atualizado/Delicious_Pa%C3%A7oca_Caixa_Chocolate_12unid/Delicious_Pa%C3%A7oca_Caixa_Chocolate_12unid_0009.png",
+   "mb": 4.0,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 265,
+   "png2000_kb": 3527,
+   "webp1200_kb": 134,
+   "png1200_kb": 1401
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Pa%C3%A7oca/Delicious_Pa%C3%A7oca_Sem_Cobertura_Atualizado/Delicious_Pa%C3%A7oca_Caixa_Leite_24unid/Delicious_Protein_Bar_Caixa_Leite_0001.png",
+   "mb": 3.72,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 260,
+   "png2000_kb": 3257,
+   "webp1200_kb": 112,
+   "png1200_kb": 1234
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Protein_Bar/Caixa/Delicious_Protein_Bar_Caixa_Chocolate_com_Avela/Delicious_Protein_Bar_Caixa_Chocolate_com_Avela_0001.png",
+   "mb": 4.0,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 373,
+   "png2000_kb": 3529,
+   "webp1200_kb": 156,
+   "png1200_kb": 1347
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Protein_Bar/Caixa/Delicious_Protein_Bar_Caixa_Leite/Delicious_Protein_Bar_Caixa_Leite_0008.png",
+   "mb": 3.73,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 255,
+   "png2000_kb": 3223,
+   "webp1200_kb": 111,
+   "png1200_kb": 1239
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Wafer/Delicious_Wafer_Caixa/Delicious_Wafer_Caixa_Chocolate/Delicious_Wafer_Caixa_Chocolate_0007.png",
+   "mb": 4.56,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 469,
+   "png2000_kb": 3860,
+   "webp1200_kb": 205,
+   "png1200_kb": 1490
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Wafer/Delicious_Wafer_Caixa/Delicious_Wafer_Caixa_Morango/Delicious_Wafer_Caixa_Morango_0010.png",
+   "mb": 3.92,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 398,
+   "png2000_kb": 3245,
+   "webp1200_kb": 169,
+   "png1200_kb": 1250
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Pote_900g/Delicious_Whey_Pote_900g_Leite/Delicious_Whey_Pote_900g_Leite_1.png",
+   "mb": 2.65,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 109,
+   "png2000_kb": 1971,
+   "webp1200_kb": 56,
+   "png1200_kb": 730
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Caixa/Delicious_Whey_Sache_Caixa_Chocolate_Negro/Delicious_Whey_Sache_Caixa_Chocolate_Negro_0008.png",
+   "mb": 3.15,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 187,
+   "png2000_kb": 2418,
+   "webp1200_kb": 100,
+   "png1200_kb": 956
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Caixa/Delicious_Whey_Sache_Caixa_Morango/Delicious_Whey_Sache_Caixa_Morango_0011.png",
+   "mb": 3.47,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 226,
+   "png2000_kb": 2566,
+   "webp1200_kb": 108,
+   "png1200_kb": 982
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Pistache/Delicious_Whey_Sache_Pistache_0003.png",
+   "mb": 3.94,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 300,
+   "png2000_kb": 3012,
+   "webp1200_kb": 170,
+   "png1200_kb": 1223
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Acessorios/BONES/Render_Mockup_4000_4000_2025-07-31.jpg",
+   "mb": 2.26,
+   "dim": [
+    4000,
+    4000
+   ],
+   "modo": "RGB",
+   "alpha": false,
+   "webp2000_kb": 100,
+   "png2000_kb": 1206,
+   "webp1200_kb": 31,
+   "png1200_kb": 437
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/01_OVERSIZED/Frame2036.png",
+   "mb": 2.32,
+   "dim": [
+    2220,
+    2220
+   ],
+   "modo": "RGBA",
+   "alpha": true,
+   "webp2000_kb": 58,
+   "png2000_kb": 1851,
+   "webp1200_kb": 23,
+   "png1200_kb": 634
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/dv02_costas.png",
+   "mb": 2.29,
+   "dim": [
+    2220,
+    2220
+   ],
+   "modo": "RGBA",
+   "alpha": true,
+   "webp2000_kb": 96,
+   "png2000_kb": 1858,
+   "webp1200_kb": 44,
+   "png1200_kb": 687
+  },
+  {
+   "url": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/Frame2041.png",
+   "mb": 1.47,
+   "dim": [
+    2160,
+    2160
+   ],
+   "modo": "RGBA",
+   "alpha": false,
+   "webp2000_kb": 69,
+   "png2000_kb": 1225,
+   "webp1200_kb": 40,
+   "png1200_kb": 473
+  }
+ ],
+ "media_webp2000_kb": 244,
+ "media_png2000_kb": 2777,
+ "media_webp1200_kb": 110,
+ "media_png1200_kb": 1050
+}
