@@ -1,4 +1,634 @@
 {
+"Acessorios/BONES/Render_Mockup_4000_4000_2025-07-31": {
+"alpha": false,
+"asset": "Render_Mockup_4000_4000_2025-07-31.jpg",
+"bytes": 2262923,
+"h": 4000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/BONES/Render_Mockup_4000_4000_2025-07-31.jpg",
+"sha": "94ac9031958832c5",
+"tag": "originais-acessorios",
+"w": 4000
+},
+"Acessorios/BONES/Render_Mockup_4000_4000_2025-07-31_1": {
+"alpha": true,
+"asset": "Render_Mockup_4000_4000_2025-07-31_1.png",
+"bytes": 11221200,
+"h": 4000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/BONES/Render_Mockup_4000_4000_2025-07-31_%281%29.png",
+"sha": "f9d8f1d61dbdcc00",
+"tag": "originais-acessorios",
+"w": 4000
+},
+"Acessorios/BONES/Render_Mockup_4000_4000_2025-07-31_2": {
+"alpha": true,
+"asset": "Render_Mockup_4000_4000_2025-07-31_2.png",
+"bytes": 6469560,
+"h": 4000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/BONES/Render_Mockup_4000_4000_2025-07-31.png",
+"sha": "5e3f3cba0ee2b7a0",
+"tag": "originais-acessorios",
+"w": 4000
+},
+"Acessorios/BONES/Render_Mockup_4000_4000_2025-07-31_2_2": {
+"alpha": true,
+"asset": "Render_Mockup_4000_4000_2025-07-31_2_2.png",
+"bytes": 12366693,
+"h": 4000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/BONES/Render_Mockup_4000_4000_2025-07-31_%282%29.png",
+"sha": "a9e4285f17c46707",
+"tag": "originais-acessorios",
+"w": 4000
+},
+"Acessorios/BONES/Renderizar_Mockup_3840_1856_2025-07-31": {
+"alpha": false,
+"asset": "Renderizar_Mockup_3840_1856_2025-07-31.png",
+"bytes": 823343,
+"h": 1856,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/BONES/Renderizar_Mockup_3840_1856_2025-07-31.png",
+"sha": "440a103917c39d5c",
+"tag": "originais-acessorios",
+"w": 3840
+},
+"Acessorios/BONES/Renderizar_Mockup_3840_1856_2025-07-31_1": {
+"alpha": false,
+"asset": "Renderizar_Mockup_3840_1856_2025-07-31_1.png",
+"bytes": 1388935,
+"h": 1856,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/BONES/Renderizar_Mockup_3840_1856_2025-07-31_%281%29.png",
+"sha": "3b67f343fb2265a4",
+"tag": "originais-acessorios",
+"w": 3840
+},
+"Acessorios/COQUETELEIRA/COQ_DIPLOKO_TAMPA_AZUL_TRANSPARENTE_FLUTUANDO": {
+"alpha": true,
+"asset": "COQ_DIPLOKO_TAMPA_AZUL_TRANSPARENTE_FLUTUANDO.png",
+"bytes": 3261706,
+"h": 2365,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/COQ_DIPLOKO_TAMPA_AZUL_TRANSPARENTE_FLUTUANDO.png",
+"sha": "035e4f47767a309e",
+"tag": "originais-acessorios",
+"w": 1570
+},
+"Acessorios/COQUETELEIRA/COQ_DV_POCAO_DO_CAOS_TRANSPARENTE_FLUTUANDO": {
+"alpha": true,
+"asset": "COQ_DV_POCAO_DO_CAOS_TRANSPARENTE_FLUTUANDO.png",
+"bytes": 1796403,
+"h": 1700,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/COQ_DV_POCAO_DO_CAOS_TRANSPARENTE_FLUTUANDO.png",
+"sha": "830374a4f255669a",
+"tag": "originais-acessorios",
+"w": 1514
+},
+"Acessorios/COQUETELEIRA/COQ_FTW_FUME_FLUTUANDO": {
+"alpha": true,
+"asset": "COQ_FTW_FUME_FLUTUANDO.png",
+"bytes": 436113,
+"h": 977,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/COQ_FTW_FUME_FLUTUANDO.png",
+"sha": "a7f8e8a18a145f80",
+"tag": "originais-acessorios",
+"w": 828
+},
+"Acessorios/COQUETELEIRA/COQ_FTW_PRETA_FLUTUANDO": {
+"alpha": true,
+"asset": "COQ_FTW_PRETA_FLUTUANDO.png",
+"bytes": 2833754,
+"h": 2496,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/COQ_FTW_PRETA_FLUTUANDO.png",
+"sha": "a2237e84479ee2eb",
+"tag": "originais-acessorios",
+"w": 1696
+},
+"Acessorios/COQUETELEIRA/COQ_FTW_TRANSPARENTE_FLUTUANDO": {
+"alpha": true,
+"asset": "COQ_FTW_TRANSPARENTE_FLUTUANDO.png",
+"bytes": 3205876,
+"h": 2496,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/COQ_FTW_TRANSPARENTE_FLUTUANDO.png",
+"sha": "06ec88ecd7123034",
+"tag": "originais-acessorios",
+"w": 1696
+},
+"Acessorios/COQUETELEIRA/COQ_FTW_VERMELHA_FLUTUANDO": {
+"alpha": true,
+"asset": "COQ_FTW_VERMELHA_FLUTUANDO.png",
+"bytes": 3197794,
+"h": 2496,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/COQ_FTW_VERMELHA_FLUTUANDO.png",
+"sha": "acf5004ed64a6121",
+"tag": "originais-acessorios",
+"w": 1696
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_DV_Premium": {
+"alpha": true,
+"asset": "Coqueteleira_DV_Premium.png",
+"bytes": 2238619,
+"h": 2000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_DV_Premium.png",
+"sha": "3bd994937b34e0de",
+"tag": "originais-acessorios",
+"w": 2000
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_Diabo_Verde": {
+"alpha": true,
+"asset": "Coqueteleira_Diabo_Verde.png",
+"bytes": 954470,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_Diabo_Verde.png",
+"sha": "7191e08cecf7f978",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_Diabo_Verde_PocaodoCaos_Transparente": {
+"alpha": true,
+"asset": "Coqueteleira_Diabo_Verde_PocaodoCaos_Transparente.png",
+"bytes": 976590,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_Diabo_Verde_PocaodoCaos_Transparente.png",
+"sha": "d1a686682104e454",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_Diabo_Verde_Preta": {
+"alpha": true,
+"asset": "Coqueteleira_Diabo_Verde_Preta.png",
+"bytes": 902048,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_Diabo_Verde_Preta.png",
+"sha": "3f530f1445b80f11",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_Diabo_Verde_Preta_Tampa_Verde": {
+"alpha": true,
+"asset": "Coqueteleira_Diabo_Verde_Preta_Tampa_Verde.png",
+"bytes": 771528,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_Diabo_Verde_Preta_Tampa_Verde.png",
+"sha": "5016625285b80594",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_Diabo_Verde_Transparente": {
+"alpha": true,
+"asset": "Coqueteleira_Diabo_Verde_Transparente.png",
+"bytes": 941714,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_Diabo_Verde_Transparente.png",
+"sha": "371fe56d03df35ab",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_FTW_Premium": {
+"alpha": true,
+"asset": "Coqueteleira_FTW_Premium.png",
+"bytes": 2217542,
+"h": 2000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_FTW_Premium.png",
+"sha": "55735d24404751b7",
+"tag": "originais-acessorios",
+"w": 2000
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_FTW_Preta": {
+"alpha": true,
+"asset": "Coqueteleira_FTW_Preta.png",
+"bytes": 886782,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_FTW_Preta.png",
+"sha": "12b8ead6e6612c3e",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_FTW_Vermelha": {
+"alpha": true,
+"asset": "Coqueteleira_FTW_Vermelha.png",
+"bytes": 935757,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_FTW_Vermelha.png",
+"sha": "40f7c645be84a489",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_Transparente_FTW": {
+"alpha": true,
+"asset": "Coqueteleira_Transparente_FTW.png",
+"bytes": 914351,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_Transparente_FTW.png",
+"sha": "6333e11ef8ac4c4f",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_premium_DV": {
+"alpha": true,
+"asset": "Coqueteleira_premium_DV.png",
+"bytes": 2514052,
+"h": 2000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_premium_DV.png",
+"sha": "1b133500ac849acd",
+"tag": "originais-acessorios",
+"w": 2000
+},
+"Acessorios/COQUETELEIRA/Coqueteleira_premium_FTW": {
+"alpha": true,
+"asset": "Coqueteleira_premium_FTW.png",
+"bytes": 2492600,
+"h": 2000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQUETELEIRA/Coqueteleira_premium_FTW.png",
+"sha": "3a051d372ded98b1",
+"tag": "originais-acessorios",
+"w": 2000
+},
+"Acessorios/COQ_DELICIOUS/COQ_DELICIOUS_TAMPA_VERMELHA_FLUTUANDO": {
+"alpha": true,
+"asset": "COQ_DELICIOUS_TAMPA_VERMELHA_FLUTUANDO.png",
+"bytes": 2844859,
+"h": 2681,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQ_DELICIOUS/COQ_DELICIOUS_TAMPA_VERMELHA_FLUTUANDO.png",
+"sha": "a259b930965a0d07",
+"tag": "originais-acessorios",
+"w": 2016
+},
+"Acessorios/COQ_DELICIOUS/amarelo": {
+"alpha": true,
+"asset": "amarelo.png",
+"bytes": 960375,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQ_DELICIOUS/amarelo.png",
+"sha": "bf5a119490369a00",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQ_DELICIOUS/azul": {
+"alpha": true,
+"asset": "azul.png",
+"bytes": 966154,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQ_DELICIOUS/azul.png",
+"sha": "1850b3067395db18",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQ_DELICIOUS/laranja": {
+"alpha": true,
+"asset": "laranja.png",
+"bytes": 913275,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQ_DELICIOUS/laranja.png",
+"sha": "2971d403c833afb7",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQ_DELICIOUS/preto": {
+"alpha": true,
+"asset": "preto.png",
+"bytes": 947719,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQ_DELICIOUS/preto.png",
+"sha": "9a02a0514def0147",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQ_DELICIOUS/rosa": {
+"alpha": true,
+"asset": "rosa.png",
+"bytes": 953751,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQ_DELICIOUS/rosa.png",
+"sha": "48073f0609015c70",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQ_DELICIOUS/roxo": {
+"alpha": true,
+"asset": "roxo.png",
+"bytes": 958818,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQ_DELICIOUS/roxo.png",
+"sha": "47ddbf2f876374d4",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQ_DELICIOUS/verde": {
+"alpha": true,
+"asset": "verde.png",
+"bytes": 967961,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQ_DELICIOUS/verde.png",
+"sha": "facbb84a586f5ce1",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/COQ_DELICIOUS/vermelha": {
+"alpha": true,
+"asset": "vermelha.png",
+"bytes": 954605,
+"h": 2860,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/COQ_DELICIOUS/vermelha.png",
+"sha": "a4510419504ef453",
+"tag": "originais-acessorios",
+"w": 2860
+},
+"Acessorios/GARRAFA_MAGSAFE/Delicious/VISTAS/Frasco_Magsafe_Delicious_0004": {
+"alpha": false,
+"asset": "Frasco_Magsafe_Delicious_0004.png",
+"bytes": 2572554,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/GARRAFA_MAGSAFE/Delicious/VISTAS/Frasco_Magsafe_Delicious_0004.png",
+"sha": "68e774a3c0352c2f",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/GARRAFA_MAGSAFE/Delicious/VISTAS/Frasco_Magsafe_Delicious_0006": {
+"alpha": false,
+"asset": "Frasco_Magsafe_Delicious_0006.png",
+"bytes": 3567892,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/GARRAFA_MAGSAFE/Delicious/VISTAS/Frasco_Magsafe_Delicious_0006.png",
+"sha": "3803dc3653b5dbc3",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/GARRAFA_MAGSAFE/Delicious/VISTAS/Frasco_Magsafe_Delicious_C_iPhone_0004": {
+"alpha": false,
+"asset": "Frasco_Magsafe_Delicious_C_iPhone_0004.png",
+"bytes": 2900029,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/GARRAFA_MAGSAFE/Delicious/VISTAS/Frasco_Magsafe_Delicious_C_iPhone_0004.png",
+"sha": "a4b896b09d0cb5ef",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/GARRAFA_MAGSAFE/Diabo_Verde/VISTAS/Frasco_Magsafe_Diabo_Verde_0004": {
+"alpha": false,
+"asset": "Frasco_Magsafe_Diabo_Verde_0004.png",
+"bytes": 3009884,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/GARRAFA_MAGSAFE/Diabo_Verde/VISTAS/Frasco_Magsafe_Diabo_Verde_0004.png",
+"sha": "c61e3d8afb2bb4c9",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/GARRAFA_MAGSAFE/Diabo_Verde/VISTAS/Frasco_Magsafe_Diabo_Verde_0006": {
+"alpha": false,
+"asset": "Frasco_Magsafe_Diabo_Verde_0006.png",
+"bytes": 4381623,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/GARRAFA_MAGSAFE/Diabo_Verde/VISTAS/Frasco_Magsafe_Diabo_Verde_0006.png",
+"sha": "d38e62c22c5658cb",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/GARRAFA_MAGSAFE/FTW/VISTAS/Frasco_Magsafe_FTW_0004": {
+"alpha": false,
+"asset": "Frasco_Magsafe_FTW_0004.png",
+"bytes": 3013412,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/GARRAFA_MAGSAFE/FTW/VISTAS/Frasco_Magsafe_FTW_0004.png",
+"sha": "c651e2f118be6bc4",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/GARRAFA_MAGSAFE/FTW/VISTAS/Frasco_Magsafe_FTW_0006": {
+"alpha": false,
+"asset": "Frasco_Magsafe_FTW_0006.png",
+"bytes": 4214733,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/GARRAFA_MAGSAFE/FTW/VISTAS/Frasco_Magsafe_FTW_0006.png",
+"sha": "14fe3458cba6610c",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/GARRAFA_MAGSAFE/FTW/VISTAS/Frasco_Magsafe_FTW_C_iPhone_0004": {
+"alpha": false,
+"asset": "Frasco_Magsafe_FTW_C_iPhone_0004.png",
+"bytes": 3060104,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/GARRAFA_MAGSAFE/FTW/VISTAS/Frasco_Magsafe_FTW_C_iPhone_0004.png",
+"sha": "c07db4e387028741",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/PORTA_CAPSULAS/Gemini_Generated_Image_362xmz362xmz362x201": {
+"alpha": true,
+"asset": "Gemini_Generated_Image_362xmz362xmz362x201.png",
+"bytes": 1168943,
+"h": 1642,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/PORTA_CAPSULAS/Gemini_Generated_Image_362xmz362xmz362x201.png",
+"sha": "a0ef2df765ff6cab",
+"tag": "originais-acessorios",
+"w": 1566
+},
+"Acessorios/PORTA_CAPSULAS/Porta_capsulas_ftw": {
+"alpha": true,
+"asset": "Porta_capsulas_ftw.png",
+"bytes": 350296,
+"h": 960,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/PORTA_CAPSULAS/Porta_capsulas_ftw.png",
+"sha": "456dcb33d264bd4e",
+"tag": "originais-acessorios",
+"w": 1280
+},
+"Acessorios/PORTA_CAPSULAS/Porta_capsulas_ftw_logo": {
+"alpha": true,
+"asset": "Porta_capsulas_ftw_logo.png",
+"bytes": 370920,
+"h": 960,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/PORTA_CAPSULAS/Porta_capsulas_ftw_logo.png",
+"sha": "27095d7af04ae8b1",
+"tag": "originais-acessorios",
+"w": 1280
+},
+"Acessorios/ROUPAS/DELICIOUS/02_MASC/1": {
+"alpha": false,
+"asset": "1.png",
+"bytes": 2115823,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/02_MASC/1.png",
+"sha": "fed17e95b11e4c64",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/02_MASC/2": {
+"alpha": false,
+"asset": "2.png",
+"bytes": 2333801,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/02_MASC/2.png",
+"sha": "6b1970fe34a9597a",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/02_MASC/3": {
+"alpha": false,
+"asset": "3.png",
+"bytes": 2467095,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/02_MASC/3.png",
+"sha": "36e37446f831e038",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/02_MASC/4": {
+"alpha": false,
+"asset": "4.png",
+"bytes": 3198806,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/02_MASC/4.png",
+"sha": "96fabd2fcf977e05",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/03_FEM/012011": {
+"alpha": false,
+"asset": "012011.png",
+"bytes": 1763816,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/03_FEM/012011.png",
+"sha": "6cd41e9cd16e51fd",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/03_FEM/Diabo_Verde_Massive_Mass_2.5kg_Baunilha_0001": {
+"alpha": false,
+"asset": "Diabo_Verde_Massive_Mass_2.5kg_Baunilha_0001.png",
+"bytes": 1734521,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/03_FEM/Diabo_Verde_Massive_Mass_2.5kg_Baunilha_0001.png",
+"sha": "9a9c67def21a8365",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/03_FEM/Diabo_Verde_Massive_Mass_2.5kg_Baunilha_0001-1": {
+"alpha": false,
+"asset": "Diabo_Verde_Massive_Mass_2.5kg_Baunilha_0001-1.png",
+"bytes": 2577817,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/03_FEM/Diabo_Verde_Massive_Mass_2.5kg_Baunilha_0001-1.png",
+"sha": "09c44ebc6e35faf9",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/_VISTAS/01_OVERSIZED/Frame2036": {
+"alpha": true,
+"asset": "Frame2036.png",
+"bytes": 2318075,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/01_OVERSIZED/Frame2036.png",
+"sha": "b71184a679d29661",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DELICIOUS/_VISTAS/01_OVERSIZED/Frame2038": {
+"alpha": true,
+"asset": "Frame2038.png",
+"bytes": 2368223,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/01_OVERSIZED/Frame2038.png",
+"sha": "9f81c349f7e3d1d0",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DELICIOUS/_VISTAS/01_OVERSIZED/Frame2040": {
+"alpha": true,
+"asset": "Frame2040.png",
+"bytes": 1758323,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/01_OVERSIZED/Frame2040.png",
+"sha": "a54144da3a01dd11",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DELICIOUS/_VISTAS/01_OVERSIZED/Frame2050": {
+"alpha": true,
+"asset": "Frame2050.png",
+"bytes": 3209464,
+"h": 2230,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/01_OVERSIZED/Frame2050.png",
+"sha": "2ee5498c3acf3073",
+"tag": "originais-acessorios",
+"w": 2223
+},
+"Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/1": {
+"alpha": false,
+"asset": "ROUPAS__DELICIOUS___VISTAS__02_MASC__1.png",
+"bytes": 2115823,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/1.png",
+"sha": "fed17e95b11e4c64",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/2": {
+"alpha": false,
+"asset": "ROUPAS__DELICIOUS___VISTAS__02_MASC__2.png",
+"bytes": 2333801,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/2.png",
+"sha": "6b1970fe34a9597a",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/3": {
+"alpha": false,
+"asset": "ROUPAS__DELICIOUS___VISTAS__02_MASC__3.png",
+"bytes": 2467095,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/3.png",
+"sha": "36e37446f831e038",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/4": {
+"alpha": false,
+"asset": "ROUPAS__DELICIOUS___VISTAS__02_MASC__4.png",
+"bytes": 3198806,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/4.png",
+"sha": "96fabd2fcf977e05",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/_VISTAS/03_FEM/1": {
+"alpha": false,
+"asset": "ROUPAS__DELICIOUS___VISTAS__03_FEM__1.png",
+"bytes": 1772646,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/03_FEM/1.png",
+"sha": "f8cdaf716c0756e2",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/_VISTAS/03_FEM/2": {
+"alpha": false,
+"asset": "ROUPAS__DELICIOUS___VISTAS__03_FEM__2.png",
+"bytes": 1741445,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/03_FEM/2.png",
+"sha": "0d8059bcb953176c",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DELICIOUS/_VISTAS/03_FEM/3": {
+"alpha": false,
+"asset": "ROUPAS__DELICIOUS___VISTAS__03_FEM__3.png",
+"bytes": 2586273,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DELICIOUS/_VISTAS/03_FEM/3.png",
+"sha": "4540509c803365f7",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/camiseta-preta_dv": {
+"alpha": false,
+"asset": "camiseta-preta_dv.jpg",
+"bytes": 97074,
+"h": 2000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/camiseta-preta_dv.jpg",
+"sha": "671ed2c26e38873b",
+"tag": "originais-acessorios",
+"w": 2000
+},
 "Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0001": {
 "alpha": false,
 "asset": "Creatina_Delicious_500g_Frutas_Vermelhas_0001.png",
@@ -4936,6 +5566,876 @@
 "h": 2160,
 "origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Baunilha/Delicious_Whey_Sache_Baunilha_0001.png",
 "sha": "d3a4333076e78296",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Baunilha/Delicious_Whey_Sache_Baunilha_0002": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Baunilha_0002.png",
+"bytes": 3052648,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Baunilha/Delicious_Whey_Sache_Baunilha_0002.png",
+"sha": "17694a993e746097",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Baunilha/Delicious_Whey_Sache_Baunilha_0003": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Baunilha_0003.png",
+"bytes": 4000433,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Baunilha/Delicious_Whey_Sache_Baunilha_0003.png",
+"sha": "80c4730a65285136",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Baunilha/Delicious_Whey_Sache_Baunilha_0004": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Baunilha_0004.png",
+"bytes": 3976833,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Baunilha/Delicious_Whey_Sache_Baunilha_0004.png",
+"sha": "60df86b7c7c3814d",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Baunilha/Delicious_Whey_Sache_Baunilha_0005": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Baunilha_0005.png",
+"bytes": 2811944,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Baunilha/Delicious_Whey_Sache_Baunilha_0005.png",
+"sha": "e853ccddd5c63458",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Chocolate/Delicious_Whey_Sache_Chocolate_0001": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Chocolate_0001.png",
+"bytes": 3100818,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Chocolate/Delicious_Whey_Sache_Chocolate_0001.png",
+"sha": "b55695406eca9adb",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Chocolate/Delicious_Whey_Sache_Chocolate_0002": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Chocolate_0002.png",
+"bytes": 3192090,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Chocolate/Delicious_Whey_Sache_Chocolate_0002.png",
+"sha": "f5c985625eaee7e6",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Chocolate/Delicious_Whey_Sache_Chocolate_0003": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Chocolate_0003.png",
+"bytes": 4030497,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Chocolate/Delicious_Whey_Sache_Chocolate_0003.png",
+"sha": "57ee9a8909707c42",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Chocolate/Delicious_Whey_Sache_Chocolate_0004": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Chocolate_0004.png",
+"bytes": 4031824,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Chocolate/Delicious_Whey_Sache_Chocolate_0004.png",
+"sha": "ff2414ed34ec7327",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Chocolate/Delicious_Whey_Sache_Chocolate_0005": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Chocolate_0005.png",
+"bytes": 2893664,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Chocolate/Delicious_Whey_Sache_Chocolate_0005.png",
+"sha": "0f332f2c0b40096e",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Chocolate_Negro/Delicious_Whey_Sache_Chocolate_Negro_0001": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Chocolate_Negro_0001.png",
+"bytes": 2832311,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Chocolate_Negro/Delicious_Whey_Sache_Chocolate_Negro_0001.png",
+"sha": "752758a877084c2b",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Chocolate_Negro/Delicious_Whey_Sache_Chocolate_Negro_0002": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Chocolate_Negro_0002.png",
+"bytes": 2897637,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Chocolate_Negro/Delicious_Whey_Sache_Chocolate_Negro_0002.png",
+"sha": "327d46ccb867b2b8",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Chocolate_Negro/Delicious_Whey_Sache_Chocolate_Negro_0003": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Chocolate_Negro_0003.png",
+"bytes": 3655805,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Chocolate_Negro/Delicious_Whey_Sache_Chocolate_Negro_0003.png",
+"sha": "979972c80681bcd4",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Chocolate_Negro/Delicious_Whey_Sache_Chocolate_Negro_0004": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Chocolate_Negro_0004.png",
+"bytes": 3818847,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Chocolate_Negro/Delicious_Whey_Sache_Chocolate_Negro_0004.png",
+"sha": "c6c4ec277e5185c6",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Chocolate_Negro/Delicious_Whey_Sache_Chocolate_Negro_0005": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Chocolate_Negro_0005.png",
+"bytes": 2666293,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Chocolate_Negro/Delicious_Whey_Sache_Chocolate_Negro_0005.png",
+"sha": "cfef09387d90eb3c",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Cookies/Delicious_Whey_Sache_Cookies_0001": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Cookies_0001.png",
+"bytes": 3093910,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Cookies/Delicious_Whey_Sache_Cookies_0001.png",
+"sha": "94eaee1668898b28",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Cookies/Delicious_Whey_Sache_Cookies_0002": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Cookies_0002.png",
+"bytes": 3187782,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Cookies/Delicious_Whey_Sache_Cookies_0002.png",
+"sha": "c31de1e6caac4497",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Cookies/Delicious_Whey_Sache_Cookies_0003": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Cookies_0003.png",
+"bytes": 4299550,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Cookies/Delicious_Whey_Sache_Cookies_0003.png",
+"sha": "fa833fc6b0e8b713",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Cookies/Delicious_Whey_Sache_Cookies_0004": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Cookies_0004.png",
+"bytes": 4228618,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Cookies/Delicious_Whey_Sache_Cookies_0004.png",
+"sha": "4781ca6586294fa5",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Cookies/Delicious_Whey_Sache_Cookies_0005": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Cookies_0005.png",
+"bytes": 2906663,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Cookies/Delicious_Whey_Sache_Cookies_0005.png",
+"sha": "b12ab3c5b2b9ca21",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Doce_de_Leite/Delicious_Whey_Sache_Doce_de_Leite_0001": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Doce_de_Leite_0001.png",
+"bytes": 3134357,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Doce_de_Leite/Delicious_Whey_Sache_Doce_de_Leite_0001.png",
+"sha": "043b52f944d680cb",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Doce_de_Leite/Delicious_Whey_Sache_Doce_de_Leite_0002": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Doce_de_Leite_0002.png",
+"bytes": 3159012,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Doce_de_Leite/Delicious_Whey_Sache_Doce_de_Leite_0002.png",
+"sha": "aae19a25b1a423b5",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Doce_de_Leite/Delicious_Whey_Sache_Doce_de_Leite_0003": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Doce_de_Leite_0003.png",
+"bytes": 4047050,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Doce_de_Leite/Delicious_Whey_Sache_Doce_de_Leite_0003.png",
+"sha": "9418d09beedd70e4",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Doce_de_Leite/Delicious_Whey_Sache_Doce_de_Leite_0004": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Doce_de_Leite_0004.png",
+"bytes": 3905237,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Doce_de_Leite/Delicious_Whey_Sache_Doce_de_Leite_0004.png",
+"sha": "51ec03e084cd63da",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Doce_de_Leite/Delicious_Whey_Sache_Doce_de_Leite_0005": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Doce_de_Leite_0005.png",
+"bytes": 2891050,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Doce_de_Leite/Delicious_Whey_Sache_Doce_de_Leite_0005.png",
+"sha": "3e0661f4672d2f8f",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Leite/Delicious_Whey_Sache_Leite_0001": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Leite_0001.png",
+"bytes": 2927688,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Leite/Delicious_Whey_Sache_Leite_0001.png",
+"sha": "2a47b0ca7382af82",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Leite/Delicious_Whey_Sache_Leite_0002": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Leite_0002.png",
+"bytes": 2950168,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Leite/Delicious_Whey_Sache_Leite_0002.png",
+"sha": "2e982d9de66c5a93",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Leite/Delicious_Whey_Sache_Leite_0003": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Leite_0003.png",
+"bytes": 4042007,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Leite/Delicious_Whey_Sache_Leite_0003.png",
+"sha": "1ddbd6e2d514b004",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Leite/Delicious_Whey_Sache_Leite_0004": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Leite_0004.png",
+"bytes": 3641487,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Leite/Delicious_Whey_Sache_Leite_0004.png",
+"sha": "da55870f85476f81",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Leite/Delicious_Whey_Sache_Leite_0005": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Leite_0005.png",
+"bytes": 2727233,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Leite/Delicious_Whey_Sache_Leite_0005.png",
+"sha": "d2beb2a7c15ec51b",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Morango/Delicious_Whey_Sache_Morango_0001": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Morango_0001.png",
+"bytes": 3113774,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Morango/Delicious_Whey_Sache_Morango_0001.png",
+"sha": "7119964e838833b2",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Morango/Delicious_Whey_Sache_Morango_0002": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Morango_0002.png",
+"bytes": 3164858,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Morango/Delicious_Whey_Sache_Morango_0002.png",
+"sha": "f78bff49331dd1be",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Morango/Delicious_Whey_Sache_Morango_0003": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Morango_0003.png",
+"bytes": 3846403,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Morango/Delicious_Whey_Sache_Morango_0003.png",
+"sha": "d1ad9332ea3ac29c",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Morango/Delicious_Whey_Sache_Morango_0004": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Morango_0004.png",
+"bytes": 4053453,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Morango/Delicious_Whey_Sache_Morango_0004.png",
+"sha": "7d4e56ceb8cb458e",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Morango/Delicious_Whey_Sache_Morango_0005": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Morango_0005.png",
+"bytes": 2912789,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Morango/Delicious_Whey_Sache_Morango_0005.png",
+"sha": "9658e68bb1a4d832",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Pistache/Delicious_Whey_Sache_Pistache_0001": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Pistache_0001.png",
+"bytes": 3106586,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Pistache/Delicious_Whey_Sache_Pistache_0001.png",
+"sha": "815e6a7e6c9bc923",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Pistache/Delicious_Whey_Sache_Pistache_0002": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Pistache_0002.png",
+"bytes": 3134429,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Pistache/Delicious_Whey_Sache_Pistache_0002.png",
+"sha": "a3fe35cef3322035",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Pistache/Delicious_Whey_Sache_Pistache_0003": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Pistache_0003.png",
+"bytes": 3944164,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Pistache/Delicious_Whey_Sache_Pistache_0003.png",
+"sha": "23c71f73b71e63df",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Pistache/Delicious_Whey_Sache_Pistache_0004": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Pistache_0004.png",
+"bytes": 3989455,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Pistache/Delicious_Whey_Sache_Pistache_0004.png",
+"sha": "d6a707f4f19c52e8",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Whey_Sache/Sache_Unitario/Delicious_Whey_Sache_Pistache/Delicious_Whey_Sache_Pistache_0005": {
+"alpha": false,
+"asset": "Delicious_Whey_Sache_Pistache_0005.png",
+"bytes": 2887065,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Whey_Sache/Sach%C3%AA_Unit%C3%A1rio/Delicious_Whey_Sache_Pistache/Delicious_Whey_Sache_Pistache_0005.png",
+"sha": "159a4148ac1e4435",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0001": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0001.png",
+"bytes": 3879889,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-Ac%CC%A7ai-Leite_Condensado_0001.png",
+"sha": "60df2636691cdcd3",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0001_2": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0001_2.png",
+"bytes": 14022035,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado_0001.png",
+"sha": "6330d9e1ff9a2caa",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0002": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0002.png",
+"bytes": 3782638,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-Ac%CC%A7ai-Leite_Condensado_0002.png",
+"sha": "f299b21266093c9e",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0002_2": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0002_2.png",
+"bytes": 14022035,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado_0002.png",
+"sha": "f8e62b83e589222e",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0003": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0003.png",
+"bytes": 5339134,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-Ac%CC%A7ai-Leite_Condensado_0003.png",
+"sha": "c8bf9f3495a61c0b",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0003_2": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0003_2.png",
+"bytes": 14022035,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado_0003.png",
+"sha": "a3f8cee472338324",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0004": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0004.png",
+"bytes": 6171793,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-Ac%CC%A7ai-Leite_Condensado_0004.png",
+"sha": "72036629284b70bf",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0004_2": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0004_2.png",
+"bytes": 14022035,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado_0004.png",
+"sha": "2acedbaa236638c6",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0005": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0005.png",
+"bytes": 3856812,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-Ac%CC%A7ai-Leite_Condensado_0005.png",
+"sha": "58e3998467d3580f",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0005_2": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0005_2.png",
+"bytes": 14022035,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado_0005.png",
+"sha": "97e90de4c35a55d1",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0006": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0006.png",
+"bytes": 6510966,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-Ac%CC%A7ai-Leite_Condensado_0006.png",
+"sha": "90c61cdc20c6f48c",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado/Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0006_2": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Banana-Acai-Leite_Condensado_0006_2.png",
+"bytes": 5700955,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado/Massa%203kg%20-%20Pouch%20-%20Banana-A%C3%A7ai-Leite_Condensado_0006.png",
+"sha": "2deeabb160b82008",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Chocolate/Massa_3kg_Pouch_Chocolate_0001": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Chocolate_0001.png",
+"bytes": 3974300,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Chocolate/Massa%203kg%20-%20Pouch%20-%20Chocolate_0001.png",
+"sha": "a37be50d5404cb2f",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Chocolate/Massa_3kg_Pouch_Chocolate_0002": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Chocolate_0002.png",
+"bytes": 3918501,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Chocolate/Massa%203kg%20-%20Pouch%20-%20Chocolate_0002.png",
+"sha": "9891731e33c95e86",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Chocolate/Massa_3kg_Pouch_Chocolate_0003": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Chocolate_0003.png",
+"bytes": 6485548,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Chocolate/Massa%203kg%20-%20Pouch%20-%20Chocolate_0003.png",
+"sha": "fda574d7b97af533",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Chocolate/Massa_3kg_Pouch_Chocolate_0004": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Chocolate_0004.png",
+"bytes": 6207483,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Chocolate/Massa%203kg%20-%20Pouch%20-%20Chocolate_0004.png",
+"sha": "87537e5dd3963e0f",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Chocolate/Massa_3kg_Pouch_Chocolate_0005": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Chocolate_0005.png",
+"bytes": 4049293,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Chocolate/Massa%203kg%20-%20Pouch%20-%20Chocolate_0005.png",
+"sha": "72fe5ef52a289ee7",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Chocolate/Massa_3kg_Pouch_Chocolate_0006": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Chocolate_0006.png",
+"bytes": 7834762,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Chocolate/Massa%203kg%20-%20Pouch%20-%20Chocolate_0006.png",
+"sha": "a41acf5be08eb477",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Cookies/Massa_3kg_Pouch_Cookies_0001": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Cookies_0001.png",
+"bytes": 3726602,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Cookies/Massa%203kg%20-%20Pouch%20-%20Cookies_0001.png",
+"sha": "60d3c58a31865ffa",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Cookies/Massa_3kg_Pouch_Cookies_0002": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Cookies_0002.png",
+"bytes": 3597011,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Cookies/Massa%203kg%20-%20Pouch%20-%20Cookies_0002.png",
+"sha": "067e593e1451e4ca",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Cookies/Massa_3kg_Pouch_Cookies_0003": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Cookies_0003.png",
+"bytes": 6425657,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Cookies/Massa%203kg%20-%20Pouch%20-%20Cookies_0003.png",
+"sha": "cea247855c60b988",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Cookies/Massa_3kg_Pouch_Cookies_0004": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Cookies_0004.png",
+"bytes": 6015661,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Cookies/Massa%203kg%20-%20Pouch%20-%20Cookies_0004.png",
+"sha": "f7c3480e0b07b394",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Cookies/Massa_3kg_Pouch_Cookies_0005": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Cookies_0005.png",
+"bytes": 3721440,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Cookies/Massa%203kg%20-%20Pouch%20-%20Cookies_0005.png",
+"sha": "54f9c9138d07f188",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Cookies/Massa_3kg_Pouch_Cookies_0006": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Cookies_0006.png",
+"bytes": 7674618,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Cookies/Massa%203kg%20-%20Pouch%20-%20Cookies_0006.png",
+"sha": "dbd92c1a85e4e6b7",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Doce_de_Leite/Massa_3kg_Pouch_Doce_de_Leite_0001": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Doce_de_Leite_0001.png",
+"bytes": 3827118,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite_0001.png",
+"sha": "097bfaf258659bc0",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Doce_de_Leite/Massa_3kg_Pouch_Doce_de_Leite_0002": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Doce_de_Leite_0002.png",
+"bytes": 3744604,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite_0002.png",
+"sha": "34ac3c1387194ee5",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Doce_de_Leite/Massa_3kg_Pouch_Doce_de_Leite_0003": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Doce_de_Leite_0003.png",
+"bytes": 6280284,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite_0003.png",
+"sha": "231a8e82ccd80b81",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Doce_de_Leite/Massa_3kg_Pouch_Doce_de_Leite_0004": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Doce_de_Leite_0004.png",
+"bytes": 6207094,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite_0004.png",
+"sha": "b0f09773b7b21461",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Doce_de_Leite/Massa_3kg_Pouch_Doce_de_Leite_0005": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Doce_de_Leite_0005.png",
+"bytes": 3902224,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite_0005.png",
+"sha": "b7d1e8556b9a8a88",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Doce_de_Leite/Massa_3kg_Pouch_Doce_de_Leite_0006": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Doce_de_Leite_0006.png",
+"bytes": 7789442,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite/Massa%203kg%20-%20Pouch%20-%20Doce%20de%20Leite_0006.png",
+"sha": "cf947d6c6e86c668",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Leite/Massa_3kg_Pouch_Leite_0001": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Leite_0001.png",
+"bytes": 3127235,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Leite/Massa%203kg%20-%20Pouch%20-%20Leite_0001.png",
+"sha": "4b36f7e9e82d668e",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Leite/Massa_3kg_Pouch_Leite_0002": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Leite_0002.png",
+"bytes": 2992723,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Leite/Massa%203kg%20-%20Pouch%20-%20Leite_0002.png",
+"sha": "2232308b3c8a9f93",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Leite/Massa_3kg_Pouch_Leite_0003": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Leite_0003.png",
+"bytes": 5332044,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Leite/Massa%203kg%20-%20Pouch%20-%20Leite_0003.png",
+"sha": "13503acda0407567",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Leite/Massa_3kg_Pouch_Leite_0004": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Leite_0004.png",
+"bytes": 5551544,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Leite/Massa%203kg%20-%20Pouch%20-%20Leite_0004.png",
+"sha": "1a5b1aa29dbcd1d1",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Leite/Massa_3kg_Pouch_Leite_0005": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Leite_0005.png",
+"bytes": 3089475,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Leite/Massa%203kg%20-%20Pouch%20-%20Leite_0005.png",
+"sha": "35f5c2d2dc6a6404",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Leite/Massa_3kg_Pouch_Leite_0006": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Leite_0006.png",
+"bytes": 6209719,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Leite/Massa%203kg%20-%20Pouch%20-%20Leite_0006.png",
+"sha": "dc4b783d2e55d169",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Mini_Sortidos/Massa_3kg_Pouch_Mini_Sortidos_0001": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Mini_Sortidos_0001.png",
+"bytes": 3910684,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos_0001.png",
+"sha": "7912d61f05f0f33a",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Mini_Sortidos/Massa_3kg_Pouch_Mini_Sortidos_0002": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Mini_Sortidos_0002.png",
+"bytes": 3828537,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos_0002.png",
+"sha": "1e6d9b4c9653f332",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Mini_Sortidos/Massa_3kg_Pouch_Mini_Sortidos_0003": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Mini_Sortidos_0003.png",
+"bytes": 6466224,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos_0003.png",
+"sha": "91897b1a4aba6b99",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Mini_Sortidos/Massa_3kg_Pouch_Mini_Sortidos_0004": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Mini_Sortidos_0004.png",
+"bytes": 6343216,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos_0004.png",
+"sha": "000eeb6f35225b9e",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Mini_Sortidos/Massa_3kg_Pouch_Mini_Sortidos_0005": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Mini_Sortidos_0005.png",
+"bytes": 3967807,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos_0005.png",
+"sha": "70afebe8d6fb3103",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Mini_Sortidos/Massa_3kg_Pouch_Mini_Sortidos_0006": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Mini_Sortidos_0006.png",
+"bytes": 7829081,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos/Massa%203kg%20-%20Pouch%20-%20Mini%20Sortidos_0006.png",
+"sha": "07053db046671780",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Morango/Massa_3kg_Pouch_Morango_0001": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Morango_0001.png",
+"bytes": 3581844,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Morango/Massa%203kg%20-%20Pouch%20-%20Morango_0001.png",
+"sha": "a3483a792217be25",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Morango/Massa_3kg_Pouch_Morango_0002": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Morango_0002.png",
+"bytes": 3491982,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Morango/Massa%203kg%20-%20Pouch%20-%20Morango_0002.png",
+"sha": "41b80be855784a4e",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Morango/Massa_3kg_Pouch_Morango_0003": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Morango_0003.png",
+"bytes": 5534924,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Morango/Massa%203kg%20-%20Pouch%20-%20Morango_0003.png",
+"sha": "a80934caf70a5ef3",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Morango/Massa_3kg_Pouch_Morango_0004": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Morango_0004.png",
+"bytes": 5987177,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Morango/Massa%203kg%20-%20Pouch%20-%20Morango_0004.png",
+"sha": "929676137f0e60cc",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Morango/Massa_3kg_Pouch_Morango_0005": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Morango_0005.png",
+"bytes": 3621670,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Morango/Massa%203kg%20-%20Pouch%20-%20Morango_0005.png",
+"sha": "7f7e02126a21fcf0",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Massa_3kg/Massa_3kg_Pouch_Morango/Massa_3kg_Pouch_Morango_0006": {
+"alpha": false,
+"asset": "Massa_3kg_Pouch_Morango_0006.png",
+"bytes": 6753685,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Massa_3kg/Massa%203kg%20-%20Pouch%20-%20Morango/Massa%203kg%20-%20Pouch%20-%20Morango_0006.png",
+"sha": "fd2a976bcb42b9a1",
 "tag": "originais-delicious",
 "w": 2160
 },
