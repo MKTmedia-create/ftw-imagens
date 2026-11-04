@@ -1,0 +1,28 @@
+name: Migracao inicial das imagens
+on:
+  push:
+    branches: [migracao]
+    paths: ['scripts/migrar.py', 'scripts/banco.py', '.github/workflows/migrar.yml', 'dados/rodar_migracao.txt']
+permissions:
+  contents: write
+concurrency:
+  group: migracao
+  cancel-in-progress: false
+jobs:
+  migrar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1, ref: migracao }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq pngquant
+      - run: pip install -q requests pillow
+      - name: Configurar git
+        run: |
+          git config user.name "ftw-imagens-bot"
+          git config user.email "ftw-imagens-bot@users.noreply.github.com"
+      - run: python scripts/migrar.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
