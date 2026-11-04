@@ -619,6 +619,676 @@
 "tag": "originais-acessorios",
 "w": 2160
 },
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/01/01": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__01__01.png",
+"bytes": 4670356,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/01/01.png",
+"sha": "ac29d64a7a481e9a",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/01/02": {
+"alpha": true,
+"asset": "02.png",
+"bytes": 4730744,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/01/02.png",
+"sha": "929bbc2f25737bf2",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/01/03": {
+"alpha": true,
+"asset": "03.png",
+"bytes": 3819723,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/01/03.png",
+"sha": "d853b78e501f1f71",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/01/04": {
+"alpha": true,
+"asset": "04.png",
+"bytes": 7719063,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/01/04.png",
+"sha": "cdfa02600f3e6dcd",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/02/01": {
+"alpha": true,
+"asset": "01.png",
+"bytes": 4670356,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/02/01.png",
+"sha": "ac29d64a7a481e9a",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/02/02": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__02__02.png",
+"bytes": 4866344,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/02/02.png",
+"sha": "45d418f150a15989",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/02/03": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__02__03.png",
+"bytes": 4011155,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/02/03.png",
+"sha": "f6f841a81f5c13ec",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/02/04": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__02__04.png",
+"bytes": 7806941,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/02/04.png",
+"sha": "6052c96ba9fff199",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/03/01": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__03__01.png",
+"bytes": 2154307,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/03/01.png",
+"sha": "7de1543189449316",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/03/02": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__03__02.png",
+"bytes": 2337363,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/03/02.png",
+"sha": "18aad5f65f5b4ff9",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/03/03": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__03__03.png",
+"bytes": 2616340,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/03/03.png",
+"sha": "c4ffa8d24aef5c88",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/03/04": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__03__04.png",
+"bytes": 3781900,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/03/04.png",
+"sha": "4c5d2f02f9a546d7",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/FEM/01": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__diploko__FEM__01.png",
+"bytes": 281477,
+"h": 2000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/FEM/01.png",
+"sha": "6544262aba46194e",
+"tag": "originais-acessorios",
+"w": 3108
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/FEM/02": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__diploko__FEM__02.png",
+"bytes": 661084,
+"h": 2000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/FEM/02.png",
+"sha": "36791ed09306a2f1",
+"tag": "originais-acessorios",
+"w": 3108
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/FEM/03": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__diploko__FEM__03.png",
+"bytes": 771331,
+"h": 2000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/FEM/03.png",
+"sha": "84526ed2c27935ea",
+"tag": "originais-acessorios",
+"w": 3108
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/MASC/01": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__diploko__MASC__01.png",
+"bytes": 2207328,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/MASC/01.png",
+"sha": "14d5ca72409986a5",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/MASC/02": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__diploko__MASC__02.png",
+"bytes": 2963011,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/MASC/02.png",
+"sha": "1c4650c51de468f4",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/MASC/03": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__diploko__MASC__03.png",
+"bytes": 3343483,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/MASC/03.png",
+"sha": "1235e7a1bc5bfe8a",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/MASC/04": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__CAMISETAS__diploko__MASC__04.png",
+"bytes": 4412339,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/diploko/MASC/04.png",
+"sha": "81cad16cb06f6baf",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/LEGGING/01": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__LEGGING__01.png",
+"bytes": 5801844,
+"h": 5500,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/LEGGING/01.png",
+"sha": "53d416b4a880d579",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/LEGGING/02": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__LEGGING__02.png",
+"bytes": 5746796,
+"h": 5500,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/LEGGING/02.png",
+"sha": "107b04e4b0b54309",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/LEGGING/03": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__LEGGING__03.png",
+"bytes": 4940109,
+"h": 5500,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/LEGGING/03.png",
+"sha": "75e8d89f34d7f530",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/REGATA/01": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__REGATA__01.png",
+"bytes": 38328010,
+"h": 9000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/REGATA/01.png",
+"sha": "fd7e301c4bb93744",
+"tag": "originais-acessorios",
+"w": 13500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/REGATA/02": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__REGATA__02.png",
+"bytes": 44028051,
+"h": 9000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/REGATA/02.png",
+"sha": "5f9f2ff88b6af849",
+"tag": "originais-acessorios",
+"w": 13500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/REGATA/03": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__REGATA__03.png",
+"bytes": 52723721,
+"h": 9000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/REGATA/03.png",
+"sha": "03de5af7307d11b6",
+"tag": "originais-acessorios",
+"w": 13500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/SHORTS/01": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__SHORTS__01.png",
+"bytes": 2422935,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/SHORTS/01.png",
+"sha": "b5efb5e107b618af",
+"tag": "originais-acessorios",
+"w": 4000
+},
+"Acessorios/ROUPAS/DIABO_VERDE/SHORTS/02": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__SHORTS__02.png",
+"bytes": 2271994,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/SHORTS/02.png",
+"sha": "e809ece91604a68b",
+"tag": "originais-acessorios",
+"w": 4000
+},
+"Acessorios/ROUPAS/DIABO_VERDE/SHORTS/03": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__SHORTS__03.png",
+"bytes": 2336742,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/SHORTS/03.png",
+"sha": "2f7f65d92e40d016",
+"tag": "originais-acessorios",
+"w": 4000
+},
+"Acessorios/ROUPAS/DIABO_VERDE/SHORTS/04": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__SHORTS__04.png",
+"bytes": 3736626,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/SHORTS/04.png",
+"sha": "b927380be044c9c9",
+"tag": "originais-acessorios",
+"w": 4000
+},
+"Acessorios/ROUPAS/DIABO_VERDE/TOP_NADADOR/01": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__TOP_NADADOR__01.png",
+"bytes": 34888522,
+"h": 9000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/TOP_NADADOR/01.png",
+"sha": "7abc024688e798ae",
+"tag": "originais-acessorios",
+"w": 13500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/TOP_NADADOR/02": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__TOP_NADADOR__02.png",
+"bytes": 33415983,
+"h": 9000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/TOP_NADADOR/02.png",
+"sha": "c0cdedcee6908f85",
+"tag": "originais-acessorios",
+"w": 13500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/TOP_NADADOR/03": {
+"alpha": true,
+"asset": "ROUPAS__DIABO_VERDE__TOP_NADADOR__03.png",
+"bytes": 47884687,
+"h": 9000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/TOP_NADADOR/03.png",
+"sha": "81c38f49a43bbcdd",
+"tag": "originais-acessorios",
+"w": 13500
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/Frame2041": {
+"alpha": false,
+"asset": "Frame2041.png",
+"bytes": 1467055,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/Frame2041.png",
+"sha": "b42fdb4beab5d705",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/dv01": {
+"alpha": true,
+"asset": "dv01.png",
+"bytes": 2964862,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/dv01.png",
+"sha": "128a9c9bfac30dd6",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/dv01_costas": {
+"alpha": true,
+"asset": "dv01_costas.png",
+"bytes": 2208721,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/dv01_costas.png",
+"sha": "83eae67e85f94bc0",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/dv01_costas2": {
+"alpha": true,
+"asset": "dv01_costas2.png",
+"bytes": 1937954,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/dv01_costas2.png",
+"sha": "16527da09e198502",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/dv01_frente": {
+"alpha": true,
+"asset": "dv01_frente.png",
+"bytes": 2060751,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/dv01_frente.png",
+"sha": "1d68d17d41fe8718",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/Frame2041": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__02_OVERSIZED__Frame2041.png",
+"bytes": 1467055,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/Frame2041.png",
+"sha": "b42fdb4beab5d705",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/dv02": {
+"alpha": true,
+"asset": "dv02.png",
+"bytes": 3000436,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/dv02.png",
+"sha": "3f3d38e328e74882",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/dv02_costas": {
+"alpha": true,
+"asset": "dv02_costas.png",
+"bytes": 2287525,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/dv02_costas.png",
+"sha": "9f45a7d9c3e364a3",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/dv02_costas2": {
+"alpha": true,
+"asset": "dv02_costas2.png",
+"bytes": 2019749,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/dv02_costas2.png",
+"sha": "07378bb4068e390e",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/dv02_frente": {
+"alpha": true,
+"asset": "dv02_frente.png",
+"bytes": 2060751,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/dv02_frente.png",
+"sha": "1d68d17d41fe8718",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/Frame2041": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__03_MASC__Frame2041.png",
+"bytes": 1467055,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/Frame2041.png",
+"sha": "b42fdb4beab5d705",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/dv03": {
+"alpha": true,
+"asset": "dv03.png",
+"bytes": 2022487,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/dv03.png",
+"sha": "fd4400b4826fb5eb",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/dv03_costas": {
+"alpha": false,
+"asset": "dv03_costas.png",
+"bytes": 1452251,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/dv03_costas.png",
+"sha": "7b3731f0c08a54b7",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/dv03_costas2": {
+"alpha": false,
+"asset": "dv03_costas2.png",
+"bytes": 1477638,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/dv03_costas2.png",
+"sha": "4e1a729d7b413811",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/dv03_frente": {
+"alpha": true,
+"asset": "dv03_frente.png",
+"bytes": 1241071,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/dv03_frente.png",
+"sha": "68531e280d5ff800",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/04_MASC_DIPLOKO/1": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__04_MASC_DIPLOKO__1.png",
+"bytes": 1270623,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/04_MASC_DIPLOKO/1.png",
+"sha": "9c663a99ed13f4a7",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/04_MASC_DIPLOKO/2": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__04_MASC_DIPLOKO__2.png",
+"bytes": 1852026,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/04_MASC_DIPLOKO/2.png",
+"sha": "48b746de4f96c9da",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/04_MASC_DIPLOKO/3": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__04_MASC_DIPLOKO__3.png",
+"bytes": 1875919,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/04_MASC_DIPLOKO/3.png",
+"sha": "2a174fedcea4d056",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/04_MASC_DIPLOKO/4": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__04_MASC_DIPLOKO__4.png",
+"bytes": 2322853,
+"h": 2159,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/04_MASC_DIPLOKO/4.png",
+"sha": "0a997a8b227190ba",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/05_FEM_DIPLOKO/1": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__05_FEM_DIPLOKO__1.png",
+"bytes": 352678,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/05_FEM_DIPLOKO/1.png",
+"sha": "0b5dba4ef762f1c8",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/05_FEM_DIPLOKO/2": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__05_FEM_DIPLOKO__2.png",
+"bytes": 892323,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/05_FEM_DIPLOKO/2.png",
+"sha": "789948bbd7ef44dd",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/05_FEM_DIPLOKO/3": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__05_FEM_DIPLOKO__3.png",
+"bytes": 865334,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/05_FEM_DIPLOKO/3.png",
+"sha": "6f2fa86312a3a849",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/LEGING/1": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__LEGING__1.png",
+"bytes": 1090379,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/LEGING/1.png",
+"sha": "bb6213d2eb104348",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/LEGING/2": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__LEGING__2.png",
+"bytes": 1279274,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/LEGING/2.png",
+"sha": "73665bd159c2e1d8",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/LEGING/3": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__LEGING__3.png",
+"bytes": 1281993,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/LEGING/3.png",
+"sha": "4e4507c52d52a31a",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/REGATA_GOLA_ALTA/1": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__REGATA_GOLA_ALTA__1.png",
+"bytes": 2729700,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/REGATA_GOLA_ALTA/1.png",
+"sha": "81e5db480cdac87c",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/REGATA_GOLA_ALTA/2": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__REGATA_GOLA_ALTA__2.png",
+"bytes": 3215042,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/REGATA_GOLA_ALTA/2.png",
+"sha": "2543a032e72d5161",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/REGATA_GOLA_ALTA/3": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__REGATA_GOLA_ALTA__3.png",
+"bytes": 3095376,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/REGATA_GOLA_ALTA/3.png",
+"sha": "60c0b9e0832a486e",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/SHORTS/1": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__SHORTS__1.png",
+"bytes": 1532194,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/SHORTS/1.png",
+"sha": "cf42bc3038b42d65",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/SHORTS/2": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__SHORTS__2.png",
+"bytes": 1507051,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/SHORTS/2.png",
+"sha": "19ea856f35e09f45",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/SHORTS/3": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__SHORTS__3.png",
+"bytes": 1492242,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/SHORTS/3.png",
+"sha": "f9c6632b301447cc",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/SHORTS/4": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__SHORTS__4.png",
+"bytes": 1845336,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/SHORTS/4.png",
+"sha": "7d94641431917377",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/TOP_NADADOR/1": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__TOP_NADADOR__1.png",
+"bytes": 3069074,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/TOP_NADADOR/1.png",
+"sha": "3606f062e429307d",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/TOP_NADADOR/2": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__TOP_NADADOR__2.png",
+"bytes": 2966392,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/TOP_NADADOR/2.png",
+"sha": "a80b421e3fc1c910",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/TOP_NADADOR/3": {
+"alpha": false,
+"asset": "ROUPAS__DIABO_VERDE___VISTAS__TOP_NADADOR__3.png",
+"bytes": 3383523,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/TOP_NADADOR/3.png",
+"sha": "fc5bfcf8f7001853",
+"tag": "originais-acessorios",
+"w": 2160
+},
 "Acessorios/ROUPAS/DIABO_VERDE/camiseta-preta_dv": {
 "alpha": false,
 "asset": "camiseta-preta_dv.jpg",
@@ -628,6 +1298,606 @@
 "sha": "671ed2c26e38873b",
 "tag": "originais-acessorios",
 "w": 2000
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/01/01": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__01__01.png",
+"bytes": 2154307,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/01/01.png",
+"sha": "7de1543189449316",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/01/02": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__01__02.png",
+"bytes": 2298522,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/01/02.png",
+"sha": "42ed65f917b76273",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/01/03": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__01__03.png",
+"bytes": 2568496,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/01/03.png",
+"sha": "df54aa992ef4ccc3",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/01/04": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__01__04.png",
+"bytes": 3733636,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/01/04.png",
+"sha": "81905880d20907cc",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/02/01": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__02__01.png",
+"bytes": 2154307,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/02/01.png",
+"sha": "7de1543189449316",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/02/02": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__02__02.png",
+"bytes": 2329276,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/02/02.png",
+"sha": "7fb55f9f7818fef9",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/02/03": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__02__03.png",
+"bytes": 2614335,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/02/03.png",
+"sha": "a649aa0b97bd1de1",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/02/04": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__02__04.png",
+"bytes": 3769170,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/02/04.png",
+"sha": "a25ac3e6b02764dd",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/03/01": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__03__01.png",
+"bytes": 4973955,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/03/01.png",
+"sha": "25fa594ea6509df9",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/03/02": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__03__02.png",
+"bytes": 4668720,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/03/02.png",
+"sha": "904aa454a84d355b",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/03/03": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__03__03.png",
+"bytes": 7986334,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/03/03.png",
+"sha": "cc4cafe584a9e26b",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/04/01": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__04__01.png",
+"bytes": 4760156,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/04/01.png",
+"sha": "ad24e73aa5cd0e4b",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/04/02": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__04__02.png",
+"bytes": 4791080,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/04/02.png",
+"sha": "ccf4ceef3741f526",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/04/03": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__04__03.png",
+"bytes": 2883515,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/04/03.png",
+"sha": "179d27fd0d4c73b4",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/CAMISETAS/04/04": {
+"alpha": true,
+"asset": "ROUPAS__FTW__CAMISETAS__04__04.png",
+"bytes": 7874510,
+"h": 3000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/CAMISETAS/04/04.png",
+"sha": "eb99efdd9875fbec",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/LEGGING/01": {
+"alpha": true,
+"asset": "ROUPAS__FTW__LEGGING__01.png",
+"bytes": 5801844,
+"h": 5500,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/LEGGING/01.png",
+"sha": "53d416b4a880d579",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/LEGGING/02": {
+"alpha": true,
+"asset": "ROUPAS__FTW__LEGGING__02.png",
+"bytes": 5686859,
+"h": 5500,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/LEGGING/02.png",
+"sha": "ff0957660eda8053",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/LEGGING/03": {
+"alpha": true,
+"asset": "ROUPAS__FTW__LEGGING__03.png",
+"bytes": 4870641,
+"h": 5500,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/LEGGING/03.png",
+"sha": "2675bf95bb87ae17",
+"tag": "originais-acessorios",
+"w": 4500
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/01_OVERSIZED/Frame2041": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__01_OVERSIZED__Frame2041.png",
+"bytes": 1467055,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/01_OVERSIZED/Frame2041.png",
+"sha": "b42fdb4beab5d705",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/01_OVERSIZED/ftw01": {
+"alpha": true,
+"asset": "ftw01.png",
+"bytes": 3058422,
+"h": 2230,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/01_OVERSIZED/ftw01.png",
+"sha": "66bcdf0817b93a13",
+"tag": "originais-acessorios",
+"w": 2223
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/01_OVERSIZED/ftw01_costas": {
+"alpha": true,
+"asset": "ftw01_costas.png",
+"bytes": 2114552,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/01_OVERSIZED/ftw01_costas.png",
+"sha": "58ef41ca8efbe22c",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/01_OVERSIZED/ftw01_frente": {
+"alpha": true,
+"asset": "ftw01_frente.png",
+"bytes": 2253265,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/01_OVERSIZED/ftw01_frente.png",
+"sha": "f603d7a4898720ed",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/Frame2041": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__02_OVERSIZED__Frame2041.png",
+"bytes": 1467055,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/Frame2041.png",
+"sha": "b42fdb4beab5d705",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/ftw02": {
+"alpha": true,
+"asset": "ftw02.png",
+"bytes": 3020945,
+"h": 2230,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/ftw02.png",
+"sha": "cac84191324b3b86",
+"tag": "originais-acessorios",
+"w": 2223
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/ftw02_costas": {
+"alpha": true,
+"asset": "ftw02_costas.png",
+"bytes": 2238675,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/ftw02_costas.png",
+"sha": "011620a668346997",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/ftw02_costas2": {
+"alpha": true,
+"asset": "ftw02_costas2.png",
+"bytes": 1676135,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/ftw02_costas2.png",
+"sha": "98d412a00eaff32f",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/ftw02_frente": {
+"alpha": true,
+"asset": "ftw02_frente.png",
+"bytes": 2100344,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/ftw02_frente.png",
+"sha": "62a5d17c20741da4",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/Frame2041": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__03_MASC__Frame2041.png",
+"bytes": 1467055,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/Frame2041.png",
+"sha": "b42fdb4beab5d705",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/ftw03": {
+"alpha": true,
+"asset": "ftw03.png",
+"bytes": 2000714,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/ftw03.png",
+"sha": "9352ea3e05e1fb5c",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/ftw03_costas": {
+"alpha": false,
+"asset": "ftw03_costas.png",
+"bytes": 1427508,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/ftw03_costas.png",
+"sha": "01ac56421d899c31",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/ftw03_costas2": {
+"alpha": false,
+"asset": "ftw03_costas2.png",
+"bytes": 1453861,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/ftw03_costas2.png",
+"sha": "27b18749344d8cd5",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/ftw03_frente": {
+"alpha": true,
+"asset": "ftw03_frente.png",
+"bytes": 1241071,
+"h": 2220,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/ftw03_frente.png",
+"sha": "68531e280d5ff800",
+"tag": "originais-acessorios",
+"w": 2220
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/04_MASC/Frame2041": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__04_MASC__Frame2041.png",
+"bytes": 1467055,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/04_MASC/Frame2041.png",
+"sha": "b42fdb4beab5d705",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/04_MASC/ftw04": {
+"alpha": false,
+"asset": "ftw04.png",
+"bytes": 2052357,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/04_MASC/ftw04.png",
+"sha": "560b9052d754d942",
+"tag": "originais-acessorios",
+"w": 2155
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/04_MASC/ftw04_costas": {
+"alpha": false,
+"asset": "ftw04_costas.png",
+"bytes": 1445962,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/04_MASC/ftw04_costas.png",
+"sha": "65579ede8d7bcf35",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/04_MASC/ftw04_costas2": {
+"alpha": false,
+"asset": "ftw04_costas2.png",
+"bytes": 1479042,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/04_MASC/ftw04_costas2.png",
+"sha": "57f871344db4f73d",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/04_MASC/ftw04_frente": {
+"alpha": false,
+"asset": "ftw04_frente.png",
+"bytes": 1253725,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/04_MASC/ftw04_frente.png",
+"sha": "4db6385585aa9231",
+"tag": "originais-acessorios",
+"w": 2155
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/LEGING/1": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__LEGING__1.png",
+"bytes": 1064529,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/LEGING/1.png",
+"sha": "c27131ce8edbe225",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/LEGING/2": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__LEGING__2.png",
+"bytes": 1279274,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/LEGING/2.png",
+"sha": "73665bd159c2e1d8",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/LEGING/3": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__LEGING__3.png",
+"bytes": 1256867,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/LEGING/3.png",
+"sha": "69b18db229101e43",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/REGATA/1": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__REGATA__1.png",
+"bytes": 1582636,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/REGATA/1.png",
+"sha": "0c0d1f8c405d4f95",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/REGATA/2": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__REGATA__2.png",
+"bytes": 1337858,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/REGATA/2.png",
+"sha": "2ab7ceb12ef0c6c3",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/REGATA/3": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__REGATA__3.png",
+"bytes": 1787459,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/REGATA/3.png",
+"sha": "2cb5fdf9b129a046",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/SHORTS/1": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__SHORTS__1.png",
+"bytes": 1473419,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/SHORTS/1.png",
+"sha": "a42c65d9d2d37f7f",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/SHORTS/2": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__SHORTS__2.png",
+"bytes": 1467239,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/SHORTS/2.png",
+"sha": "c67c0df479661197",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/SHORTS/3": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__SHORTS__3.png",
+"bytes": 1476358,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/SHORTS/3.png",
+"sha": "58ee56c2de8e77a3",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/SHORTS/4": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__SHORTS__4.png",
+"bytes": 1836256,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/SHORTS/4.png",
+"sha": "0490d3cff1c37076",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/TOP_NADADOR/1": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__TOP_NADADOR__1.png",
+"bytes": 2949417,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/TOP_NADADOR/1.png",
+"sha": "166d4889df3bb76f",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/TOP_NADADOR/2": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__TOP_NADADOR__2.png",
+"bytes": 2763839,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/TOP_NADADOR/2.png",
+"sha": "44184b7b123e47e9",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/_VISTAS/TOP_NADADOR/3": {
+"alpha": false,
+"asset": "ROUPAS__FTW___VISTAS__TOP_NADADOR__3.png",
+"bytes": 3353383,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/_VISTAS/TOP_NADADOR/3.png",
+"sha": "a227fd4889676b18",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/FTW/camiseta_preta_ftw": {
+"alpha": true,
+"asset": "camiseta_preta_ftw.png",
+"bytes": 648275,
+"h": 2000,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/FTW/camiseta_preta_ftw.png",
+"sha": "b480bdf1f462342f",
+"tag": "originais-acessorios",
+"w": 2000
+},
+"Acessorios/ROUPAS/MEDIDAS/CAMISETA_FEM": {
+"alpha": true,
+"asset": "CAMISETA_FEM.png",
+"bytes": 298811,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/MEDIDAS/CAMISETA_FEM.png",
+"sha": "890c0c749aa7a5a0",
+"tag": "originais-acessorios",
+"w": 2185
+},
+"Acessorios/ROUPAS/MEDIDAS/CAMISETA_MASC202": {
+"alpha": false,
+"asset": "CAMISETA_MASC202.png",
+"bytes": 1139213,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/MEDIDAS/CAMISETA_MASC202.png",
+"sha": "854886166c876995",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/MEDIDAS/LEGGING": {
+"alpha": false,
+"asset": "LEGGING.png",
+"bytes": 723929,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/MEDIDAS/LEGGING.png",
+"sha": "0bee6233580eee6a",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/MEDIDAS/OVERSIZED": {
+"alpha": true,
+"asset": "OVERSIZED.png",
+"bytes": 1060417,
+"h": 2204,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/MEDIDAS/OVERSIZED.png",
+"sha": "1480cd907bcebcad",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/MEDIDAS/REGATA_GOLA_ALTA": {
+"alpha": true,
+"asset": "REGATA_GOLA_ALTA.png",
+"bytes": 639638,
+"h": 2202,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/MEDIDAS/REGATA_GOLA_ALTA.png",
+"sha": "c260e397076ae359",
+"tag": "originais-acessorios",
+"w": 2281
+},
+"Acessorios/ROUPAS/MEDIDAS/REGATA_MASC": {
+"alpha": true,
+"asset": "REGATA_MASC.png",
+"bytes": 1007878,
+"h": 2318,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/MEDIDAS/REGATA_MASC.png",
+"sha": "77df44b14e82485a",
+"tag": "originais-acessorios",
+"w": 2635
+},
+"Acessorios/ROUPAS/MEDIDAS/SHORTS": {
+"alpha": false,
+"asset": "SHORTS.png",
+"bytes": 1001720,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/MEDIDAS/SHORTS.png",
+"sha": "c55ed4f7465c8ae6",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/MEDIDAS/SLIM_MASC": {
+"alpha": true,
+"asset": "SLIM_MASC.png",
+"bytes": 1083352,
+"h": 2179,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/MEDIDAS/SLIM_MASC.png",
+"sha": "7eeb79219ce57097",
+"tag": "originais-acessorios",
+"w": 2160
+},
+"Acessorios/ROUPAS/MEDIDAS/TOP_NADADOR": {
+"alpha": true,
+"asset": "TOP_NADADOR.png",
+"bytes": 1412668,
+"h": 2270,
+"origem": "http://ftw.emmeprodutora.com.br/Acessorios/ROUPAS/MEDIDAS/TOP_NADADOR.png",
+"sha": "ca183b50ca41cc9b",
+"tag": "originais-acessorios",
+"w": 2487
 },
 "Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0001": {
 "alpha": false,
