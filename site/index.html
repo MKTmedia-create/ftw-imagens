@@ -39,8 +39,6 @@ svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.4;stro
 .marcas button:hover{background:var(--tray)}
 .marcas button[aria-pressed=true]{background:var(--marca);color:#fff}
 .marcas button[aria-pressed=true] span{color:#ffffffc9}
-.planilha{display:flex;align-items:center;gap:8px;height:40px;padding:0 14px 0 16px;margin-left:4px;border-radius:999px;background:var(--tray);color:var(--tinta);text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap;transition:background .4s var(--mola)}
-.planilha:hover{background:var(--anel-forte)}
 
 /* busca */
 .topo{max-width:1560px;margin:0 auto;padding:104px 32px 0}
@@ -154,8 +152,7 @@ dialog.sai::backdrop{opacity:0;transition:opacity .26s}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 
 @media (max-width:1040px){
-  .logo,.planilha b{display:none}
-  .planilha{padding:0 12px;margin-left:0}
+  .logo{display:none}
   .ilha{left:12px;right:12px;transform:none;max-width:none}
   .marcas{flex:1;min-width:0}
   .corpo{display:block;padding:18px 16px 72px}
@@ -163,8 +160,8 @@ dialog.sai::backdrop{opacity:0;transition:opacity .26s}
   .topo{padding:78px 16px 0}
   .busca{padding:10px 18px;gap:12px}
   .moveis{display:block;margin-bottom:18px}
-  .marcas button,.planilha{height:44px}
   .seletor{display:block}
+  .marcas button{height:44px}
   .folha{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .bloco+.bloco{margin-top:52px}
   .nome{font-size:16px}
@@ -189,13 +186,11 @@ dialog.sai::backdrop{opacity:0;transition:opacity .26s}
   <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1"/></symbol>
   <symbol id="i-copiar" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M15 9V6.5A2.5 2.5 0 0 0 12.500 4h-6A2.500 2.500 0 0 0 4 6.500v6A2.500 2.500 0 0 0 6.500 15H9"/></symbol>
   <symbol id="i-fechar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
-  <symbol id="i-tabela" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2.500"/><path d="M4 10h16M10 10v9"/></symbol>
 </defs></svg>
 
 <nav class="ilha" aria-label="Marcas">
   <span class="logo">Banco de imagens</span>
   <ul class="marcas" id="marcas"></ul>
-  <a class="planilha" href="links_novos.csv" download aria-label="Baixar planilha de links"><svg class="i"><use href="#i-tabela"/></svg><b>Planilha</b></a>
 </nav>
 
 <header class="topo">
@@ -389,7 +384,7 @@ function desenharPainel(){
   const avisos = [];
   if(velho) avisos.push('Embalagem antiga. Não use em materiais novos nem no site sem confirmar com a Criação.');
   if(conferir) avisos.push('EAN em conferência: as fontes internas divergem. Confirme antes de cadastrar.');
-  if(g.tb === 'nao') avisos.push('Este produto não está na tabela de Jul/2026. Confirme se segue em linha.');
+  if(g.tb === 'nao') avisos.push('Fora da tabela comercial de Jul/2026.');
   const ficha = linhaFicha('EAN', ean, {cod:!!g.ean, copiar:!!g.ean}) + linhaFicha('PA', g.pa, {cod:true, copiar:true}) + linhaFicha('DUN-14', g.dun, {cod:true, copiar:true}) + linhaFicha('Unidades por caixa', g.qc)
     + linhaFicha('Descrição na tabela', g.ds, {larga:true}) + linhaFicha('Categoria', g.ct) + linhaFicha('Caixa de embarque', g.cx, {larga:true}) + linhaFicha('NCM', g.ncm, {cod:true});
   P.innerHTML = `
