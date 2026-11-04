@@ -1,0 +1,55 @@
+name: Publicar banco de imagens
+on:
+  push:
+    branches: [main]
+    paths: ['entrada/**', 'produtos/**', 'site/**', 'scripts/**', '.github/workflows/publicar.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1, ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq pngquant
+      - run: pip install -q requests pillow
+      - run: python scripts/atualizar.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Salvar no repositorio
+        run: |
+          git config user.name "ftw-imagens-bot"
+          git config user.email "ftw-imagens-bot@users.noreply.github.com"
+          git add -A entrada produtos miniaturas dados site
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualiza catalogo de imagens [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Montar site
+        run: |
+          mkdir _site
+          cp -r site/. _site/
+          cp -r produtos miniaturas _site/
+          find _site/produtos -maxdepth 1 -type f -delete
+          du -sh _site
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: _site }
+  publicar:
+    needs: atualizar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

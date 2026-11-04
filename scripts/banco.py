@@ -223,6 +223,8 @@ def pretty_token(t):
     a = ACENTOS.get(t.lower())
     if a:
         return a
+    if t.lower() in ('de', 'do', 'da', 'com', 'e'):
+        return t.lower()
     if t.isupper() or t.islower():
         return t.capitalize()
     return t
@@ -296,7 +298,9 @@ def gerar_catalogo():
             chave = mini.relative_to(MINIATURAS).with_suffix('').as_posix()
             if not any((PRODUTOS / f'{chave}{x}').exists() for x in ('.jpg', '.png')):
                 mini.unlink()
-    lista = sorted(grupos.values(), key=lambda g: (list(ROTULO_MARCA).index(g['m']), g['l'], g['n'], g['v'] == 'antigo'))
+    def ordem(t):
+        return unicodedata.normalize('NFKD', t).encode('ascii', 'ignore').decode().lower()
+    lista = sorted(grupos.values(), key=lambda g: (list(ROTULO_MARCA).index(g['m']), ordem(g['l']), ordem(g['n']), g['v'] == 'antigo'))
     cat = dict(gerado=datetime.now(timezone.utc).isoformat(timespec='seconds'), rotulos=ROTULO_MARCA,
                total=sum(len(g['i']) for g in lista), grupos=lista)
     ARQ_CATALOGO.parent.mkdir(exist_ok=True)
