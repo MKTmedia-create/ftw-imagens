@@ -1,0 +1,61 @@
+{
+ "no_plano": 2077,
+ "migradas": 2077,
+ "faltando": 0,
+ "erros": 0,
+ "bytes_originais": 8054167184,
+ "mb_versoes_site_e_miniaturas": 706,
+ "segundos": 1787,
+ "identicos": [
+  [
+   "Acessorios/ROUPAS/DELICIOUS/02_MASC/1",
+   "Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/1"
+  ],
+  [
+   "Acessorios/ROUPAS/DELICIOUS/02_MASC/2",
+   "Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/2"
+  ],
+  [
+   "Acessorios/ROUPAS/DELICIOUS/02_MASC/3",
+   "Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/3"
+  ],
+  [
+   "Acessorios/ROUPAS/DELICIOUS/02_MASC/4",
+   "Acessorios/ROUPAS/DELICIOUS/_VISTAS/02_MASC/4"
+  ],
+  [
+   "Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/02/01",
+   "Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/01/01"
+  ],
+  [
+   "Acessorios/ROUPAS/DIABO_VERDE/CAMISETAS/03/01",
+   "Acessorios/ROUPAS/FTW/CAMISETAS/01/01",
+   "Acessorios/ROUPAS/FTW/CAMISETAS/02/01"
+  ],
+  [
+   "Acessorios/ROUPAS/DIABO_VERDE/LEGGING/01",
+   "Acessorios/ROUPAS/FTW/LEGGING/01"
+  ],
+  [
+   "Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/Frame2041",
+   "Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/Frame2041",
+   "Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/Frame2041",
+   "Acessorios/ROUPAS/FTW/_VISTAS/01_OVERSIZED/Frame2041",
+   "Acessorios/ROUPAS/FTW/_VISTAS/02_OVERSIZED/Frame2041",
+   "Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/Frame2041",
+   "Acessorios/ROUPAS/FTW/_VISTAS/04_MASC/Frame2041"
+  ],
+  [
+   "Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/01_OVERSIZED/dv01_frente",
+   "Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/02_OVERSIZED/dv02_frente"
+  ],
+  [
+   "Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/03_MASC/dv03_frente",
+   "Acessorios/ROUPAS/FTW/_VISTAS/03_MASC/ftw03_frente"
+  ],
+  [
+   "Acessorios/ROUPAS/DIABO_VERDE/_VISTAS/LEGING/2",
+   "Acessorios/ROUPAS/FTW/_VISTAS/LEGING/2"
+  ]
+ ]
+}
