@@ -419,9 +419,9 @@ function mostrarImagem(k){
   img.alt = `${g.n}, imagem ${k+1}`;
   $$('#tiras button').forEach((b,j)=>{ b.setAttribute('aria-current', j===k); if(j===k) b.scrollIntoView({block:'nearest',inline:'nearest'}); });
   const ext = it.a.split('.').pop().toUpperCase(), oext = (it.of||'').toUpperCase(), dim = it.w ? `${it.w} px` : '';
-  $('#acoes').innerHTML = `<p class="arq">${esc(it.a.replace(/\.[^.]+$/,''))}</p><div class="btns">
+  $('#acoes').innerHTML = `<p class="arq">${esc(it.dn)}</p><div class="btns">
     ${it.o ? `<a class="pill forte" href="${esc(it.o)}" rel="noopener"><span>Baixar original<small>${oext} ${dim}, ${fmtB(it.ob)}</small></span><span class="gota">${icone('baixar')}</span></a>`:''}
-    <a class="pill" href="${esc(site(g,it))}" download="${esc(it.a)}"><span>Baixar para site<small>${ext} 1600 px, ${fmtB(it.b)}</small></span><span class="gota">${icone('baixar')}</span></a>
+    <a class="pill" href="${esc(site(g,it))}" download="${esc(it.dn+'.'+ext.toLowerCase())}"><span>Baixar para site<small>${ext} 1600 px, ${fmtB(it.b)}</small></span><span class="gota">${icone('baixar')}</span></a>
     <button class="pill" data-acao="link"><span>Copiar link<small>Versão para site</small></span><span class="gota">${icone('link')}</span></button>
   </div>`;
 }
@@ -442,12 +442,12 @@ async function baixarZip(g, btn){
     for(let k=0;k<g.i.length;k++){
       small.textContent = `Preparando ${k+1} de ${g.i.length}`;
       const r = await fetch(site(g,g.i[k])); if(!r.ok) throw 0;
-      z.file(g.i[k].a, await r.blob());
+      z.file(g.i[k].dn + '.' + g.i[k].a.split('.').pop().toLowerCase(), await r.blob());
     }
     small.textContent = 'Compactando';
     const blob = await z.generateAsync({type:'blob',compression:'STORE'});
     const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
-    a.download = g.p.split('/').pop() + '.zip'; document.body.append(a); a.click(); a.remove();
+    a.download = g.dz + '.zip'; document.body.append(a); a.click(); a.remove();
     setTimeout(()=>URL.revokeObjectURL(a.href),60000);
     aviso('.zip baixado');
   }catch(e){ aviso('O .zip não foi gerado. Verifique a conexão e tente de novo.'); }

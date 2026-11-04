@@ -158,6 +158,21 @@ class Originais:
                     return tag
                 n += 1
 
+    def renomear(self, tag, velho, novo):
+        """Muda o nome do arquivo na release. Pode ser repetido sem efeito colateral."""
+        if tag not in self.rel:
+            self.rel[tag] = self._carregar(tag)
+        info = self.rel[tag]
+        if velho not in info['assets'] and novo in info['assets']:
+            return True
+        if velho not in info['assets']:
+            raise RuntimeError(f'arquivo nao encontrado: {velho}')
+        r = self._pede('PATCH', f"{self.api}/releases/assets/{info['assets'][velho]['id']}", json=dict(name=novo))
+        if r.status_code != 200:
+            raise RuntimeError(f'renomear {velho}: {r.status_code} {r.text[:200]}')
+        info['assets'][novo] = info['assets'].pop(velho)
+        return True
+
     def enviar(self, tag, nome, dados, tipo):
         info = self.rel[tag]
         ex = info['assets'].get(nome)
@@ -178,6 +193,42 @@ class Originais:
             raise RuntimeError(f'enviar {nome}: {r.status_code} {r.text[:300]}')
         with self.lock:
             info['assets'][nome] = dict(id=r.json()['id'], size=len(dados))
+
+
+def ascii_seguro(t):
+    t = unicodedata.normalize('NFKD', t).encode('ascii', 'ignore').decode()
+    t = re.sub(r'[^A-Za-z0-9.-]+', '_', t)
+    return re.sub(r'_{2,}', '_', t).strip('_.')
+
+
+def base_download(g):
+    """EAN_Marca_Nome_do_Produto, sem repetir a marca no inicio do nome."""
+    marca = ascii_seguro(ROTULO_MARCA[g['m']])
+    nome = ascii_seguro(g['n'])
+    if nome.lower().startswith(marca.lower() + '_'):
+        nome = nome[len(marca) + 1:]
+    partes = [g.get('ean', ''), marca, nome]
+    if g['v'] == 'antigo':
+        partes.append('Antigo')
+    elif g['v']:
+        partes.append(ascii_seguro(g['v']))
+    return '_'.join(x for x in partes if x)
+
+
+def definir_nomes_download(grupos):
+    """Grava em cada imagem o nome usado no download: base + sequencia. Nunca repete nomes."""
+    usados = set()
+    for g in grupos:
+        base = candidato = base_download(g)
+        n = 2
+        while candidato.lower() in usados:
+            candidato = f'{base}_{n}'
+            n += 1
+        usados.add(candidato.lower())
+        g['dz'] = candidato
+        total = len(g['i'])
+        for k, it in enumerate(g['i'], start=1):
+            it['dn'] = f'{candidato}_{k:02d}' if total > 1 else candidato
 
 
 def url_original(tag, nome):
@@ -336,6 +387,7 @@ def gerar_catalogo():
             for k, g in enumerate(sorted(r, key=lambda x: x['p'])[1:], start=2):
                 g['n'] += f' ({k})'
     lista = sorted(grupos.values(), key=lambda g: (list(ROTULO_MARCA).index(g['m']), ordem(g['l']), ordem(g['n']), g['v'] == 'antigo'))
+    definir_nomes_download(lista)
     cat = dict(gerado=datetime.now(timezone.utc).isoformat(timespec='seconds'), rotulos=ROTULO_MARCA,
                total=sum(len(g['i']) for g in lista), grupos=lista)
     ARQ_CATALOGO.parent.mkdir(exist_ok=True)
@@ -343,11 +395,11 @@ def gerar_catalogo():
     # planilha de-para para o time de e-commerce
     with open(DADOS / 'links_novos.csv', 'w', newline='', encoding='utf-8-sig') as f:
         w = csv.writer(f, delimiter=';')
-        w.writerow(['marca', 'produto', 'pa', 'ean', 'dun', 'qtd_por_caixa', 'descricao', 'versao', 'arquivo', 'link_site', 'link_original', 'miniatura', 'link_antigo'])
+        w.writerow(['marca', 'produto', 'pa', 'ean', 'dun', 'qtd_por_caixa', 'descricao', 'versao', 'arquivo', 'nome_download', 'link_site', 'link_original', 'miniatura', 'link_antigo'])
         for g in lista:
             for it in g['i']:
                 chave = f"{g['p']}/{it['a'].rsplit('.', 1)[0]}"
-                w.writerow([ROTULO_MARCA[g['m']], g['n'], g.get('pa', ''), g.get('ean', ''), g.get('dun', ''), g.get('qc', ''), g.get('ds', ''), g['v'], it['a'], f"{BASE_SITE}/produtos/{g['p']}/{it['a']}",
+                w.writerow([ROTULO_MARCA[g['m']], g['n'], g.get('pa', ''), g.get('ean', ''), g.get('dun', ''), g.get('qc', ''), g.get('ds', ''), g['v'], it['a'], it['dn'], f"{BASE_SITE}/produtos/{g['p']}/{it['a']}",
                             it.get('o', ''), f"{BASE_SITE}/miniaturas/{chave}.webp", meta.get(chave, {}).get('origem', '')])
     shutil.copy(DADOS / 'links_novos.csv', ARQ_CATALOGO.parent / 'links_novos.csv')
     return cat

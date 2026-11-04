@@ -1,12 +1,47 @@
 #!/usr/bin/env python3
 """Processa as imagens novas colocadas em entrada/ e refaz o catalogo."""
-import hashlib, json
+import hashlib, json, time
 from pathlib import Path
 from banco import *
 
 ENTRADA = RAIZ / 'entrada'
 IGNORAR = {'.gitkeep', '.DS_Store', 'LEIA-ME.md', 'Thumbs.db', 'desktop.ini'}
 TIPOS = {'.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg'}
+
+
+LIMITE_NOMES_S = 95 * 60
+
+
+def sincronizar_nomes(cat, orig):
+    """Deixa cada original na release com o nome EAN_Marca_Nome. Retoma de onde parou."""
+    meta = ler_originais()
+    inicio = time.time()
+    feitos, falhas, pendentes = 0, {}, 0
+    for g in cat['grupos']:
+        for it in g['i']:
+            chave = f"{g['p']}/{it['a'].rsplit('.', 1)[0]}"
+            m = meta.get(chave)
+            if not m or not m.get('asset'):
+                continue
+            novo = f"{it['dn']}.{m['asset'].rsplit('.', 1)[-1].lower()}"
+            if m['asset'] == novo:
+                continue
+            if time.time() - inicio > LIMITE_NOMES_S:
+                pendentes += 1
+                continue
+            try:
+                orig.renomear(m['tag'], m['asset'], novo)
+                m['asset'] = novo
+                feitos += 1
+                time.sleep(0.7)
+            except Exception as e:
+                falhas[chave] = str(e)[:200]
+            if feitos % 100 == 0:
+                salvar_originais(meta)
+                print(f'{feitos} nomes atualizados', flush=True)
+    salvar_originais(meta)
+    print(f'nomes: {feitos} atualizados, {pendentes} pendentes, {len(falhas)} falhas', flush=True)
+    return dict(renomeados=feitos, pendentes=pendentes, falhas=falhas)
 
 
 def main():
@@ -50,8 +85,10 @@ def main():
         for d in sorted((x for x in ENTRADA.rglob('*') if x.is_dir()), key=lambda x: -len(x.parts)):
             if not any(d.iterdir()):
                 d.rmdir()
+    cat = gerar_catalogo()
+    nomes = sincronizar_nomes(cat, Originais())
     gerar_catalogo()
-    (DADOS / 'ultima_atualizacao.json').write_text(json.dumps(dict(processadas=feitos, erros=erros), ensure_ascii=False, indent=1),
+    (DADOS / 'ultima_atualizacao.json').write_text(json.dumps(dict(processadas=feitos, erros=erros, nomes=nomes), ensure_ascii=False, indent=1),
                                                   encoding='utf-8')
     print(f'{len(feitos)} imagens processadas, {len(erros)} com erro')
     for k, v in erros.items():
