@@ -1,4 +1,444 @@
 {
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0001": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Frutas_Vermelhas_0001.png",
+"bytes": 3360708,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0001.png",
+"sha": "d0ad83d808059eec",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0002": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Frutas_Vermelhas_0002.png",
+"bytes": 4035953,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0002.png",
+"sha": "d737afb55acffa53",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0003": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Frutas_Vermelhas_0003.png",
+"bytes": 4386489,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0003.png",
+"sha": "4c42e7c80deb26a5",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0004": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Frutas_Vermelhas_0004.png",
+"bytes": 4841886,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0004.png",
+"sha": "30b4dfb8078da161",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0005": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Frutas_Vermelhas_0005.png",
+"bytes": 4189511,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Frutas_Vermelhas/Creatina_Delicious_500g_Frutas_Vermelhas_0005.png",
+"sha": "51bebe3fe29bfd49",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Limao/Creatina_Delicious_500g_Limao_0001": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Limao_0001.png",
+"bytes": 3285313,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Limao/Creatina_Delicious_500g_Limao_0001.png",
+"sha": "477db52fc7163f38",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Limao/Creatina_Delicious_500g_Limao_0002": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Limao_0002.png",
+"bytes": 3862475,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Limao/Creatina_Delicious_500g_Limao_0002.png",
+"sha": "5bf04c1b6688cc54",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Limao/Creatina_Delicious_500g_Limao_0003": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Limao_0003.png",
+"bytes": 4184639,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Limao/Creatina_Delicious_500g_Limao_0003.png",
+"sha": "170ee56b14df247f",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Limao/Creatina_Delicious_500g_Limao_0004": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Limao_0004.png",
+"bytes": 4587345,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Limao/Creatina_Delicious_500g_Limao_0004.png",
+"sha": "ded20b3588ca2cd5",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Limao/Creatina_Delicious_500g_Limao_0005": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Limao_0005.png",
+"bytes": 4010693,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Limao/Creatina_Delicious_500g_Limao_0005.png",
+"sha": "ceb9161f8db568af",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Uva/Creatina_Delicious_500g_Uva_0001": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Uva_0001.png",
+"bytes": 3240730,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Uva/Creatina_Delicious_500g_Uva_0001.png",
+"sha": "f335b0b3a19f364d",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Uva/Creatina_Delicious_500g_Uva_0002": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Uva_0002.png",
+"bytes": 3830522,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Uva/Creatina_Delicious_500g_Uva_0002.png",
+"sha": "d645d8fc83184c30",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Uva/Creatina_Delicious_500g_Uva_0003": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Uva_0003.png",
+"bytes": 4123809,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Uva/Creatina_Delicious_500g_Uva_0003.png",
+"sha": "075b1b1443c202a2",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Uva/Creatina_Delicious_500g_Uva_0004": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Uva_0004.png",
+"bytes": 4500357,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Uva/Creatina_Delicious_500g_Uva_0004.png",
+"sha": "665a622d23913936",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Uva/Creatina_Delicious_500g_Uva_0005": {
+"alpha": false,
+"asset": "Creatina_Delicious_500g_Uva_0005.png",
+"bytes": 3976932,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_500g/Creatina_Delicious_500g_Uva/Creatina_Delicious_500g_Uva_0005.png",
+"sha": "70986da6d408a190",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Limao/Creatina_Delicious_5g_Limao_0001": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Limao_0001.png",
+"bytes": 2575625,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Lim%C3%A3o/Creatina_Delicious_5g_Lim%C3%A3o_0001.png",
+"sha": "6e26cc01265b144f",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Limao/Creatina_Delicious_5g_Limao_0002": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Limao_0002.png",
+"bytes": 2748164,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Lim%C3%A3o/Creatina_Delicious_5g_Lim%C3%A3o_0002.png",
+"sha": "3504c5598215cabb",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Limao/Creatina_Delicious_5g_Limao_0003": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Limao_0003.png",
+"bytes": 3756527,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Lim%C3%A3o/Creatina_Delicious_5g_Lim%C3%A3o_0003.png",
+"sha": "d5321fc400fe9493",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Limao/Creatina_Delicious_5g_Limao_0004": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Limao_0004.png",
+"bytes": 5199446,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Lim%C3%A3o/Creatina_Delicious_5g_Lim%C3%A3o_0004.png",
+"sha": "91a0454f25cc42d3",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Limao/Creatina_Delicious_5g_Limao_0005": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Limao_0005.png",
+"bytes": 2864854,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Lim%C3%A3o/Creatina_Delicious_5g_Lim%C3%A3o_0005.png",
+"sha": "b84394821b334391",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Uva/Creatina_Delicious_5g_Uva_0001": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Uva_0001.png",
+"bytes": 2647809,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Uva/Creatina_Delicious_5g_Uva_0001.png",
+"sha": "e52e5ac555b018cf",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Uva/Creatina_Delicious_5g_Uva_0002": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Uva_0002.png",
+"bytes": 2794146,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Uva/Creatina_Delicious_5g_Uva_0002.png",
+"sha": "345cdb685676767e",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Uva/Creatina_Delicious_5g_Uva_0003": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Uva_0003.png",
+"bytes": 3803796,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Uva/Creatina_Delicious_5g_Uva_0003.png",
+"sha": "334e21ba16e82f38",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Uva/Creatina_Delicious_5g_Uva_0004": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Uva_0004.png",
+"bytes": 5142895,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Uva/Creatina_Delicious_5g_Uva_0004.png",
+"sha": "b3f49cc20244a1df",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Uva/Creatina_Delicious_5g_Uva_0005": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Uva_0005.png",
+"bytes": 2946158,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Uva/Creatina_Delicious_5g_Uva_0005.png",
+"sha": "eb96ac75a493a3f0",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Vermelha/Creatina_Delicious_5g_Vermelha_0001": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Vermelha_0001.png",
+"bytes": 2747507,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Vermelha/Creatina_Delicious_5g_Vermelha_0001.png",
+"sha": "d6658976862878bb",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Vermelha/Creatina_Delicious_5g_Vermelha_0002": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Vermelha_0002.png",
+"bytes": 2911774,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Vermelha/Creatina_Delicious_5g_Vermelha_0002.png",
+"sha": "5f00f10476a368ee",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Vermelha/Creatina_Delicious_5g_Vermelha_0003": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Vermelha_0003.png",
+"bytes": 4093731,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Vermelha/Creatina_Delicious_5g_Vermelha_0003.png",
+"sha": "c5b59ad4f48963df",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Vermelha/Creatina_Delicious_5g_Vermelha_0004": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Vermelha_0004.png",
+"bytes": 5498610,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Vermelha/Creatina_Delicious_5g_Vermelha_0004.png",
+"sha": "da4b7edb990aab37",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Creatina_Delicious_Amostras_Gratis/Creatina_Delicious_5g_Vermelha/Creatina_Delicious_5g_Vermelha_0005": {
+"alpha": false,
+"asset": "Creatina_Delicious_5g_Vermelha_0005.png",
+"bytes": 3056338,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Creatina_Delicious_Amostras_Gr%C3%A1tis/Creatina_Delicious_5g_Vermelha/Creatina_Delicious_5g_Vermelha_0005.png",
+"sha": "5369e960bd67d4c6",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0001": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_Caixa_0001.png",
+"bytes": 4426279,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0001.png",
+"sha": "114da0de0f1f899d",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0002": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_Caixa_0002.png",
+"bytes": 3891928,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0002.png",
+"sha": "bdebae021280e572",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0003": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_Caixa_0003.png",
+"bytes": 5308951,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0003.png",
+"sha": "d96db8e3b0529bfd",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0004": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_Caixa_0004.png",
+"bytes": 7389512,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0004.png",
+"sha": "8b698e1abd61bfb8",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0005": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_Caixa_0005.png",
+"bytes": 3711410,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0005.png",
+"sha": "0771fffb2d28372b",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0006": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_Caixa_0006.png",
+"bytes": 4936658,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0006.png",
+"sha": "06914c2ad6d970d0",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0007": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_Caixa_0007.png",
+"bytes": 4935315,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0007.png",
+"sha": "48bd62ddece16329",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0008": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_Caixa_0008.png",
+"bytes": 4674528,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0008.png",
+"sha": "4f9ab8aecbdb1d59",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0009": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_Caixa_0009.png",
+"bytes": 5285205,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0009.png",
+"sha": "ecca8aa658320aa7",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0010": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_Caixa_0010.png",
+"bytes": 4073550,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Caixa/Delicious_Brownie_Chocolate_Caixa_0010.png",
+"sha": "59b9226239459193",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Unitario/Delicious_Brownie_Chocolate_0001": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_0001.png",
+"bytes": 3436751,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Unit%C3%A1rio/Delicious_Brownie_Chocolate_0001.png",
+"sha": "9973ede051a380db",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Unitario/Delicious_Brownie_Chocolate_0002": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_0002.png",
+"bytes": 3734013,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Unit%C3%A1rio/Delicious_Brownie_Chocolate_0002.png",
+"sha": "a8bf68a7020e1393",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Unitario/Delicious_Brownie_Chocolate_0003": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_0003.png",
+"bytes": 2833510,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Unit%C3%A1rio/Delicious_Brownie_Chocolate_0003.png",
+"sha": "103d41b9f05f7dfe",
+"tag": "originais-delicious",
+"w": 2160
+},
+"Delicious/Delicious_Brownie_Chocolate/Unitario/Delicious_Brownie_Chocolate_0004": {
+"alpha": false,
+"asset": "Delicious_Brownie_Chocolate_0004.png",
+"bytes": 4433407,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/Delicious/Delicious_Brownie_Chocolate/Unit%C3%A1rio/Delicious_Brownie_Chocolate_0004.png",
+"sha": "d508f2fb6b483682",
+"tag": "originais-delicious",
+"w": 2160
+},
 "DiaboVerde/DiaboVerde_Creatina_300g/DiaboVerde_Creatina_300g_0001": {
 "alpha": false,
 "asset": "DiaboVerde_Creatina_300g_0001.png",
@@ -2089,6 +2529,276 @@
 "tag": "originais-diaboverde",
 "w": 2160
 },
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Energy_Drink/Pre_Workout_269_ML_Energy_Drink_0001": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Energy_Drink_0001.png",
+"bytes": 1891896,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Energy_Drink/Pr%C3%A9_Workout_269_ML_Energy_Drink_0001.png",
+"sha": "42b05743544d5054",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Energy_Drink/Pre_Workout_269_ML_Energy_Drink_0002": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Energy_Drink_0002.png",
+"bytes": 1949914,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Energy_Drink/Pr%C3%A9_Workout_269_ML_Energy_Drink_0002.png",
+"sha": "e99c9c242fc0b235",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Energy_Drink/Pre_Workout_269_ML_Energy_Drink_0003": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Energy_Drink_0003.png",
+"bytes": 2308759,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Energy_Drink/Pr%C3%A9_Workout_269_ML_Energy_Drink_0003.png",
+"sha": "9371a58e55c28795",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Energy_Drink/Pre_Workout_269_ML_Energy_Drink_0004": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Energy_Drink_0004.png",
+"bytes": 2480671,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Energy_Drink/Pr%C3%A9_Workout_269_ML_Energy_Drink_0004.png",
+"sha": "5860a6ef13b5715f",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Energy_Drink/Pre_Workout_269_ML_Energy_Drink_0005": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Energy_Drink_0005.png",
+"bytes": 1868615,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Energy_Drink/Pr%C3%A9_Workout_269_ML_Energy_Drink_0005.png",
+"sha": "42b8728ab3362408",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Energy_Drink/Pre_Workout_269_ML_Energy_Drink_12": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Energy_Drink_12.png",
+"bytes": 2221012,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Energy_Drink/Pr%C3%A9_Workout_269_ML_Energy_Drink_12.png",
+"sha": "61c92968f6860cf7",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Energy_Drink/Pre_Workout_269_ML_Energy_Drink_24": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Energy_Drink_24.png",
+"bytes": 3188819,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Energy_Drink/Pr%C3%A9_Workout_269_ML_Energy_Drink_24.png",
+"sha": "2e46d2e146bf9bad",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Energy_Drink/Pre_Workout_269_ML_Energy_Drink_6": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Energy_Drink_6.png",
+"bytes": 2284735,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Energy_Drink/Pr%C3%A9_Workout_269_ML_Energy_Drink_6.png",
+"sha": "8e765ec3cd63ccb4",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Energy_Drink/Pre_Workout_269_ML_Energy_Drink_9": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Energy_Drink_9.png",
+"bytes": 2101130,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Energy_Drink/Pr%C3%A9_Workout_269_ML_Energy_Drink_9.png",
+"sha": "b3f65d195e37f84b",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Maca_Verde/Pre_Workout_269_ML_Maca_Verde_0001": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Maca_Verde_0001.png",
+"bytes": 1882380,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Maca_Verde/Pr%C3%A9_Workout_269_ML_Maca_Verde_0001.png",
+"sha": "f5e9d3b281b978cc",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Maca_Verde/Pre_Workout_269_ML_Maca_Verde_0002": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Maca_Verde_0002.png",
+"bytes": 1940865,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Maca_Verde/Pr%C3%A9_Workout_269_ML_Maca_Verde_0002.png",
+"sha": "73bd9a807907c813",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Maca_Verde/Pre_Workout_269_ML_Maca_Verde_0003": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Maca_Verde_0003.png",
+"bytes": 2303676,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Maca_Verde/Pr%C3%A9_Workout_269_ML_Maca_Verde_0003.png",
+"sha": "925ab850fed80ded",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Maca_Verde/Pre_Workout_269_ML_Maca_Verde_0004": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Maca_Verde_0004.png",
+"bytes": 2479853,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Maca_Verde/Pr%C3%A9_Workout_269_ML_Maca_Verde_0004.png",
+"sha": "80e8ebd104e086d0",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Maca_Verde/Pre_Workout_269_ML_Maca_Verde_0005": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Maca_Verde_0005.png",
+"bytes": 1860249,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Maca_Verde/Pr%C3%A9_Workout_269_ML_Maca_Verde_0005.png",
+"sha": "35d6904e95330a1f",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Maca_Verde/Pre_Workout_269_ML_Maca_Verde_12": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Maca_Verde_12.png",
+"bytes": 2209017,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Maca_Verde/Pr%C3%A9_Workout_269_ML_Maca_Verde_12.png",
+"sha": "dab60bf83c2dd564",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Maca_Verde/Pre_Workout_269_ML_Maca_Verde_24": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Maca_Verde_24.png",
+"bytes": 3172132,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Maca_Verde/Pr%C3%A9_Workout_269_ML_Maca_Verde_24.png",
+"sha": "3060d7fb16c79c1e",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Maca_Verde/Pre_Workout_269_ML_Maca_Verde_6": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Maca_Verde_6.png",
+"bytes": 2277860,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Maca_Verde/Pr%C3%A9_Workout_269_ML_Maca_Verde_6.png",
+"sha": "d6ae16f4f160593c",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Maca_Verde/Pre_Workout_269_ML_Maca_Verde_9": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Maca_Verde_9.png",
+"bytes": 2091355,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Maca_Verde/Pr%C3%A9_Workout_269_ML_Maca_Verde_9.png",
+"sha": "37ce991ee97aca11",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Tropical/Pre_Workout_269_ML_Tropical_0001": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Tropical_0001.png",
+"bytes": 1891081,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Tropical/Pr%C3%A9_Workout_269_ML_Tropical_0001.png",
+"sha": "1afba5eea0fc6f60",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Tropical/Pre_Workout_269_ML_Tropical_0002": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Tropical_0002.png",
+"bytes": 1955299,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Tropical/Pr%C3%A9_Workout_269_ML_Tropical_0002.png",
+"sha": "121c56ab661524bb",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Tropical/Pre_Workout_269_ML_Tropical_0003": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Tropical_0003.png",
+"bytes": 2317316,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Tropical/Pr%C3%A9_Workout_269_ML_Tropical_0003.png",
+"sha": "dbb17210753fd75c",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Tropical/Pre_Workout_269_ML_Tropical_0004": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Tropical_0004.png",
+"bytes": 2495449,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Tropical/Pr%C3%A9_Workout_269_ML_Tropical_0004.png",
+"sha": "0533f703b8583f5a",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Tropical/Pre_Workout_269_ML_Tropical_0005": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Tropical_0005.png",
+"bytes": 1873534,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Tropical/Pr%C3%A9_Workout_269_ML_Tropical_0005.png",
+"sha": "644020c94a82417e",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Tropical/Pre_Workout_269_ML_Tropical_12": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Tropical_12.png",
+"bytes": 2236106,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Tropical/Pr%C3%A9_Workout_269_ML_Tropical_12.png",
+"sha": "2b6dc2e86f39f240",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Tropical/Pre_Workout_269_ML_Tropical_24": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Tropical_24.png",
+"bytes": 3223036,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Tropical/Pr%C3%A9_Workout_269_ML_Tropical_24.png",
+"sha": "5bb984d1301b9c67",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Tropical/Pre_Workout_269_ML_Tropical_6": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Tropical_6.png",
+"bytes": 2303432,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Tropical/Pr%C3%A9_Workout_269_ML_Tropical_6.png",
+"sha": "3bf7cacb0de75101",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_269_ML/Pre_Workout_269_ML_Tropical/Pre_Workout_269_ML_Tropical_9": {
+"alpha": false,
+"asset": "Pre_Workout_269_ML_Tropical_9.png",
+"bytes": 2113814,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pr%C3%A9_Workout_269_ML/Pr%C3%A9_Workout_269_ML_Tropical/Pr%C3%A9_Workout_269_ML_Tropical_9.png",
+"sha": "b525acd0ab303d76",
+"tag": "originais-diaboverde",
+"w": 2160
+},
 "DiaboVerde/Pre_Workout_300g/Pre_Workout_300g_Algodao_Doce/Pre_Workout_300g_Algodao_Doce_0001": {
 "alpha": false,
 "asset": "Pre_Workout_300g_Algodao_Doce_0001.png",
@@ -3676,6 +4386,796 @@
 "h": 2160,
 "origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Pobreloco_Morango_Twist/Pre_Workout_300g_Pobreloco_Morango_Twist_0003.png",
 "sha": "d6edae7a2312e6de",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Pobreloco_Morango_Twist/Pre_Workout_300g_Pobreloco_Morango_Twist_0004": {
+"alpha": false,
+"asset": "Pre_Workout_300g_Pobreloco_Morango_Twist_0004.png",
+"bytes": 3438658,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Pobreloco_Morango_Twist/Pre_Workout_300g_Pobreloco_Morango_Twist_0004.png",
+"sha": "87d7b2fdd05fc6c0",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Pobreloco_Morango_Twist/Pre_Workout_300g_Pobreloco_Morango_Twist_0005": {
+"alpha": false,
+"asset": "Pre_Workout_300g_Pobreloco_Morango_Twist_0005.png",
+"bytes": 4089993,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Pobreloco_Morango_Twist/Pre_Workout_300g_Pobreloco_Morango_Twist_0005.png",
+"sha": "82d6c6688cf70756",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Pobreloco_Morango_Twist/Pre_Workout_300g_Pobreloco_Morango_Twist_0006": {
+"alpha": false,
+"asset": "Pre_Workout_300g_Pobreloco_Morango_Twist_0006.png",
+"bytes": 5256474,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Pobreloco_Morango_Twist/Pre_Workout_300g_Pobreloco_Morango_Twist_0006.png",
+"sha": "3678e2b92f9105aa",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0001": {
+"alpha": false,
+"asset": "Pre_Workout_300g_Tadalafellas_Melancia_0001.png",
+"bytes": 4180078,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0001.png",
+"sha": "59b3023d20fac76b",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0002": {
+"alpha": false,
+"asset": "Pre_Workout_300g_Tadalafellas_Melancia_0002.png",
+"bytes": 4908182,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0002.png",
+"sha": "21e5bb842f096616",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0003": {
+"alpha": false,
+"asset": "Pre_Workout_300g_Tadalafellas_Melancia_0003.png",
+"bytes": 4739118,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0003.png",
+"sha": "98a62082746e3689",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0004": {
+"alpha": false,
+"asset": "Pre_Workout_300g_Tadalafellas_Melancia_0004.png",
+"bytes": 4341182,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0004.png",
+"sha": "5adc6dc3c08c433d",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0005": {
+"alpha": false,
+"asset": "Pre_Workout_300g_Tadalafellas_Melancia_0005.png",
+"bytes": 5052418,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0005.png",
+"sha": "b52c97b48f003e0e",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0006": {
+"alpha": false,
+"asset": "Pre_Workout_300g_Tadalafellas_Melancia_0006.png",
+"bytes": 6681820,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_Tadalafellas_Melancia/Pre_Workout_300g_Tadalafellas_Melancia_0006.png",
+"sha": "520af37bb6d03575",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0001": {
+"alpha": false,
+"asset": "Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0001.png",
+"bytes": 3742795,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0001.png",
+"sha": "59e00df394d5faf0",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0002": {
+"alpha": false,
+"asset": "Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0002.png",
+"bytes": 4394562,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0002.png",
+"sha": "90206a6dada0217d",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0003": {
+"alpha": false,
+"asset": "Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0003.png",
+"bytes": 4823444,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0003.png",
+"sha": "b33b8c2ff3a71e0a",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0004": {
+"alpha": false,
+"asset": "Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0004.png",
+"bytes": 4233942,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0004.png",
+"sha": "3d334efeb7e1a667",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0005": {
+"alpha": false,
+"asset": "Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0005.png",
+"bytes": 4557789,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0005.png",
+"sha": "23dc1d979119eff4",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0006": {
+"alpha": false,
+"asset": "Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0006.png",
+"bytes": 6328486,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Pre_Workout_Collab/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade/Pre_Workout_300g_The_Tank_Fabricio_Moreira_Cherry_Lemonade_0006.png",
+"sha": "25d75360ff97b0b4",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoCrazy/ThermoCrazy_60c/ThermoCrazy_60c_0001": {
+"alpha": false,
+"asset": "ThermoCrazy_60c_0001.png",
+"bytes": 2605826,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoCrazy/ThermoCrazy_60c/ThermoCrazy_60c_0001.png",
+"sha": "91f3b7240b64b454",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoCrazy/ThermoCrazy_60c/ThermoCrazy_60c_0002": {
+"alpha": false,
+"asset": "ThermoCrazy_60c_0002.png",
+"bytes": 3162988,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoCrazy/ThermoCrazy_60c/ThermoCrazy_60c_0002.png",
+"sha": "d57c8ab6227a812a",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoCrazy/ThermoCrazy_60c/ThermoCrazy_60c_0003": {
+"alpha": false,
+"asset": "ThermoCrazy_60c_0003.png",
+"bytes": 3307979,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoCrazy/ThermoCrazy_60c/ThermoCrazy_60c_0003.png",
+"sha": "6b00f7e7e2abc6fb",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoCrazy/ThermoCrazy_60c/ThermoCrazy_60c_0004": {
+"alpha": false,
+"asset": "ThermoCrazy_60c_0004.png",
+"bytes": 3497705,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoCrazy/ThermoCrazy_60c/ThermoCrazy_60c_0004.png",
+"sha": "7464a0126b423aed",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoCrazy/ThermoCrazy_60c/ThermoCrazy_60c_0005": {
+"alpha": false,
+"asset": "ThermoCrazy_60c_0005.png",
+"bytes": 3219310,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoCrazy/ThermoCrazy_60c/ThermoCrazy_60c_0005.png",
+"sha": "215225f61eb74381",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoCrazy/ThermoCrazy_Pobreloco_90c/ThermoCrazy_PobreLoco_90c_0001": {
+"alpha": false,
+"asset": "ThermoCrazy_PobreLoco_90c_0001.png",
+"bytes": 4045913,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoCrazy/ThermoCrazy_Pobreloco_90c/ThermoCrazy_PobreLoco_90c_0001.png",
+"sha": "bb7a05b18e38904d",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoCrazy/ThermoCrazy_Pobreloco_90c/ThermoCrazy_PobreLoco_90c_0002": {
+"alpha": false,
+"asset": "ThermoCrazy_PobreLoco_90c_0002.png",
+"bytes": 4573671,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoCrazy/ThermoCrazy_Pobreloco_90c/ThermoCrazy_PobreLoco_90c_0002.png",
+"sha": "df02b4713acaf535",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoCrazy/ThermoCrazy_Pobreloco_90c/ThermoCrazy_PobreLoco_90c_0003": {
+"alpha": false,
+"asset": "ThermoCrazy_PobreLoco_90c_0003.png",
+"bytes": 5715103,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoCrazy/ThermoCrazy_Pobreloco_90c/ThermoCrazy_PobreLoco_90c_0003.png",
+"sha": "6be53df13225e39c",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoCrazy/ThermoCrazy_Pobreloco_90c/ThermoCrazy_PobreLoco_90c_0004": {
+"alpha": false,
+"asset": "ThermoCrazy_PobreLoco_90c_0004.png",
+"bytes": 5302944,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoCrazy/ThermoCrazy_Pobreloco_90c/ThermoCrazy_PobreLoco_90c_0004.png",
+"sha": "74f90a67074f2a44",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoCrazy/ThermoCrazy_Pobreloco_90c/ThermoCrazy_PobreLoco_90c_0005": {
+"alpha": false,
+"asset": "ThermoCrazy_PobreLoco_90c_0005.png",
+"bytes": 3535657,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoCrazy/ThermoCrazy_Pobreloco_90c/ThermoCrazy_PobreLoco_90c_0005.png",
+"sha": "d73195dfb8037191",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoDry_300g_Abacaxi_Gengibre/ThermoDry_300g_Abacaxi_Gengibre_0001": {
+"alpha": false,
+"asset": "ThermoDry_300g_Abacaxi_Gengibre_0001.png",
+"bytes": 2688058,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoDry_300g_Abacaxi_Gengibre/ThermoDry_300g_Abacaxi_Gengibre_0001.png",
+"sha": "03041ed2927dddfa",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoDry_300g_Abacaxi_Gengibre/ThermoDry_300g_Abacaxi_Gengibre_0002": {
+"alpha": false,
+"asset": "ThermoDry_300g_Abacaxi_Gengibre_0002.png",
+"bytes": 3198677,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoDry_300g_Abacaxi_Gengibre/ThermoDry_300g_Abacaxi_Gengibre_0002.png",
+"sha": "6e68d3d0f0c499c3",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoDry_300g_Abacaxi_Gengibre/ThermoDry_300g_Abacaxi_Gengibre_0003": {
+"alpha": false,
+"asset": "ThermoDry_300g_Abacaxi_Gengibre_0003.png",
+"bytes": 3357454,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoDry_300g_Abacaxi_Gengibre/ThermoDry_300g_Abacaxi_Gengibre_0003.png",
+"sha": "d9666e32102460d1",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoDry_300g_Abacaxi_Gengibre/ThermoDry_300g_Abacaxi_Gengibre_0004": {
+"alpha": false,
+"asset": "ThermoDry_300g_Abacaxi_Gengibre_0004.png",
+"bytes": 3453199,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoDry_300g_Abacaxi_Gengibre/ThermoDry_300g_Abacaxi_Gengibre_0004.png",
+"sha": "ac1c8b05122aaa3e",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/ThermoDry_300g_Abacaxi_Gengibre/ThermoDry_300g_Abacaxi_Gengibre_0005": {
+"alpha": false,
+"asset": "ThermoDry_300g_Abacaxi_Gengibre_0005.png",
+"bytes": 3294923,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/ThermoDry_300g_Abacaxi_Gengibre/ThermoDry_300g_Abacaxi_Gengibre_0005.png",
+"sha": "b7c38f0f19693a9c",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermo_Dry_Amostras_Gratis/ThermoDry_10g_Abacaxi_Gengibre/ThermoDry_10g_Abacaxi_Gengibre_0001": {
+"alpha": false,
+"asset": "ThermoDry_10g_Abacaxi_Gengibre_0001.png",
+"bytes": 1806121,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermo_Dry_Amostras_Gr%C3%A1tis/ThermoDry_10g_Abacaxi_Gengibre/ThermoDry_10g_Abacaxi_Gengibre_0001.png",
+"sha": "036cae3f10fa0980",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermo_Dry_Amostras_Gratis/ThermoDry_10g_Abacaxi_Gengibre/ThermoDry_10g_Abacaxi_Gengibre_0002": {
+"alpha": false,
+"asset": "ThermoDry_10g_Abacaxi_Gengibre_0002.png",
+"bytes": 1919134,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermo_Dry_Amostras_Gr%C3%A1tis/ThermoDry_10g_Abacaxi_Gengibre/ThermoDry_10g_Abacaxi_Gengibre_0002.png",
+"sha": "ae4198bae31aa125",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermo_Dry_Amostras_Gratis/ThermoDry_10g_Abacaxi_Gengibre/ThermoDry_10g_Abacaxi_Gengibre_0003": {
+"alpha": false,
+"asset": "ThermoDry_10g_Abacaxi_Gengibre_0003.png",
+"bytes": 2633401,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermo_Dry_Amostras_Gr%C3%A1tis/ThermoDry_10g_Abacaxi_Gengibre/ThermoDry_10g_Abacaxi_Gengibre_0003.png",
+"sha": "d55159cd82a75f88",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermo_Dry_Amostras_Gratis/ThermoDry_10g_Abacaxi_Gengibre/ThermoDry_10g_Abacaxi_Gengibre_0004": {
+"alpha": false,
+"asset": "ThermoDry_10g_Abacaxi_Gengibre_0004.png",
+"bytes": 3347530,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermo_Dry_Amostras_Gr%C3%A1tis/ThermoDry_10g_Abacaxi_Gengibre/ThermoDry_10g_Abacaxi_Gengibre_0004.png",
+"sha": "5a35a08e1570be10",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermo_Dry_Amostras_Gratis/ThermoDry_10g_Abacaxi_Gengibre/ThermoDry_10g_Abacaxi_Gengibre_0005": {
+"alpha": false,
+"asset": "ThermoDry_10g_Abacaxi_Gengibre_0005.png",
+"bytes": 1848663,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermo_Dry_Amostras_Gr%C3%A1tis/ThermoDry_10g_Abacaxi_Gengibre/ThermoDry_10g_Abacaxi_Gengibre_0005.png",
+"sha": "51ebc7c586ce9c82",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_120c/Thermocaps_120c0001": {
+"alpha": false,
+"asset": "Thermocaps_120c0001.png",
+"bytes": 3694057,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_120c/Thermocaps_120c0001.png",
+"sha": "078379e435e323b0",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_120c/Thermocaps_120c0002": {
+"alpha": false,
+"asset": "Thermocaps_120c0002.png",
+"bytes": 4034882,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_120c/Thermocaps_120c0002.png",
+"sha": "ffa037285b01290a",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_120c/Thermocaps_120c0003": {
+"alpha": false,
+"asset": "Thermocaps_120c0003.png",
+"bytes": 6101496,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_120c/Thermocaps_120c0003.png",
+"sha": "51e943626bf2b56c",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_120c/Thermocaps_120c0004": {
+"alpha": false,
+"asset": "Thermocaps_120c0004.png",
+"bytes": 5800484,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_120c/Thermocaps_120c0004.png",
+"sha": "b2a58f7eea5602ab",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_120c/Thermocaps_120c0005": {
+"alpha": false,
+"asset": "Thermocaps_120c0005.png",
+"bytes": 4215735,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_120c/Thermocaps_120c0005.png",
+"sha": "9057dbfe9d0dc5b2",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_120c_Atualizado/Thermocaps_120c0001": {
+"alpha": false,
+"asset": "Thermocaps__Thermocaps_120c_Atualizado__Thermocaps_120c0001.png",
+"bytes": 2724019,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_120c_Atualizado/Thermocaps_120c0001.png",
+"sha": "ce7319731aebe6a2",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_120c_Atualizado/Thermocaps_120c0002": {
+"alpha": false,
+"asset": "Thermocaps__Thermocaps_120c_Atualizado__Thermocaps_120c0002.png",
+"bytes": 2984486,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_120c_Atualizado/Thermocaps_120c0002.png",
+"sha": "649748fdc18e01b9",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_120c_Atualizado/Thermocaps_120c0003": {
+"alpha": false,
+"asset": "Thermocaps__Thermocaps_120c_Atualizado__Thermocaps_120c0003.png",
+"bytes": 5052579,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_120c_Atualizado/Thermocaps_120c0003.png",
+"sha": "8e48f649f8d6c83b",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_120c_Atualizado/Thermocaps_120c0004": {
+"alpha": false,
+"asset": "Thermocaps__Thermocaps_120c_Atualizado__Thermocaps_120c0004.png",
+"bytes": 5185066,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_120c_Atualizado/Thermocaps_120c0004.png",
+"sha": "78c3a92289bd5052",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_120c_Atualizado/Thermocaps_120c0005": {
+"alpha": false,
+"asset": "Thermocaps__Thermocaps_120c_Atualizado__Thermocaps_120c0005.png",
+"bytes": 3088636,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_120c_Atualizado/Thermocaps_120c0005.png",
+"sha": "617e987b29ebba34",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0001": {
+"alpha": false,
+"asset": "Thermocaps_60c_0001.png",
+"bytes": 3454373,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0001.png",
+"sha": "d08f8db91df3159e",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0002": {
+"alpha": false,
+"asset": "Thermocaps_60c_0002.png",
+"bytes": 4082914,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0002.png",
+"sha": "6afa5a4b378f46dd",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0003": {
+"alpha": false,
+"asset": "Thermocaps_60c_0003.png",
+"bytes": 5063647,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0003.png",
+"sha": "794dc7c567262e76",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0004": {
+"alpha": false,
+"asset": "Thermocaps_60c_0004.png",
+"bytes": 3260932,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0004.png",
+"sha": "d51ebe9a74b137bd",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0005": {
+"alpha": false,
+"asset": "Thermocaps_60c_0005.png",
+"bytes": 3640344,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0005.png",
+"sha": "70f7bcfbb5741bf2",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0006": {
+"alpha": false,
+"asset": "Thermocaps_60c_0006.png",
+"bytes": 6498834,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c/Thermocaps_60c_0006.png",
+"sha": "1a168ce6c69043d3",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0001": {
+"alpha": false,
+"asset": "Thermocaps__Thermocaps_60c_Atualizado__Thermocaps_60c_0001.png",
+"bytes": 2452237,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0001.png",
+"sha": "9b16120ed986712c",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0002": {
+"alpha": false,
+"asset": "Thermocaps__Thermocaps_60c_Atualizado__Thermocaps_60c_0002.png",
+"bytes": 2783637,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0002.png",
+"sha": "8aed996f86b0a2da",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0003": {
+"alpha": false,
+"asset": "Thermocaps__Thermocaps_60c_Atualizado__Thermocaps_60c_0003.png",
+"bytes": 4518578,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0003.png",
+"sha": "ed071b32100eda5a",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0004": {
+"alpha": false,
+"asset": "Thermocaps__Thermocaps_60c_Atualizado__Thermocaps_60c_0004.png",
+"bytes": 2638831,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0004.png",
+"sha": "169a5205f51ca99e",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0005": {
+"alpha": false,
+"asset": "Thermocaps__Thermocaps_60c_Atualizado__Thermocaps_60c_0005.png",
+"bytes": 2387596,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0005.png",
+"sha": "1e83c2ce406960a0",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0006": {
+"alpha": false,
+"asset": "Thermocaps__Thermocaps_60c_Atualizado__Thermocaps_60c_0006.png",
+"bytes": 4983835,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_60c_Atualizado/Thermocaps_60c_0006.png",
+"sha": "caddf6521875a727",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_90c/Thermocaps_90c0001": {
+"alpha": false,
+"asset": "Thermocaps_90c0001.png",
+"bytes": 14021998,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_90c/Thermocaps_90c0001.png",
+"sha": "84122d37cfbd9c2a",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_90c/Thermocaps_90c0002": {
+"alpha": false,
+"asset": "Thermocaps_90c0002.png",
+"bytes": 14021998,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_90c/Thermocaps_90c0002.png",
+"sha": "adf1db27dce65d63",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_90c/Thermocaps_90c0003": {
+"alpha": false,
+"asset": "Thermocaps_90c0003.png",
+"bytes": 14021998,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_90c/Thermocaps_90c0003.png",
+"sha": "b50ebe2ac46aafa7",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_90c/Thermocaps_90c0004": {
+"alpha": false,
+"asset": "Thermocaps_90c0004.png",
+"bytes": 14021998,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_90c/Thermocaps_90c0004.png",
+"sha": "29275eab5b5552a3",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps/Thermocaps_90c/Thermocaps_90c0005": {
+"alpha": false,
+"asset": "Thermocaps_90c0005.png",
+"bytes": 14021998,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps/Thermocaps_90c/Thermocaps_90c0005.png",
+"sha": "285dae0113f30f6f",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps_Amostras_Gratis/Thermocaps_1c/Thermocaps_1c_0001": {
+"alpha": false,
+"asset": "Thermocaps_1c_0001.png",
+"bytes": 1728022,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps_Amostras_Gr%C3%A1tis/Thermocaps_1c/Thermocaps_1c_0001.png",
+"sha": "5bf5179279398f80",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps_Amostras_Gratis/Thermocaps_1c/Thermocaps_1c_0002": {
+"alpha": false,
+"asset": "Thermocaps_1c_0002.png",
+"bytes": 1819958,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps_Amostras_Gr%C3%A1tis/Thermocaps_1c/Thermocaps_1c_0002.png",
+"sha": "8ebfef1c421632c1",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps_Amostras_Gratis/Thermocaps_1c/Thermocaps_1c_0003": {
+"alpha": false,
+"asset": "Thermocaps_1c_0003.png",
+"bytes": 2513139,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps_Amostras_Gr%C3%A1tis/Thermocaps_1c/Thermocaps_1c_0003.png",
+"sha": "719002c2f9668442",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps_Amostras_Gratis/Thermocaps_1c/Thermocaps_1c_0004": {
+"alpha": false,
+"asset": "Thermocaps_1c_0004.png",
+"bytes": 3176286,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps_Amostras_Gr%C3%A1tis/Thermocaps_1c/Thermocaps_1c_0004.png",
+"sha": "5550a24be2beb0ad",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Thermocaps_Amostras_Gratis/Thermocaps_1c/Thermocaps_1c_0005": {
+"alpha": false,
+"asset": "Thermocaps_1c_0005.png",
+"bytes": 1717238,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Thermocaps_Amostras_Gr%C3%A1tis/Thermocaps_1c/Thermocaps_1c_0005.png",
+"sha": "c143a3279d00c407",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0001": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pina_Colada_0001.png",
+"bytes": 2619668,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0001.png",
+"sha": "54b6f52058d06800",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0002": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pina_Colada_0002.png",
+"bytes": 3109956,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0002.png",
+"sha": "2955fa4a82cb0874",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0003": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pina_Colada_0003.png",
+"bytes": 3262577,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0003.png",
+"sha": "8bf59d34ad3f56d3",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0004": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pina_Colada_0004.png",
+"bytes": 3272587,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0004.png",
+"sha": "f7ffaa384ef1c6ba",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0005": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pina_Colada_0005.png",
+"bytes": 3184208,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0005.png",
+"sha": "4df1baf9258a5adc",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0006": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pina_Colada_0006.png",
+"bytes": 4670020,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pina_Colada/Pre_Workout_300g_ZeroCarbo_Pina_Colada_0006.png",
+"sha": "b2bfd8e03ce12b0d",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0001": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0001.png",
+"bytes": 2620469,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0001.png",
+"sha": "6daee7ef15b915a6",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0002": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0002.png",
+"bytes": 3112045,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0002.png",
+"sha": "8aaf80c8612b54cd",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0003": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0003.png",
+"bytes": 3121947,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0003.png",
+"sha": "44fd42983071f69c",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0004": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0004.png",
+"bytes": 3308977,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0004.png",
+"sha": "4a6f72b00b7dbe90",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0005": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0005.png",
+"bytes": 3185735,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0005.png",
+"sha": "2ccac6fa894680c8",
+"tag": "originais-diaboverde",
+"w": 2160
+},
+"DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0006": {
+"alpha": false,
+"asset": "Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0006.png",
+"bytes": 4772518,
+"h": 2160,
+"origem": "http://ftw.emmeprodutora.com.br/DiaboVerde/Zero_Carbo/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade/Pre_Workout_300g_ZeroCarbo_Pink_Lemonade_0006.png",
+"sha": "8f35a686f00de64c",
 "tag": "originais-diaboverde",
 "w": 2160
 },
