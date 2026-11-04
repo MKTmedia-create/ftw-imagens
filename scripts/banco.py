@@ -313,8 +313,8 @@ def gerar_catalogo():
         c = produtos.get(g['p'])
         if not c:
             continue
-        dados = dict(pa=c['pa'], ean=c['ean'], ds=c['descricao'], ct=c['categoria'], cx=c['caixa_embarque'],
-                     ncm=c['ncm'], tb=c['na_tabela_jul2026'], st=c['status'])
+        dados = dict(pa=c['pa'], ean=c['ean'], dun=c.get('dun'), ds=c['descricao'], ct=c['categoria'], cx=c['caixa_embarque'],
+                     qc=c.get('qtd_por_caixa'), ncm=c['ncm'], tb=c['na_tabela_jul2026'], st=c['status'])
         g.update({k: v for k, v in dados.items() if v})
 
     def ordem(t):
@@ -343,11 +343,11 @@ def gerar_catalogo():
     # planilha de-para para o time de e-commerce
     with open(DADOS / 'links_novos.csv', 'w', newline='', encoding='utf-8-sig') as f:
         w = csv.writer(f, delimiter=';')
-        w.writerow(['marca', 'produto', 'pa', 'ean', 'descricao', 'versao', 'arquivo', 'link_site', 'link_original', 'miniatura', 'link_antigo'])
+        w.writerow(['marca', 'produto', 'pa', 'ean', 'dun', 'qtd_por_caixa', 'descricao', 'versao', 'arquivo', 'link_site', 'link_original', 'miniatura', 'link_antigo'])
         for g in lista:
             for it in g['i']:
                 chave = f"{g['p']}/{it['a'].rsplit('.', 1)[0]}"
-                w.writerow([ROTULO_MARCA[g['m']], g['n'], g.get('pa', ''), g.get('ean', ''), g.get('ds', ''), g['v'], it['a'], f"{BASE_SITE}/produtos/{g['p']}/{it['a']}",
+                w.writerow([ROTULO_MARCA[g['m']], g['n'], g.get('pa', ''), g.get('ean', ''), g.get('dun', ''), g.get('qc', ''), g.get('ds', ''), g['v'], it['a'], f"{BASE_SITE}/produtos/{g['p']}/{it['a']}",
                             it.get('o', ''), f"{BASE_SITE}/miniaturas/{chave}.webp", meta.get(chave, {}).get('origem', '')])
     shutil.copy(DADOS / 'links_novos.csv', ARQ_CATALOGO.parent / 'links_novos.csv')
     return cat

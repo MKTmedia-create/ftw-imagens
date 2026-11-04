@@ -58,12 +58,6 @@ svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.4;stro
 .lateral{position:sticky;top:76px}
 .lateral .nucleo{display:flex;flex-direction:column;max-height:calc(100dvh - 96px);border-radius:calc(var(--r-m) - var(--bezel));background:var(--core);box-shadow:inset 0 1px 1px rgba(255,255,255,.9)}
 .lateral.bezel{border-radius:var(--r-m)}
-.chaves{padding:12px 14px;border-bottom:1px solid var(--anel);display:grid;gap:2px}
-.chave{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:40px;font-size:14px;cursor:pointer}
-.chave input{appearance:none;-webkit-appearance:none;position:relative;flex:none;width:38px;height:22px;margin:0;border-radius:999px;background:#CDD1D7;cursor:pointer;transition:background .4s var(--mola)}
-.chave input::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(16,17,20,.35);transition:transform .45s var(--mola)}
-.chave input:checked{background:var(--tinta)}
-.chave input:checked::after{transform:translateX(16px)}
 .linhas{overflow:auto;padding:8px;scrollbar-width:thin}
 .linhas h2{margin:14px 10px 4px;font-size:21px;line-height:1.1;font-weight:800;font-stretch:66%}
 .linhas h2:first-child{margin-top:6px}
@@ -167,8 +161,6 @@ dialog.sai::backdrop{opacity:0;transition:opacity .26s}
   .topo{padding:78px 16px 0}
   .busca{padding:10px 18px;gap:12px}
   .moveis{display:block;margin-bottom:18px}
-  .moveis .chaves{grid-template-columns:1fr 1fr;gap:6px 14px;padding:4px 14px;border:0;border-radius:18px;background:var(--core);box-shadow:0 0 0 1px var(--anel)}
-  .moveis .chave{font-size:13px;min-height:46px;gap:8px}
   .marcas button,.planilha{height:44px}
   .seletor{display:block}
   .folha{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
@@ -220,10 +212,6 @@ dialog.sai::backdrop{opacity:0;transition:opacity .26s}
 <main class="corpo">
   <aside class="lateral bezel" aria-label="Filtros">
     <div class="nucleo">
-      <div class="chaves">
-        <label class="chave">Só tabela Jul/2026<input type="checkbox" class="f-tabela"></label>
-        <label class="chave">Embalagens antigas<input type="checkbox" class="f-antigas"></label>
-      </div>
       <nav class="linhas" id="linhas" aria-label="Linhas de produto"></nav>
     </div>
   </aside>
@@ -231,10 +219,6 @@ dialog.sai::backdrop{opacity:0;transition:opacity .26s}
     <div class="moveis">
       <label class="sr" for="seletor">Linha de produto</label>
       <select class="seletor" id="seletor"></select>
-      <div class="chaves">
-        <label class="chave">Só tabela Jul/2026<input type="checkbox" class="f-tabela"></label>
-        <label class="chave">Embalagens antigas<input type="checkbox" class="f-antigas"></label>
-      </div>
     </div>
     <div id="resultado"></div>
   </div>
@@ -254,7 +238,7 @@ const site = (g, it) => `produtos/${g.p}/${it.a}`;
 const mini = (g, it) => `miniaturas/${g.p}/${it.a.replace(/\.[^.]+$/, '')}.webp`;
 const abs = rel => new URL(rel, location.href).href;
 const plural = n => n === 1 ? 'imagem' : 'imagens';
-let CAT, est = {q:'', marca:'', linha:'', antigas:false, tabela:false}, animar = true;
+let CAT, est = {q:'', marca:'', linha:''}, animar = true;
 
 function aviso(t){const el=$('#toast');el.textContent=t;el.classList.add('on');clearTimeout(aviso.t);aviso.t=setTimeout(()=>el.classList.remove('on'),2400)}
 
@@ -267,7 +251,7 @@ async function carregar(){
     $('#resultado').innerHTML = '<div class="vazio"><b>O catálogo não carregou.</b>Recarregue a página. Se continuar, avise o time de Criação.</div>';
     return;
   }
-  CAT.grupos.forEach(g => g.busca = sem([g.n, g.l, CAT.rotulos[g.m], g.p.replace(/[_/-]/g,' '), g.v, g.pa, g.ean, g.ds].join(' ')));
+  CAT.grupos.forEach(g => g.busca = sem([g.n, g.l, CAT.rotulos[g.m], g.p.replace(/[_/-]/g,' '), g.v, g.pa, g.ean, g.dun, g.ds].join(' ')));
   const d = new Date(CAT.gerado);
   $('#atualizado').textContent = `${fmtN(CAT.grupos.length)} produtos e variações. Atualizado em ${d.toLocaleDateString('pt-BR')}, às ${d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}.`;
   render();
@@ -276,7 +260,7 @@ async function carregar(){
 
 const visiveis = () => {
   const toks = sem(est.q).split(/\s+/).filter(Boolean);
-  return CAT.grupos.filter(g => (est.antigas || g.v !== 'antigo') && (!est.tabela || g.tb === 'sim') && toks.every(t => g.busca.includes(t)));
+  return CAT.grupos.filter(g => g.v !== 'antigo' && toks.every(t => g.busca.includes(t)));
 };
 
 function render(){
@@ -404,8 +388,8 @@ function desenharPainel(){
   if(velho) avisos.push('Embalagem antiga. Não use em materiais novos nem no site sem confirmar com a Criação.');
   if(conferir) avisos.push('EAN em conferência: as fontes internas divergem. Confirme antes de cadastrar.');
   if(g.tb === 'nao') avisos.push('Este produto não está na tabela de Jul/2026. Confirme se segue em linha.');
-  const ficha = linhaFicha('EAN', ean, {cod:!!g.ean, copiar:!!g.ean}) + linhaFicha('PA', g.pa, {cod:true, copiar:true})
-    + linhaFicha('Descrição na tabela', g.ds, {larga:true}) + linhaFicha('Categoria', g.ct) + linhaFicha('Caixa de embarque', g.cx) + linhaFicha('NCM', g.ncm, {cod:true});
+  const ficha = linhaFicha('EAN', ean, {cod:!!g.ean, copiar:!!g.ean}) + linhaFicha('PA', g.pa, {cod:true, copiar:true}) + linhaFicha('DUN-14', g.dun, {cod:true, copiar:true}) + linhaFicha('Unidades por caixa', g.qc)
+    + linhaFicha('Descrição na tabela', g.ds, {larga:true}) + linhaFicha('Categoria', g.ct) + linhaFicha('Caixa de embarque', g.cx, {larga:true}) + linhaFicha('NCM', g.ncm, {cod:true});
   P.innerHTML = `
   <div class="pn-topo">
     <div><span class="selo-marca">${esc(CAT.rotulos[g.m])}</span><h2 id="pn-tit">${esc(g.n)}</h2></div>
@@ -486,13 +470,11 @@ function abrirDoHash(){
 /* eventos */
 let tBusca;
 $('#q').addEventListener('input', e => { clearTimeout(tBusca); tBusca = setTimeout(()=>{ est.q = e.target.value; render(); }, 90); });
-const sincroniza = (sel, chave) => $$(sel).forEach(el => el.addEventListener('change', e => { est[chave] = e.target.checked; $$(sel).forEach(o=>o.checked=e.target.checked); render(); }));
-sincroniza('.f-antigas','antigas'); sincroniza('.f-tabela','tabela');
 $('#marcas').addEventListener('click', e => { const b=e.target.closest('button'); if(!b)return; est.marca=b.dataset.m; est.linha=''; animar=true; render(); });
 $('#linhas').addEventListener('click', e => { const b=e.target.closest('button'); if(!b)return; if(b.dataset.mm) est.marca=b.dataset.mm; est.linha=b.dataset.l; animar=true; render(); scrollTo({top:$('.corpo').offsetTop-70}); });
 $('#seletor').addEventListener('change', e => { const v=e.target.value; if(v){const [m,l]=v.split('|'); est.marca=m; est.linha=l;} else est.linha=''; render(); });
 $('#resultado').addEventListener('click', e => {
-  if(e.target.closest('#limpar')){ est={q:'',marca:'',linha:'',antigas:false,tabela:false}; $('#q').value=''; $$('.f-antigas,.f-tabela').forEach(o=>o.checked=false); render(); return; }
+  if(e.target.closest('#limpar')){ est={q:'',marca:'',linha:''}; $('#q').value=''; render(); return; }
   const c=e.target.closest('.card'); if(c) abrir(c.dataset.p);
 });
 document.addEventListener('keydown', e => {
