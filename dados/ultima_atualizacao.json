@@ -1,4 +1,9 @@
 {
  "processadas": [],
- "erros": {}
+ "erros": {},
+ "nomes": {
+  "renomeados": 2077,
+  "pendentes": 0,
+  "falhas": {}
+ }
 }
