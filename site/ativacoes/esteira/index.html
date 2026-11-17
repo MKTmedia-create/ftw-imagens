@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Desafio Esteira — TV</title>
+<title>We do Hard Things — TV</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Archivo+Narrow:wght@400..700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -183,15 +183,15 @@
       <span class="x">×</span>
       <div class="logo has" id="logo2" title="Clique para trocar o logo do evento"><img src="trail-logo.png" alt="Dunamis Farm Trail Run 26"></div>
     </div>
-    <div class="ev"><span id="tTitle">Desafio Esteira</span><small id="tSub">1 km no menor tempo</small></div>
+    <div class="ev"><span id="tTitle">We do Hard Things. For the win.</span><small id="tSub">1 km no menor tempo</small></div>
     <div class="status"><span class="sq" id="netDot"></span><span id="netTxt">Conectando</span></div>
   </header>
 
   <main class="stage">
     <section class="lane">
-      <div class="hud tl"><i></i><span id="hudEv">Desafio Esteira</span></div>
+      <div class="hud tl"><i></i><span>Desafio na esteira</span></div>
       <div class="hud tr"><i></i><span id="hudDist">Distância 1 km</span><span id="hudCount">000 cadastrados</span></div>
-      <div class="hud br"><span>We do hard things</span><i></i></div>
+      <div class="hud br"><span>FTW Suplementos<br>× Dunamis</span><i></i></div>
 
       <div class="now">
         <div class="headline"><span class="tag" id="lblNow">Na esteira</span><div class="bib" id="curBib"></div></div>
@@ -288,7 +288,7 @@
 
 <div class="modal" id="totemModal">
   <div class="totem">
-    <h2 id="tmTitle">Desafio Esteira</h2>
+    <h2 id="tmTitle">We do Hard Things. For the win.</h2>
     <p>Aponte a câmera, cadastre seu nome<br>e entre na fila do desafio.</p>
     <div class="qrb" id="qrBig"></div>
     <small id="tmLink"></small>
@@ -305,11 +305,12 @@
 
   const rnd = n => Array.from(crypto.getRandomValues(new Uint8Array(n))).map(b => 'abcdefghjkmnpqrstuvwxyz23456789'[b % 31]).join('');
   const blank = () => ({
-    cfg:{ title:'Desafio Esteira', sub:'1 km no menor tempo', dist:'1 km', topic:'ftw-esteira-' + rnd(10), logo:'', logo2:'' },
+    cfg:{ title:'We do Hard Things. For the win.', sub:'1 km no menor tempo', dist:'1 km', topic:'ftw-esteira-' + rnd(10), logo:'', logo2:'' },
     queue:[], current:null, results:[], seen:[], lastId:null, seq:0, people:[], drawn:[]
   });
   let S;
   try { S = JSON.parse(localStorage.getItem(LS)) || blank(); } catch(e){ S = blank(); }
+  if (!S.cfg.title || S.cfg.title==='Desafio Esteira') S.cfg.title = 'We do Hard Things. For the win.';
   S.seq = S.seq || 0; S.cfg.logo2 = S.cfg.logo2 || ''; S.people = S.people || []; S.drawn = S.drawn || [];
   const save = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){} };
   save();
@@ -366,7 +367,7 @@
 
   function renderHead(){
     $('tTitle').textContent = S.cfg.title; $('tSub').textContent = S.cfg.sub;
-    $('hudEv').textContent = S.cfg.title; $('hudDist').textContent = 'Distância ' + S.cfg.dist;
+    $('hudDist').textContent = 'Distância ' + S.cfg.dist;
     $('tmTitle').textContent = S.cfg.title;
     [['logo1','logo','Logo marca'],['logo2','logo2','Logo evento']].forEach(([id,k,ph]) => {
       const el = $(id);
@@ -404,7 +405,7 @@
   function renderQueue(){
     const q = $('queue'); q.innerHTML = '';
     const items = S.queue.length ? S.queue.slice(0,12).map((p,i) => [String(i+1).padStart(2,'0'), p.nome])
-                                 : [['', 'Fila livre · escaneie o QR e encare o desafio']];
+                                 : [['', 'Escaneie o QR e entre na fila'], ['', 'Ganhe seu número da sorte']];
     const make = () => items.forEach(([n,nm]) => {
       const s = document.createElement('span');
       if (n){ const b=document.createElement('b'); b.textContent=n; s.appendChild(b); }
@@ -561,7 +562,7 @@
   $('gear').onclick = openCfg;
   $('bClose').onclick = () => closeM('cfgModal');
   $('bSave').onclick = () => {
-    S.cfg.title = $('fTitle').value.trim() || 'Desafio Esteira';
+    S.cfg.title = $('fTitle').value.trim() || 'We do Hard Things. For the win.';
     S.cfg.sub = $('fSub').value.trim();
     S.cfg.dist = $('fDist').value.trim() || '1 km';
     const nt = $('fTopic').value.trim().replace(/[^a-zA-Z0-9_-]/g,'');
