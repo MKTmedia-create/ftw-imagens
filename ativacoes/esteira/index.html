@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desafio Esteira — FTW Suplementos (TV)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+<script src="qr.js"></script>
+<style>
+  :root{
+    --bg:#0a0a0a; --panel:#141414; --line:#262626; --txt:#f5f5f5; --mut:#8a8a8a;
+    --red:#e30613; --red2:#ff2a36; --gold:#f5c542; --silver:#cfd3d8; --bronze:#d08a4c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;overflow:hidden}
+  .stage{display:grid;grid-template-columns:58fr 42fr;height:100vh;width:100vw}
+  /* ESQUERDA */
+  .left{display:flex;flex-direction:column;padding:2.6vw 3vw;position:relative;
+    background:radial-gradient(ellipse at 30% 60%, rgba(227,6,19,.18), transparent 60%)}
+  .top{display:flex;align-items:center;justify-content:space-between;gap:2vw;min-height:7vw}
+  .logo{height:6vw;min-width:14vw;max-width:24vw;border:2px dashed #333;border-radius:.6vw;display:flex;align-items:center;justify-content:center;color:#555;font-size:.9vw;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;overflow:hidden}
+  .logo.has{border:none}
+  .logo img{max-height:100%;max-width:100%;object-fit:contain}
+  .title{text-align:right}
+  .title h1{font-family:Anton,sans-serif;font-weight:400;font-size:3.2vw;line-height:1;letter-spacing:.02em;text-transform:uppercase}
+  .title p{color:var(--red2);font-weight:800;font-size:1.2vw;letter-spacing:.25em;text-transform:uppercase;margin-top:.4vw}
+  .center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .label{font-size:1.1vw;letter-spacing:.4em;color:var(--mut);text-transform:uppercase;font-weight:600}
+  .name{font-family:Anton,sans-serif;font-size:6.2vw;line-height:1.05;text-transform:uppercase;margin:.6vw 0 .2vw;max-width:52vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .name.empty{color:#3a3a3a}
+  .ig{color:var(--mut);font-size:1.3vw;height:1.8vw}
+  .timer{font-family:"JetBrains Mono",monospace;font-size:8.5vw;line-height:1;margin:1.6vw 0 2vw;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .timer.running{color:var(--red2);text-shadow:0 0 3vw rgba(255,42,54,.45)}
+  .timer.done{color:var(--gold)}
+  .btn-main{width:9vw;height:9vw;border-radius:50%;border:none;background:var(--red);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 .6vw rgba(227,6,19,.2),0 1vw 3vw rgba(227,6,19,.35);transition:transform .12s, background .2s}
+  .btn-main:hover{transform:scale(1.04)}
+  .btn-main:active{transform:scale(.97)}
+  .btn-main svg{width:3.4vw;height:3.4vw;fill:#fff}
+  .btn-main.next{width:auto;height:auto;border-radius:99vw;padding:1.3vw 3vw;font-family:Anton,sans-serif;font-size:2vw;letter-spacing:.05em}
+  .btn-main:disabled{background:#2a2a2a;box-shadow:none;cursor:default;color:#666}
+  .hint{margin-top:1vw;color:#555;font-size:.85vw;letter-spacing:.15em;text-transform:uppercase;min-height:1.2vw}
+  .result{font-family:Anton,sans-serif;font-size:2.4vw;color:var(--gold);min-height:3vw;letter-spacing:.03em;text-transform:uppercase}
+  .queue{display:flex;align-items:center;gap:.8vw;min-height:3.4vw;overflow:hidden}
+  .queue .ql{font-size:.9vw;letter-spacing:.3em;color:var(--mut);font-weight:600;white-space:nowrap}
+  .chip{background:var(--panel);border:1px solid var(--line);border-radius:99vw;padding:.55vw 1.1vw;font-size:1.05vw;font-weight:600;white-space:nowrap;display:flex;gap:.5vw;align-items:center}
+  .chip b{color:var(--red2)}
+  .chip.more{color:var(--mut)}
+  .countdown{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font-family:Anton,sans-serif;font-size:22vw;color:var(--red2);background:rgba(10,10,10,.82);z-index:5}
+  .countdown.on{display:flex}
+  /* DIREITA */
+  .right{background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;padding:2.6vw 2.4vw 2vw}
+  .rk-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.2vw}
+  .rk-head h2{font-family:Anton,sans-serif;font-weight:400;font-size:2.6vw;letter-spacing:.03em}
+  .rk-head span{color:var(--mut);font-size:1vw;font-weight:600}
+  .rk{flex:1;display:flex;flex-direction:column;gap:.45vw;overflow:hidden}
+  .row{display:grid;grid-template-columns:3.2vw 1fr auto;align-items:center;gap:1vw;padding:.7vw 1vw;border-radius:.5vw;background:#1b1b1b;font-size:1.35vw;transition:background .4s}
+  .row .pos{font-family:Anton,sans-serif;font-size:1.7vw;text-align:center;color:var(--mut)}
+  .row .nm{font-weight:800;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row .tm{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums}
+  .row.p1 .pos{color:var(--gold)} .row.p2 .pos{color:var(--silver)} .row.p3 .pos{color:var(--bronze)}
+  .row.p1{background:linear-gradient(90deg,rgba(245,197,66,.16),#1b1b1b 60%)}
+  .row.hl{background:var(--red)!important;animation:pulse 1.2s ease 3}
+  .row.hl .pos,.row.hl .nm{color:#fff}
+  .row.sep{background:none;justify-content:center;display:flex;color:#444;padding:.1vw;font-size:1vw}
+  @keyframes pulse{50%{transform:scale(1.025)}}
+  .rk-empty{color:#444;font-size:1.2vw;text-align:center;margin-top:6vw;line-height:1.6}
+  .cta{display:flex;align-items:center;gap:1.4vw;margin-top:1.4vw;padding-top:1.4vw;border-top:1px solid var(--line)}
+  .qr{background:#fff;padding:.5vw;border-radius:.4vw;width:7.4vw;height:7.4vw;flex:none}
+  .qr svg{width:100%;height:100%;display:block}
+  .cta h3{font-family:Anton,sans-serif;font-weight:400;font-size:1.9vw;line-height:1.05}
+  .cta p{color:var(--mut);font-size:.95vw;margin-top:.3vw}
+  .net{position:fixed;top:.6vw;left:50%;transform:translateX(-50%);font-size:.75vw;color:#555;letter-spacing:.1em;display:flex;gap:.4vw;align-items:center;z-index:3}
+  .dot{width:.5vw;height:.5vw;border-radius:50%;background:#555}
+  .dot.ok{background:#2ecc71} .dot.err{background:var(--red2)}
+  /* CONTROLES */
+  .gear{position:fixed;bottom:1vw;left:1vw;width:2.6vw;height:2.6vw;border-radius:50%;background:#1a1a1a;border:1px solid #2a2a2a;color:#777;cursor:pointer;opacity:.25;transition:opacity .2s;z-index:6;font-size:1.3vw}
+  .gear:hover{opacity:1}
+  .ops{position:fixed;bottom:1vw;left:4.4vw;display:flex;gap:.5vw;opacity:0;transition:opacity .2s;z-index:6}
+  body:hover .ops{opacity:1}
+  .ops button{background:#1a1a1a;border:1px solid #2a2a2a;color:#aaa;padding:.45vw .9vw;border-radius:.4vw;font-size:.8vw;cursor:pointer;font-family:inherit}
+  .ops button:hover{color:#fff;border-color:#555}
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:10}
+  .modal.on{display:flex}
+  .card{background:#151515;border:1px solid #2a2a2a;border-radius:14px;padding:28px;width:min(720px,92vw);max-height:90vh;overflow:auto;font-size:15px}
+  .card h3{font-family:Anton,sans-serif;font-weight:400;font-size:26px;margin-bottom:16px;letter-spacing:.02em}
+  .card label{display:block;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:.1em;margin:14px 0 6px}
+  .card input,.card textarea{width:100%;background:#0d0d0d;border:1px solid #333;color:#fff;border-radius:8px;padding:10px 12px;font-size:15px;font-family:inherit}
+  .card .rowf{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .card button{background:#262626;border:1px solid #3a3a3a;color:#eee;border-radius:8px;padding:10px 14px;cursor:pointer;font-family:inherit;font-size:14px}
+  .card button.pri{background:var(--red);border-color:var(--red);color:#fff;font-weight:700}
+  .card button.dang{color:#ff6b73;border-color:#5a1f23}
+  .card .small{font-size:12px;color:#777;margin-top:6px;line-height:1.5}
+  .card code{background:#0d0d0d;padding:2px 6px;border-radius:4px;font-size:12px;word-break:break-all}
+  .list{margin-top:8px;border:1px solid #2a2a2a;border-radius:8px;max-height:220px;overflow:auto}
+  .list div{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1px solid #222;font-size:14px}
+  .list div button{padding:4px 10px;font-size:12px}
+  .totem{background:#fff;color:#000;text-align:center;border-radius:14px;padding:40px;width:min(560px,92vw)}
+  .totem h2{font-family:Anton,sans-serif;font-weight:400;font-size:44px;line-height:1}
+  .totem p{font-size:18px;margin:10px 0 24px}
+  .totem #qrBig{display:inline-block;padding:10px;background:#fff;width:360px;height:360px}.totem #qrBig svg{width:100%;height:100%}
+  .totem small{display:block;margin-top:16px;color:#555;font-size:12px;word-break:break-all}
+</style>
+</head>
+<body>
+<div class="net"><span class="dot" id="netDot"></span><span id="netTxt">conectando…</span></div>
+
+<div class="stage">
+  <section class="left">
+    <div class="top">
+      <div class="logo" id="logoBox" title="Clique para inserir o logo">ESPAÇO PARA LOGO</div>
+      <div class="title"><h1 id="tTitle">Desafio Esteira</h1><p id="tSub">1 km no menor tempo</p></div>
+    </div>
+
+    <div class="center">
+      <div class="label" id="lblNow">Na esteira</div>
+      <div class="name empty" id="curName">Aguardando participante</div>
+      <div class="ig" id="curIg"></div>
+      <div class="timer" id="timer">00:00.00</div>
+      <button class="btn-main next" id="mainBtn">CHAMAR PRÓXIMO</button>
+      <div class="hint" id="hint">Espaço = ação principal · Esc = cancelar tentativa</div>
+      <div class="result" id="result"></div>
+    </div>
+
+    <div class="queue" id="queue"></div>
+    <div class="countdown" id="cd">3</div>
+  </section>
+
+  <aside class="right">
+    <div class="rk-head"><h2>RANKING</h2><span id="rkCount">0 participantes</span></div>
+    <div class="rk" id="rk"></div>
+    <div class="cta">
+      <div class="qr" id="qrSmall"></div>
+      <div><h3>ESCANEIE E<br>ENTRE NA FILA</h3><p id="ctaTxt">Cadastre seu nome pelo celular</p></div>
+    </div>
+  </aside>
+</div>
+
+<button class="gear" id="gear" title="Configurações">⚙</button>
+<div class="ops">
+  <button id="opSkip">Pular participante</button>
+  <button id="opCancel">Cancelar tentativa</button>
+  <button id="opFull">Tela cheia (F)</button>
+  <button id="opTotem">QR do totem</button>
+</div>
+
+<!-- CONFIG -->
+<div class="modal" id="cfgModal">
+  <div class="card">
+    <h3>CONFIGURAÇÕES DA ATIVAÇÃO</h3>
+    <label>Título na TV</label><input id="fTitle" maxlength="40">
+    <label>Subtítulo (distância / regra)</label><input id="fSub" maxlength="50">
+    <label>Distância (exibida no cadastro)</label><input id="fDist" maxlength="20">
+    <label>Logo</label>
+    <div class="rowf" style="margin-top:0"><button id="bLogo">Escolher imagem…</button><button id="bLogoRm" class="dang">Remover logo</button></div>
+    <input type="file" id="fileLogo" accept="image/*" style="display:none">
+
+    <label>Adicionar participante manualmente</label>
+    <div class="rowf" style="margin-top:0"><input id="fManual" placeholder="Nome" maxlength="28" style="flex:1"><button id="bManual" class="pri">Adicionar à fila</button></div>
+
+    <label>Fila atual</label><div class="list" id="qList"></div>
+    <label>Resultados</label><div class="list" id="rList"></div>
+
+    <label>Código do evento (canal)</label>
+    <input id="fTopic">
+    <div class="small">Os cadastros chegam por este canal. Mude só se quiser começar uma ativação nova do zero. Link do cadastro: <code id="linkCad"></code></div>
+
+    <div class="rowf">
+      <button class="pri" id="bSave">Salvar</button>
+      <button id="bCsv">Exportar resultados (CSV)</button>
+      <button id="bClose">Fechar</button>
+      <button class="dang" id="bReset">Zerar ranking e fila</button>
+    </div>
+  </div>
+</div>
+
+<!-- QR TOTEM -->
+<div class="modal" id="totemModal">
+  <div class="totem">
+    <h2 id="tmTitle">DESAFIO ESTEIRA</h2>
+    <p>Aponte a câmera, cadastre seu nome<br>e entre na fila do desafio.</p>
+    <div id="qrBig"></div>
+    <small id="tmLink"></small>
+    <div style="margin-top:18px"><button onclick="closeM('totemModal')" style="padding:10px 18px;border-radius:8px;border:1px solid #ccc;background:#f2f2f2;cursor:pointer">Fechar</button></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const LS = 'ftwEsteira.v1';
+  const NTFY = 'https://ntfy.sh';
+
+  // ---------- estado ----------
+  const rnd = n => Array.from(crypto.getRandomValues(new Uint8Array(n))).map(b => 'abcdefghjkmnpqrstuvwxyz23456789'[b % 31]).join('');
+  const blank = () => ({
+    cfg:{ title:'Desafio Esteira', sub:'1 km no menor tempo', dist:'1 km', topic:'ftw-esteira-' + rnd(10), logo:'' },
+    queue:[], current:null, results:[], seen:[], lastId:null
+  });
+  let S;
+  try { S = JSON.parse(localStorage.getItem(LS)) || blank(); } catch(e){ S = blank(); }
+  const save = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){} };
+  save();
+
+  let run = { state:'idle', t0:0, ms:0 }; // idle | countdown | running | done
+  let raf = null, lastFinishedId = null, lastP = null;
+
+  // ---------- util ----------
+  const fmt = ms => {
+    const m = Math.floor(ms/60000), s = Math.floor(ms/1000)%60, c = Math.floor(ms/10)%100;
+    return String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0') + '.' + String(c).padStart(2,'0');
+  };
+  const clean = s => String(s||'').replace(/\s+/g,' ').trim().slice(0,28);
+  const cadUrl = () => {
+    const base = new URL('cadastro.html', location.href);
+    base.search = '?e=' + encodeURIComponent(S.cfg.topic) + '&d=' + encodeURIComponent(S.cfg.dist);
+    return base.toString();
+  };
+  const ranked = () => [...S.results].sort((a,b) => a.ms - b.ms);
+
+  // ---------- render ----------
+  const ICON_PLAY = '<svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg>';
+  const ICON_STOP = '<svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>';
+
+  function renderHead(){
+    $('tTitle').textContent = S.cfg.title;
+    $('tSub').textContent = S.cfg.sub;
+    $('tmTitle').textContent = S.cfg.title.toUpperCase();
+    const lb = $('logoBox');
+    if (S.cfg.logo){ lb.className='logo has'; lb.innerHTML=''; const i=new Image(); i.src=S.cfg.logo; lb.appendChild(i); }
+    else { lb.className='logo'; lb.textContent='ESPAÇO PARA LOGO'; }
+  }
+
+  function renderNow(){
+    const c = S.current || (run.state==='done' ? lastP : null), btn = $('mainBtn'), t = $('timer');
+    $('curName').textContent = c ? c.nome : 'Aguardando participante';
+    $('curName').className = 'name' + (c ? '' : ' empty');
+    $('curIg').textContent = c && c.ig ? '@' + c.ig : '';
+    t.className = 'timer' + (run.state==='running' ? ' running' : run.state==='done' ? ' done' : '');
+    if (run.state !== 'running') t.textContent = fmt(run.ms);
+    btn.disabled = false;
+    if (!S.current || run.state === 'done'){
+      btn.className = 'btn-main next'; btn.textContent = S.queue.length ? 'CHAMAR PRÓXIMO' : 'FILA VAZIA';
+      btn.disabled = !S.queue.length;
+      $('lblNow').textContent = run.state==='done' ? 'Tempo final' : 'Na esteira';
+    } else if (run.state === 'running'){
+      btn.className = 'btn-main'; btn.innerHTML = ICON_STOP; $('lblNow').textContent = 'Correndo';
+    } else if (run.state === 'countdown'){
+      btn.className = 'btn-main'; btn.innerHTML = ICON_STOP; btn.disabled = true;
+    } else {
+      btn.className = 'btn-main'; btn.innerHTML = ICON_PLAY; $('lblNow').textContent = 'Na esteira';
+    }
+  }
+
+  function renderQueue(){
+    const q = $('queue'); q.innerHTML = '';
+    const l = document.createElement('span'); l.className='ql'; l.textContent='PRÓXIMOS'; q.appendChild(l);
+    if (!S.queue.length){ const e=document.createElement('span'); e.className='chip more'; e.textContent='ninguém na fila — escaneie o QR'; q.appendChild(e); return; }
+    S.queue.slice(0,5).forEach((p,i) => {
+      const ch = document.createElement('span'); ch.className='chip';
+      const b = document.createElement('b'); b.textContent = (i+1) + 'º';
+      ch.appendChild(b); ch.appendChild(document.createTextNode(p.nome)); q.appendChild(ch);
+    });
+    if (S.queue.length > 5){ const m=document.createElement('span'); m.className='chip more'; m.textContent='+'+(S.queue.length-5); q.appendChild(m); }
+  }
+
+  function renderRank(){
+    const r = ranked(), box = $('rk'); box.innerHTML = '';
+    $('rkCount').textContent = r.length + (r.length===1 ? ' participante' : ' participantes');
+    if (!r.length){ box.innerHTML = '<div class="rk-empty">Ninguém correu ainda.<br>Seja o primeiro a marcar tempo.</div>'; return; }
+    const TOP = 10;
+    const mk = (p, i) => {
+      const d = document.createElement('div');
+      d.className = 'row' + (i<3 ? ' p'+(i+1) : '') + (p.id===lastFinishedId ? ' hl' : '');
+      const a=document.createElement('span'); a.className='pos'; a.textContent=(i+1);
+      const n=document.createElement('span'); n.className='nm'; n.textContent=p.nome;
+      const t=document.createElement('span'); t.className='tm'; t.textContent=fmt(p.ms);
+      d.append(a,n,t); return d;
+    };
+    r.slice(0,TOP).forEach((p,i) => box.appendChild(mk(p,i)));
+    const idx = r.findIndex(p => p.id===lastFinishedId);
+    if (idx >= TOP){ const s=document.createElement('div'); s.className='row sep'; s.textContent='• • •'; box.appendChild(s); box.appendChild(mk(r[idx], idx)); }
+  }
+
+  function qrSvg(text){
+    if (!window.qrcode) return '';
+    const q = qrcode(0, 'M'); q.addData(text); q.make();
+    return q.createSvgTag({ cellSize:8, margin:0, scalable:true });
+  }
+  function renderQR(){
+    const url = cadUrl(), svg = qrSvg(url);
+    $('qrSmall').innerHTML = svg; $('qrBig').innerHTML = svg;
+    $('tmLink').textContent = url; $('linkCad').textContent = url;
+    $('ctaTxt').textContent = 'Cadastre seu nome pelo celular · ' + S.cfg.dist;
+  }
+
+  function renderAll(){ renderHead(); renderNow(); renderQueue(); renderRank(); }
+
+  // ---------- fluxo ----------
+  function callNext(){
+    if (!S.queue.length) return;
+    S.current = S.queue.shift(); run = { state:'idle', t0:0, ms:0 };
+    $('result').textContent=''; lastFinishedId=null; save(); renderAll();
+  }
+  function startCountdown(){
+    run.state='countdown'; renderNow();
+    const cd = $('cd'); let n = 3; cd.textContent=n; cd.classList.add('on');
+    const tick = () => {
+      n--; if (n>0){ cd.textContent=n; setTimeout(tick, 800); }
+      else if (n===0){ cd.textContent='JÁ!'; setTimeout(tick, 500); startRun(); }
+      else cd.classList.remove('on');
+    };
+    setTimeout(tick, 800);
+  }
+  function startRun(){
+    run = { state:'running', t0:performance.now(), ms:0 }; renderNow();
+    const loop = () => { run.ms = performance.now() - run.t0; $('timer').textContent = fmt(run.ms); if (run.state==='running') raf = requestAnimationFrame(loop); };
+    loop();
+  }
+  function stopRun(){
+    cancelAnimationFrame(raf);
+    run.ms = performance.now() - run.t0; run.state='done';
+    const p = { ...S.current, ms: Math.round(run.ms), at: new Date().toISOString() };
+    S.results.push(p); lastFinishedId = p.id; lastP = p; S.current = null; save();
+    const pos = ranked().findIndex(x => x.id===p.id) + 1;
+    $('result').textContent = pos===1 ? '🏆 NOVO LÍDER!' : pos + 'º lugar no ranking';
+    renderNow(); renderQueue(); renderRank();
+  }
+  function cancelRun(){
+    cancelAnimationFrame(raf); $('cd').classList.remove('on');
+    if (S.current){ run = { state:'idle', t0:0, ms:0 }; renderNow(); }
+  }
+  function skip(){
+    cancelRun(); if (S.current){ S.queue.push(S.current); S.current=null; }
+    run = { state:'idle', t0:0, ms:0 }; save(); renderAll();
+  }
+  function mainAction(){
+    if (run.state==='countdown') return;
+    if (run.state==='running') return stopRun();
+    if (!S.current || run.state==='done') return callNext();
+    startCountdown();
+  }
+  function addToQueue(p){
+    if (!p || !p.nome) return;
+    if (S.seen.includes(p.id)) return;
+    S.seen.push(p.id); if (S.seen.length>3000) S.seen = S.seen.slice(-2000);
+    S.queue.push(p); save(); renderQueue();
+    if (!S.current && run.state!=='running') renderNow();
+  }
+
+  // ---------- cadastros via ntfy (poll) ----------
+  async function poll(){
+    const since = S.lastId || 'all';
+    try {
+      const res = await fetch(`${NTFY}/${encodeURIComponent(S.cfg.topic)}/json?poll=1&since=${since}`, { cache:'no-store' });
+      if (!res.ok) throw new Error(res.status);
+      const txt = await res.text();
+      txt.split('\n').filter(Boolean).forEach(line => {
+        let m; try { m = JSON.parse(line); } catch(e){ return; }
+        if (m.event !== 'message') return;
+        S.lastId = m.id;
+        let d; try { d = JSON.parse(m.message); } catch(e){ d = { nome:m.message }; }
+        if (d.t !== 'cad') return;
+        addToQueue({ id: m.id, nome: clean(d.nome).toUpperCase(), ig: clean(d.ig).replace(/^@/,'').toLowerCase().slice(0,30), ts: m.time });
+      });
+      save();
+      $('netDot').className='dot ok'; $('netTxt').textContent='cadastros online';
+    } catch(e){
+      $('netDot').className='dot err'; $('netTxt').textContent='sem conexão — cadastre manualmente (⚙)';
+    }
+  }
+  setInterval(poll, 3000); poll();
+
+  // ---------- config ----------
+  window.closeM = id => $(id).classList.remove('on');
+  function openCfg(){
+    $('fTitle').value=S.cfg.title; $('fSub').value=S.cfg.sub; $('fDist').value=S.cfg.dist; $('fTopic').value=S.cfg.topic;
+    $('linkCad').textContent=cadUrl(); fillLists(); $('cfgModal').classList.add('on');
+  }
+  function fillLists(){
+    const q=$('qList'); q.innerHTML='';
+    if (!S.queue.length) q.innerHTML='<div style="color:#666">Fila vazia</div>';
+    S.queue.forEach((p,i)=>{ const d=document.createElement('div'); const s=document.createElement('span'); s.textContent=(i+1)+'. '+p.nome+(p.ig?' (@'+p.ig+')':''); const b=document.createElement('button'); b.textContent='Remover'; b.onclick=()=>{ S.queue.splice(i,1); save(); fillLists(); renderAll(); }; d.append(s,b); q.appendChild(d); });
+    const r=$('rList'); r.innerHTML='';
+    const rr = ranked();
+    if (!rr.length) r.innerHTML='<div style="color:#666">Sem resultados</div>';
+    rr.forEach((p,i)=>{ const d=document.createElement('div'); const s=document.createElement('span'); s.textContent=(i+1)+'º '+p.nome+' — '+fmt(p.ms); const b=document.createElement('button'); b.textContent='Excluir'; b.onclick=()=>{ S.results=S.results.filter(x=>x.id!==p.id); save(); fillLists(); renderAll(); }; d.append(s,b); r.appendChild(d); });
+  }
+  $('gear').onclick = openCfg;
+  $('bClose').onclick = () => closeM('cfgModal');
+  $('bSave').onclick = () => {
+    S.cfg.title = $('fTitle').value.trim() || 'Desafio Esteira';
+    S.cfg.sub = $('fSub').value.trim();
+    S.cfg.dist = $('fDist').value.trim() || '1 km';
+    const nt = $('fTopic').value.trim().replace(/[^a-zA-Z0-9_-]/g,'');
+    if (nt && nt !== S.cfg.topic){ S.cfg.topic = nt; S.lastId = null; }
+    save(); renderAll(); renderQR(); closeM('cfgModal');
+  };
+  $('bManual').onclick = () => {
+    const n = clean($('fManual').value); if (!n) return;
+    addToQueue({ id:'m-'+Date.now(), nome:n.toUpperCase(), ig:'', ts:Date.now()/1000 });
+    $('fManual').value=''; fillLists();
+  };
+  $('fManual').addEventListener('keydown', e => { if (e.key==='Enter'){ e.preventDefault(); $('bManual').click(); } });
+  const pickLogo = () => $('fileLogo').click();
+  $('bLogo').onclick = pickLogo; $('logoBox').onclick = pickLogo;
+  $('bLogoRm').onclick = () => { S.cfg.logo=''; save(); renderHead(); };
+  $('fileLogo').onchange = e => {
+    const f = e.target.files[0]; if (!f) return;
+    const img = new Image(), rd = new FileReader();
+    rd.onload = () => { img.onload = () => {
+      const max = 900, k = Math.min(1, max/Math.max(img.width,img.height));
+      const c = document.createElement('canvas'); c.width=img.width*k; c.height=img.height*k;
+      c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+      S.cfg.logo = c.toDataURL('image/png'); save(); renderHead();
+    }; img.src = rd.result; };
+    rd.readAsDataURL(f); e.target.value='';
+  };
+  $('bCsv').onclick = () => {
+    const rows = [['posicao','nome','instagram','tempo','tempo_ms','data_hora']];
+    ranked().forEach((p,i)=>rows.push([i+1,p.nome,p.ig||'',fmt(p.ms),p.ms,p.at]));
+    const csv = '﻿' + rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(';')).join('\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+    a.download = 'ranking-esteira-' + new Date().toISOString().slice(0,10) + '.csv'; a.click();
+  };
+  $('bReset').onclick = () => {
+    const btn = $('bReset');
+    if (btn.dataset.armed){ S.queue=[]; S.results=[]; S.current=null; run={state:'idle',t0:0,ms:0}; lastFinishedId=null; save(); renderAll(); fillLists(); btn.textContent='Zerar ranking e fila'; delete btn.dataset.armed; $('result').textContent=''; return; }
+    btn.dataset.armed='1'; btn.textContent='Clique de novo para confirmar';
+    setTimeout(()=>{ delete btn.dataset.armed; btn.textContent='Zerar ranking e fila'; }, 4000);
+  };
+
+  // ---------- operação ----------
+  $('mainBtn').onclick = mainAction;
+  $('opSkip').onclick = skip;
+  $('opCancel').onclick = cancelRun;
+  const full = () => { (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen()).catch(()=>{}); };
+  $('opFull').onclick = full;
+  $('opTotem').onclick = () => $('totemModal').classList.add('on');
+  document.addEventListener('keydown', e => {
+    if ($('cfgModal').classList.contains('on') || e.target.tagName==='INPUT') return;
+    if (e.code==='Space' || e.code==='Enter'){ e.preventDefault(); mainAction(); }
+    else if (e.key==='Escape'){ if ($('totemModal').classList.contains('on')) closeM('totemModal'); else cancelRun(); }
+    else if (e.key==='f' || e.key==='F') full();
+    else if (e.key==='n' || e.key==='N'){ if (run.state!=='running') { if (S.current && run.state!=='done') skip(); else callNext(); } }
+  });
+
+  // retoma participante em andamento após recarregar
+  renderAll(); renderQR();
+})();
+</script>
+</body>
+</html>
