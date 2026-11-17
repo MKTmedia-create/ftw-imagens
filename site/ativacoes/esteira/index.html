@@ -79,6 +79,16 @@
   .res.on{opacity:1;transform:none}
   .res.lead{background:var(--lime)}
 
+  .entry{position:absolute;left:4vw;right:4vw;bottom:2.4vw;z-index:2;background:var(--bar);border-top:.35vw solid var(--orange);padding:1.6vw 2vw;display:none;align-items:center;gap:1.6vw}
+  .entry.on{display:flex;animation:up .7s var(--ease) both}
+  @keyframes up{from{transform:translateY(2vw);opacity:0}to{transform:none;opacity:1}}
+  .entry label{font-family:var(--narrow);font-weight:700;font-size:1.6vw;text-transform:uppercase;color:#f2f2f2;line-height:1}
+  .entry label small{display:block;font-family:var(--mono);font-weight:400;font-size:.75vw;color:var(--mute);text-transform:none;margin-top:.4vw;letter-spacing:0}
+  .entry input{flex:1;min-width:0;background:#141414;border:1px solid #444;color:var(--lime);font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 70;font-weight:400;font-size:3.6vw;padding:.3vw 1vw;text-align:right;outline:none;font-variant-numeric:tabular-nums}
+  .entry input:focus{border-color:var(--lime)}
+  .entry .unit{font-family:var(--narrow);font-weight:700;font-size:2.4vw;color:var(--grey)}
+  .entry button{background:var(--lime);color:#000;border:none;height:4.4vw;padding:0 2vw;font-family:var(--narrow);font-weight:700;font-size:1.5vw;text-transform:uppercase;cursor:pointer;transform:skewX(-14deg)}
+  .entry button span{display:inline-block;transform:skewX(14deg)}
   .countdown{position:absolute;inset:0;background:var(--lime);color:#000;display:flex;align-items:center;justify-content:center;z-index:3;
     font-family:var(--narrow);font-weight:700;font-size:30vw;line-height:1;text-transform:uppercase;opacity:0;pointer-events:none;transition:opacity .25s var(--ease)}
   .countdown.on{opacity:1}
@@ -86,7 +96,7 @@
   @keyframes pop{from{transform:scale(1.6);opacity:0}to{transform:none;opacity:1}}
 
   /* ranking (dobra verde do site) */
-  .board{background:var(--lime);color:#000;display:grid;grid-template-rows:auto 1fr auto;min-height:0;position:relative}
+  .board{background:var(--lime);color:#000;display:grid;grid-template-rows:auto auto 1fr auto;min-height:0;position:relative}
   .board::before{content:"";position:absolute;top:0;bottom:0;left:5.6vw;width:1px;background:var(--hairK);pointer-events:none}
   .bhead{display:flex;align-items:flex-end;justify-content:space-between;padding:2.4vw 2.6vw 1.2vw 7vw;border-bottom:1px solid var(--hairK);position:relative}
   .bhead h2{font-family:var(--narrow);font-weight:700;font-size:4.2vw;line-height:.85;text-transform:uppercase;letter-spacing:-.01em}
@@ -96,7 +106,7 @@
   .pix i:nth-child(-n+4):nth-child(odd),.pix i:nth-child(n+5):nth-child(even){background:var(--lav)}
 
   .rk{position:relative;overflow:hidden;display:flex;flex-direction:column}
-  .row{display:grid;grid-template-columns:5.6vw 1fr auto;align-items:center;height:calc((100vh - 5.6vw - 3.6vw - 7.6vw - 9.8vw) / 10);
+  .row{display:grid;grid-template-columns:5.6vw 1fr auto;align-items:center;height:calc((100vh - 5.6vw - 3.6vw - 7.6vw - 9.8vw - 4.2vw) / 10);
     border-bottom:1px solid rgba(0,0,0,.25);padding-right:2.6vw;position:relative}
   .row .pos{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 70;font-weight:300;font-size:2.6vw;text-align:center;color:var(--olive);font-variant-numeric:tabular-nums}
   .row .nm{padding-left:1.4vw;font-family:var(--narrow);font-weight:700;font-size:1.65vw;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -107,6 +117,13 @@
   .row.hl::after{content:"";position:absolute;left:0;top:0;bottom:0;width:.45vw;background:var(--orange)}
   .row.hl:not(.p1){background:rgba(0,0,0,.08)}
   .row.slot{opacity:.32} .row.slot .nm{font-weight:400}
+  .live{display:grid;grid-template-columns:5.6vw 1fr auto;align-items:center;height:4.2vw;background:#000;color:var(--grey);padding-right:2.6vw;position:relative}
+  .live .dot{justify-self:center;width:.8vw;height:.8vw;background:var(--orange);animation:blink 1.1s steps(2,end) infinite}
+  .live .nm{padding-left:1.4vw;font-family:var(--narrow);font-weight:700;font-size:1.65vw;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .live .nm small{font-family:var(--mono);font-weight:400;font-size:.7vw;color:var(--orange);margin-right:.9vw;letter-spacing:.08em}
+  .live .tm{font-family:var(--mono);font-weight:700;font-size:1.45vw;color:var(--lime);font-variant-numeric:tabular-nums}
+  .live.idle .dot{background:#444;animation:none} .live.idle .nm small{color:var(--mute)} .live.idle .tm{color:#555}
+  @keyframes blink{50%{opacity:.15}}
   .row.sep{height:2.2vw;justify-content:center;display:flex;font-size:.8vw;letter-spacing:.3em;border:none}
   .empty-rk{padding:4vw 2.6vw 0 7vw;font-family:var(--narrow);font-weight:700;font-size:2.4vw;line-height:1;text-transform:uppercase;color:var(--olive)}
   .empty-rk p{font-family:var(--mono);font-weight:400;font-size:.9vw;color:#000;margin-top:1vw;text-transform:none;line-height:1.5}
@@ -183,14 +200,14 @@
       <span class="x">×</span>
       <div class="logo has" id="logo2" title="Clique para trocar o logo do evento"><img src="trail-logo.png" alt="Dunamis Farm Trail Run 26"></div>
     </div>
-    <div class="ev"><span id="tTitle">We do Hard Things. For the win.</span><small id="tSub">1 km no menor tempo</small></div>
+    <div class="ev"><span id="tTitle">We do Hard Things. For the win.</span><small id="tSub">O máximo de distância em 1 minuto</small></div>
     <div class="status"><span class="sq" id="netDot"></span><span id="netTxt">Conectando</span></div>
   </header>
 
   <main class="stage">
     <section class="lane">
       <div class="hud tl"><i></i><span>Desafio na esteira</span></div>
-      <div class="hud tr"><i></i><span id="hudDist">Distância 1 km</span><span id="hudCount">000 cadastrados</span></div>
+      <div class="hud tr"><i></i><span id="hudDist">Tempo 1 min</span><span id="hudCount">000 cadastrados</span></div>
       <div class="hud br"><span>FTW Suplementos<br>× Dunamis</span><i></i></div>
 
       <div class="now">
@@ -202,6 +219,12 @@
           <div class="res" id="result"></div>
         </div>
       </div>
+      <form class="entry" id="entry" autocomplete="off">
+        <label for="distIn">Distância no painel<small>Digite os metros e aperte Enter</small></label>
+        <input id="distIn" inputmode="numeric" maxlength="5" placeholder="000">
+        <span class="unit">m</span>
+        <button type="submit"><span>Registrar</span></button>
+      </form>
       <div class="countdown" id="cd"></div>
     </section>
 
@@ -209,8 +232,9 @@
       <div class="bhead">
         <div class="pix"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <h2>Ranking</h2>
-        <div class="meta"><span id="rkCount">0 atletas</span><br>Menor tempo vence</div>
+        <div class="meta"><span id="rkCount">0 participantes</span><br>Maior distância · todos vencem</div>
       </div>
+      <div class="live idle" id="live"><span class="dot"></span><span class="nm"><small id="liveLbl">Na esteira</small><span id="liveName">—</span></span><span class="tm" id="liveTime">--:--.--</span></div>
       <div class="rk" id="rk"></div>
       <div class="cta">
         <div class="qr" id="qrSmall"></div>
@@ -227,7 +251,7 @@
 
 <button class="gear" id="gear" title="Configurações" aria-label="Configurações">⚙</button>
 <div class="ops">
-  <button id="opSkip">Pular atleta (N)</button>
+  <button id="opSkip">Pular participante (N)</button>
   <button id="opCancel">Cancelar tentativa (Esc)</button>
   <button id="opFull">Tela cheia (F)</button>
   <button id="opTotem">QR do totem</button>
@@ -248,10 +272,10 @@
 <div class="modal" id="cfgModal">
   <div class="card">
     <h3>Configurações</h3>
-    <div class="small">Espaço ou Enter faz a ação principal: chamar, iniciar e parar.</div>
+    <div class="small">Espaço ou Enter faz a ação principal: chamar e iniciar. O tempo para sozinho no fim; aí digite os metros do painel da esteira e aperte Enter.</div>
     <div class="two">
       <div><label>Título na TV</label><input id="fTitle" maxlength="40"></div>
-      <div><label>Distância</label><input id="fDist" maxlength="20"></div>
+      <div><label>Duração (segundos)</label><input id="fDist" inputmode="numeric" maxlength="4"></div>
     </div>
     <label>Subtítulo</label><input id="fSub" maxlength="50">
     <label>Logos</label>
@@ -261,7 +285,7 @@
     </div>
     <input type="file" id="fileLogo" accept="image/*" style="display:none">
 
-    <label>Adicionar atleta manualmente</label>
+    <label>Adicionar participante manualmente</label>
     <div class="rowf" style="margin-top:0"><input id="fManual" placeholder="Nome" maxlength="28" style="flex:1"><button id="bManual" class="pri">Adicionar à fila</button></div>
 
     <div class="two">
@@ -305,12 +329,15 @@
 
   const rnd = n => Array.from(crypto.getRandomValues(new Uint8Array(n))).map(b => 'abcdefghjkmnpqrstuvwxyz23456789'[b % 31]).join('');
   const blank = () => ({
-    cfg:{ title:'We do Hard Things. For the win.', sub:'1 km no menor tempo', dist:'1 km', topic:'ftw-esteira-' + rnd(10), logo:'', logo2:'' },
+    cfg:{ title:'We do Hard Things. For the win.', sub:'O máximo de distância em 1 minuto', dur:60, topic:'ftw-esteira-' + rnd(10), logo:'', logo2:'' },
     queue:[], current:null, results:[], seen:[], lastId:null, seq:0, people:[], drawn:[]
   });
   let S;
   try { S = JSON.parse(localStorage.getItem(LS)) || blank(); } catch(e){ S = blank(); }
   if (!S.cfg.title || S.cfg.title==='Desafio Esteira') S.cfg.title = 'We do Hard Things. For the win.';
+  if (!S.cfg.dur) S.cfg.dur = 60;
+  if (!S.cfg.sub || S.cfg.sub==='1 km no menor tempo') S.cfg.sub = 'O máximo de distância em 1 minuto';
+  S.results = (S.results||[]).filter(x => typeof x.dist === 'number');
   S.seq = S.seq || 0; S.cfg.logo2 = S.cfg.logo2 || ''; S.people = S.people || []; S.drawn = S.drawn || [];
   const save = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){} };
   save();
@@ -323,10 +350,19 @@
     return String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0') + '.' + String(c).padStart(2,'0');
   };
   const pad3 = n => String(n||0).padStart(3,'0');
+  const DUR = () => (S.cfg.dur||60)*1000;
+  const durLabel = () => { const d = S.cfg.dur||60; return d % 60 === 0 ? (d===60 ? '1 minuto' : (d/60)+' minutos') : d+' segundos'; };
+  const durShort = () => { const d = S.cfg.dur||60; return d % 60 === 0 ? (d/60)+' min' : d+' s'; };
+  const mfmt = m => Number(m).toLocaleString('pt-BR') + ' m';
+  // bipe (o navegador libera o som depois do primeiro clique/tecla do operador)
+  let actx = null;
+  const beep = (f=880, ms=180, n=1) => { try{ actx = actx || new (window.AudioContext||window.webkitAudioContext)();
+    for (let i=0;i<n;i++){ const o=actx.createOscillator(), g=actx.createGain(), t=actx.currentTime + i*(ms/1000+.08);
+      o.frequency.value=f; o.connect(g); g.connect(actx.destination); g.gain.setValueAtTime(.25,t); g.gain.exponentialRampToValueAtTime(.001,t+ms/1000); o.start(t); o.stop(t+ms/1000); } }catch(e){} };
   const clean = s => String(s||'').replace(/\s+/g,' ').trim().slice(0,28);
   const cadUrl = () => {
     const u = new URL('cadastro.html', location.href);
-    u.search = '?e=' + encodeURIComponent(S.cfg.topic) + '&k=' + (S.cfg.pub||'') + '&d=' + encodeURIComponent(S.cfg.dist) + '&t=' + encodeURIComponent(S.cfg.title);
+    u.search = '?e=' + encodeURIComponent(S.cfg.topic) + '&k=' + (S.cfg.pub||'') + '&d=' + encodeURIComponent(durLabel()) + '&t=' + encodeURIComponent(S.cfg.title);
     return u.toString();
   };
   // criptografia: o celular cifra com a chave pública do QR; só este notebook decifra
@@ -352,7 +388,7 @@
   async function sendNumber(ref, n){
     try { await fetch(`${NTFY}/${encodeURIComponent(S.cfg.topic)}`, { method:'POST', body: JSON.stringify({ t:'num', ref, n }) }); } catch(e){}
   }
-  const ranked = () => [...S.results].sort((a,b) => a.ms - b.ms);
+  const ranked = () => [...S.results].sort((a,b) => b.dist - a.dist || a.at.localeCompare(b.at));
 
   const IC = {
     play:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3.5v17l15-8.5z"/></svg>',
@@ -367,7 +403,7 @@
 
   function renderHead(){
     $('tTitle').textContent = S.cfg.title; $('tSub').textContent = S.cfg.sub;
-    $('hudDist').textContent = 'Distância ' + S.cfg.dist;
+    $('hudDist').textContent = 'Tempo ' + durShort();
     $('tmTitle').textContent = S.cfg.title;
     [['logo1','logo','Logo marca'],['logo2','logo2','Logo evento']].forEach(([id,k,ph]) => {
       const el = $(id);
@@ -385,19 +421,32 @@
   }
   addEventListener('resize', () => fitName());
   if (document.fonts) document.fonts.ready.then(() => fitName());
+  function renderLive(){
+    const c = S.current, running = run.state==='running' || run.state==='countdown';
+    $('live').className = 'live' + (running ? '' : ' idle');
+    $('liveLbl').textContent = run.state==='input' ? 'Registrando distância' : running ? 'Correndo agora' : (c ? 'Próximo na esteira' : 'Na esteira');
+    $('liveName').textContent = c ? c.nome : '—';
+    if (!running) $('liveTime').textContent = run.state==='input' ? '00:00.00' : c ? fmt(DUR()) : '--:--.--';
+  }
   function renderNow(){
+    renderLive();
     const c = S.current || (run.state==='done' ? lastP : null), t = $('timer');
     $('curName').textContent = c ? c.nome : 'Aguardando';
     $('curName').className = 'name' + (c ? '' : ' empty');
     $('curBib').innerHTML = '';
     if (c){ const b=document.createElement('b'); b.textContent='Nº da sorte '+pad3(c.n); $('curBib').append(b); }
     fitName();
-    t.className = 'timer' + (run.state==='running' ? ' running' : run.state==='done' ? ' done' : S.current ? ' ready' : '');
-    if (run.state !== 'running') t.textContent = fmt(run.ms);
-    if (!S.current || run.state === 'done'){
+    t.className = 'timer' + (run.state==='running' ? ' running' : (run.state==='done' || run.state==='input') ? ' done' : S.current ? ' ready' : '');
+    if (run.state === 'done' && lastP) t.textContent = mfmt(lastP.dist);
+    else if (run.state === 'input') t.textContent = '00:00.00';
+    else if (run.state !== 'running') t.textContent = fmt(DUR());
+    $('entry').classList.toggle('on', run.state==='input');
+    document.querySelector('.ctl').style.visibility = run.state==='input' ? 'hidden' : '';
+    if (run.state === 'input'){ setBtn('Registrar', '', '', true); $('lblNow').textContent = 'Tempo esgotado'; }
+    else if (!S.current || run.state === 'done'){
       setBtn(S.queue.length ? 'Chamar próximo' : 'Fila vazia', S.queue.length ? 'next' : '', '', !S.queue.length);
-      $('lblNow').textContent = run.state==='done' ? 'Tempo final' : 'Na esteira';
-    } else if (run.state === 'running'){ setBtn('Parar', 'stop', 'stop'); $('lblNow').textContent = 'Correndo'; }
+      $('lblNow').textContent = run.state==='done' ? 'Distância final' : 'Na esteira';
+    } else if (run.state === 'running'){ setBtn('Encerrar', 'stop', 'stop'); $('lblNow').textContent = 'Correndo'; }
     else if (run.state === 'countdown'){ setBtn('Prepare-se', '', '', true); }
     else { setBtn('Iniciar', 'play'); $('lblNow').textContent = 'Na esteira'; }
   }
@@ -420,7 +469,7 @@
     const box = $('rk');
     const before = {}; box.querySelectorAll('.row[data-id]').forEach(el => before[el.dataset.id] = el.getBoundingClientRect().top);
     const r = ranked(); box.innerHTML = '';
-    $('rkCount').textContent = r.length + (r.length===1 ? ' atleta' : ' atletas');
+    $('rkCount').textContent = r.length + (r.length===1 ? ' participante' : ' participantes');
     const TOP = 10;
     const mk = (p, i) => {
       const d = document.createElement('div'); d.dataset.id = p.id;
@@ -428,11 +477,11 @@
       const a=document.createElement('span'); a.className='pos'; a.textContent=String(i+1).padStart(2,'0');
       const n=document.createElement('span'); n.className='nm'; n.textContent=p.nome;
       const s=document.createElement('small'); s.textContent='nº '+pad3(p.n); n.appendChild(s);
-      const t=document.createElement('span'); t.className='tm'; t.textContent=fmt(p.ms);
+      const t=document.createElement('span'); t.className='tm'; t.textContent=mfmt(p.dist);
       d.append(a,n,t); return d;
     };
     r.slice(0,TOP).forEach((p,i) => box.appendChild(mk(p,i)));
-    for (let i=r.length;i<TOP;i++){ const d=document.createElement('div'); d.className='row slot'; d.innerHTML='<span class="pos"></span><span class="nm">—</span><span class="tm">--:--.--</span>'; d.firstChild.textContent=String(i+1).padStart(2,'0'); box.appendChild(d); }
+    for (let i=r.length;i<TOP;i++){ const d=document.createElement('div'); d.className='row slot'; d.innerHTML='<span class="pos"></span><span class="nm">—</span><span class="tm">--- m</span>'; d.firstChild.textContent=String(i+1).padStart(2,'0'); box.appendChild(d); }
     const idx = r.findIndex(p => p.id===lastFinishedId);
     if (idx >= TOP){ const s=document.createElement('div'); s.className='row sep'; s.textContent='• • •'; box.appendChild(s); box.appendChild(mk(r[idx], idx)); }
     // cada linha desliza da posição antiga até a nova
@@ -475,28 +524,45 @@
     const seq = ['3','2','1','Já!']; let k = 0;
     const show = () => {
       if (run.state !== 'countdown' && k < 4){ cd.classList.remove('on'); return; }
-      if (k < seq.length){ cd.innerHTML = '<b></b>'; cd.firstChild.textContent = seq[k]; if (k===3) startRun(); k++; setTimeout(show, k===4 ? 550 : 800); }
+      if (k < seq.length){ cd.innerHTML = '<b></b>'; cd.firstChild.textContent = seq[k]; if (k===3){ beep(1320, 380); startRun(); } else beep(660, 140); k++; setTimeout(show, k===4 ? 550 : 800); }
       else cd.classList.remove('on');
     };
     show();
   }
   function startRun(){
     run = { state:'running', t0:performance.now(), ms:0 }; renderNow();
-    const loop = () => { run.ms = performance.now() - run.t0; $('timer').textContent = fmt(run.ms); if (run.state==='running') raf = requestAnimationFrame(loop); };
+    let warned = 0;
+    const loop = () => {
+      run.ms = performance.now() - run.t0;
+      const left = Math.max(0, DUR() - run.ms);
+      $('timer').textContent = $('liveTime').textContent = fmt(left);
+      const sec = Math.ceil(left/1000);
+      if (sec <= 3 && sec > 0 && warned !== sec){ warned = sec; beep(660, 120); }
+      if (left <= 0) return stopRun(true);
+      if (run.state==='running') raf = requestAnimationFrame(loop);
+    };
     loop();
   }
-  function stopRun(){
+  function stopRun(auto){
     cancelAnimationFrame(raf);
-    run.ms = performance.now() - run.t0; run.state='done';
-    const p = { ...S.current, ms: Math.round(run.ms), at: new Date().toISOString() };
-    S.results.push(p); lastFinishedId = p.id; lastP = p; S.current = null; save();
-    const pos = ranked().findIndex(x => x.id===p.id) + 1;
-    renderNow(); renderQueue(); renderRank();
-    showResult(pos===1 ? 'Novo líder' : pos + 'º lugar', pos===1);
+    run.ms = Math.min(DUR(), performance.now() - run.t0); run.state='input';
+    if (auto) beep(1320, 600);
+    renderNow(); $('distIn').value=''; setTimeout(() => $('distIn').focus(), 60);
   }
+  function saveDistance(){
+    const m = parseInt(String($('distIn').value).replace(/\D/g,''), 10);
+    if (!(m >= 0) || run.state !== 'input' || !S.current){ $('distIn').focus(); return; }
+    const p = { ...S.current, dist: m, ms: Math.round(run.ms), at: new Date().toISOString() };
+    S.results.push(p); lastFinishedId = p.id; lastP = p; S.current = null; run.state='done'; save();
+    const pos = ranked().findIndex(x => x.id===p.id) + 1;
+    $('distIn').blur(); renderNow(); renderQueue(); renderRank();
+    showResult(pos===1 ? 'Maior distância do dia' : 'Desafio completo', true);
+  }
+  $('entry').addEventListener('submit', e => { e.preventDefault(); saveDistance(); });
   function cancelRun(){
     cancelAnimationFrame(raf); $('cd').classList.remove('on');
     if (S.current){ run = { state:'idle', t0:0, ms:0 }; renderNow(); }
+    $('entry').classList.remove('on');
   }
   function skip(){
     cancelRun(); if (S.current){ S.queue.push(S.current); S.current=null; }
@@ -504,6 +570,7 @@
   }
   function mainAction(){
     if (run.state==='countdown') return;
+    if (run.state==='input') return $('distIn').focus();
     if (run.state==='running') return stopRun();
     if (!S.current || run.state==='done') return callNext();
     startCountdown();
@@ -546,7 +613,7 @@
 
   window.closeM = id => $(id).classList.remove('on');
   function openCfg(){
-    $('fTitle').value=S.cfg.title; $('fSub').value=S.cfg.sub; $('fDist').value=S.cfg.dist; $('fTopic').value=S.cfg.topic;
+    $('fTitle').value=S.cfg.title; $('fSub').value=S.cfg.sub; $('fDist').value=S.cfg.dur; $('fTopic').value=S.cfg.topic;
     $('linkCad').textContent=cadUrl(); fillLists(); $('cfgModal').classList.add('on');
   }
   function fillLists(){
@@ -557,14 +624,14 @@
     const r=$('rList'); r.innerHTML='';
     const rr = ranked();
     if (!rr.length) r.innerHTML='<div style="color:#777">Sem resultados</div>';
-    rr.forEach((p,i)=>{ const d=document.createElement('div'); const s=document.createElement('span'); s.textContent=(i+1)+'º '+p.nome+' '+fmt(p.ms); const b=document.createElement('button'); b.textContent='Excluir'; b.onclick=()=>{ S.results=S.results.filter(x=>x.id!==p.id); save(); fillLists(); renderAll(); }; d.append(s,b); r.appendChild(d); });
+    rr.forEach((p,i)=>{ const d=document.createElement('div'); const s=document.createElement('span'); s.textContent=(i+1)+'º '+p.nome+' '+mfmt(p.dist); const b=document.createElement('button'); b.textContent='Excluir'; b.onclick=()=>{ S.results=S.results.filter(x=>x.id!==p.id); save(); fillLists(); renderAll(); }; d.append(s,b); r.appendChild(d); });
   }
   $('gear').onclick = openCfg;
   $('bClose').onclick = () => closeM('cfgModal');
   $('bSave').onclick = () => {
     S.cfg.title = $('fTitle').value.trim() || 'We do Hard Things. For the win.';
     S.cfg.sub = $('fSub').value.trim();
-    S.cfg.dist = $('fDist').value.trim() || '1 km';
+    S.cfg.dur = Math.max(10, Math.min(3600, parseInt($('fDist').value,10) || 60));
     const nt = $('fTopic').value.trim().replace(/[^a-zA-Z0-9_-]/g,'');
     if (nt && nt !== S.cfg.topic){ S.cfg.topic = nt; S.lastId = null; S.cfg.pub = ''; S.cfg.priv = null; privKey = null; }
     ensureKeys().then(renderQR);
@@ -592,11 +659,11 @@
     rd.readAsDataURL(f); e.target.value='';
   };
   $('bCsv').onclick = () => {
-    const rows = [['numero_sorte','nome_completo','whatsapp','email','correu','posicao','tempo','tempo_ms','cadastro_em','sorteado']];
+    const rows = [['numero_sorte','nome_completo','whatsapp','email','correu','posicao','distancia_m','tempo_corrido_s','cadastro_em','sorteado']];
     const rk = ranked();
     S.people.forEach(p => {
       const i = rk.findIndex(x => x.id===p.id), res = rk[i];
-      rows.push([pad3(p.n), p.full, p.wpp, p.email, res?'sim':'nao', res?i+1:'', res?fmt(res.ms):'', res?res.ms:'', p.at, S.drawn.includes(p.id)?'sim':'']);
+      rows.push([pad3(p.n), p.full, p.wpp, p.email, res?'sim':'nao', res?i+1:'', res?res.dist:'', res?(res.ms/1000).toFixed(1):'', p.at, S.drawn.includes(p.id)?'sim':'']);
     });
     const csv = '﻿' + rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(';')).join('\n');
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
