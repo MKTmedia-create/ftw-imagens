@@ -20,6 +20,16 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%;background:#000;}
+  body.dual{--u:min(.5vw,1vh)}
+  #wall{display:flex;flex:none}
+  #wall.vleft{flex-direction:row-reverse}
+  .vid{display:none;width:calc(100 * var(--u));height:calc(100 * var(--u));background:#000;position:relative;overflow:hidden}
+  body.dual .vid{display:block}
+  .vid video{width:100%;height:100%;object-fit:cover;display:block}
+  .vid .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(2 * var(--u));color:var(--mute);font-family:var(--mono);font-size:calc(1.4 * var(--u));text-align:center;padding:calc(8 * var(--u));
+    background-image:linear-gradient(var(--hair) 1px,transparent 1px),linear-gradient(90deg,var(--hair) 1px,transparent 1px);background-size:calc(9.5 * var(--u)) calc(9.5 * var(--u))}
+  .vid .ph b{font-family:var(--narrow);font-weight:700;font-size:calc(4 * var(--u));color:var(--grey);text-transform:uppercase;line-height:1}
+  .vid.ready .ph{display:none}
   body{display:flex;align-items:center;justify-content:center;color:var(--grey);font-family:var(--mono);overflow:hidden;-webkit-font-smoothing:antialiased}
   body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.06;z-index:4;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
@@ -196,6 +206,7 @@
 </style>
 </head>
 <body>
+<div id="wall">
 <div class="app" id="app">
   <header class="bar">
     <div class="logos">
@@ -252,6 +263,9 @@
   </footer>
 </div>
 
+<div class="vid" id="vid"><video id="pov" playsinline preload="auto"></video><div class="ph"><b>Vídeo POV</b>Clique na ⚙ e carregue o vídeo do percurso<br>(DFTR_Percurso_POV_1x1_COLOR.mp4)</div></div>
+</div>
+
 <button class="gear" id="gear" title="Configurações" aria-label="Configurações">⚙</button>
 <div class="ops">
   <button id="opSkip">Pular participante (N)</button>
@@ -278,9 +292,22 @@
     <div class="small">Espaço ou Enter faz a ação principal: chamar e iniciar. O tempo para sozinho no fim; aí digite os metros do painel da esteira e aperte Enter.</div>
     <div class="two">
       <div><label>Título na TV</label><input id="fTitle" maxlength="40"></div>
-      <div><label>Duração (segundos)</label><input id="fDist" inputmode="numeric" maxlength="4"></div>
+      <div><label>Duração sem vídeo (segundos)</label><input id="fDist" inputmode="numeric" maxlength="4"></div>
     </div>
-    <label>Subtítulo</label><input id="fSub" maxlength="50">
+    <label>Subtítulo <span style="text-transform:none;letter-spacing:0">(vazio = automático pela duração)</span></label><input id="fSub" maxlength="50">
+
+    <label>Tela dupla: sistema + vídeo POV (1344 × 672)</label>
+    <div class="rowf" style="margin-top:0;align-items:center">
+      <label style="margin:0;display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;color:#ddd;font-size:14px"><input type="checkbox" id="fDual" style="width:auto"> Ligar tela dupla</label>
+      <label style="margin:0;display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;color:#ddd;font-size:14px"><input type="checkbox" id="fVLeft" style="width:auto"> Vídeo do lado esquerdo</label>
+      <button id="bVideo">Carregar vídeo…</button><span class="small" id="vInfo" style="margin:0"></span>
+    </div>
+    <input type="file" id="fileVideo" accept="video/*" style="display:none">
+    <div class="two">
+      <div><label>Início da corrida no vídeo (s)</label><input id="fVIntro" inputmode="decimal" maxlength="5"></div>
+      <div><label>Duração da corrida no vídeo (s)</label><input id="fVRun" inputmode="numeric" maxlength="4"></div>
+    </div>
+    <div class="small">Com o vídeo carregado, o Iniciar dá play no vídeo e o cronômetro segue o tempo dele. A contagem 3-2-1 e os bipes vêm do próprio vídeo.</div>
     <label>Logos</label>
     <div class="rowf" style="margin-top:0">
       <button id="bLogo1">Logo da marca…</button><button id="bLogo2">Logo do evento…</button>
@@ -339,7 +366,10 @@
   try { S = JSON.parse(localStorage.getItem(LS)) || blank(); } catch(e){ S = blank(); }
   if (!S.cfg.title || S.cfg.title==='Desafio Esteira') S.cfg.title = 'We do Hard Things. For the win.';
   if (!S.cfg.dur) S.cfg.dur = 60;
-  if (!S.cfg.sub || S.cfg.sub==='1 km no menor tempo') S.cfg.sub = 'O máximo de distância em 1 minuto';
+  if (!S.cfg.sub || S.cfg.sub==='1 km no menor tempo' || /^O máximo de distância em /.test(S.cfg.sub)) S.cfg.sub = '';
+  if (S.cfg.dual === undefined) S.cfg.dual = true;
+  if (!S.cfg.vintro) S.cfg.vintro = 5;
+  if (!S.cfg.vrun) S.cfg.vrun = 90;
   S.results = (S.results||[]).filter(x => typeof x.dist === 'number');
   S.seq = S.seq || 0; S.cfg.logo2 = S.cfg.logo2 || ''; S.people = S.people || []; S.drawn = S.drawn || [];
   const save = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){} };
@@ -353,13 +383,17 @@
     return String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0') + '.' + String(c).padStart(2,'0');
   };
   const pad3 = n => String(n||0).padStart(3,'0');
-  const DUR = () => (S.cfg.dur||60)*1000;
-  const durLabel = () => { const d = S.cfg.dur||60; return d % 60 === 0 ? (d===60 ? '1 minuto' : (d/60)+' minutos') : d+' segundos'; };
-  const durShort = () => { const d = S.cfg.dur||60; return d % 60 === 0 ? (d/60)+' min' : d+' s'; };
+  let videoOK = false;
+  const useVideo = () => S.cfg.dual && videoOK;
+  const DUR = () => (useVideo() ? S.cfg.vrun : (S.cfg.dur||60)) * 1000;
+  const durLabel = () => { const d = DUR()/1000, m = Math.floor(d/60), s = d%60;
+    if (!m) return d + ' segundos'; if (!s) return m===1 ? '1 minuto' : m+' minutos'; return m + 'min' + String(s).padStart(2,'0'); };
+  const durShort = () => { const d = DUR()/1000, m = Math.floor(d/60), s = d%60; return !m ? d+' s' : !s ? m+' min' : m+'min'+String(s).padStart(2,'0'); };
+  const subText = () => S.cfg.sub || ('O máximo de distância em ' + durLabel());
   const mfmt = m => Number(m).toLocaleString('pt-BR') + ' m';
   // bipe (o navegador libera o som depois do primeiro clique/tecla do operador)
   let actx = null;
-  const beep = (f=880, ms=180, n=1) => { try{ actx = actx || new (window.AudioContext||window.webkitAudioContext)();
+  const beep = (f=880, ms=180, n=1) => { if (useVideo()) return; try{ actx = actx || new (window.AudioContext||window.webkitAudioContext)();
     for (let i=0;i<n;i++){ const o=actx.createOscillator(), g=actx.createGain(), t=actx.currentTime + i*(ms/1000+.08);
       o.frequency.value=f; o.connect(g); g.connect(actx.destination); g.gain.setValueAtTime(.25,t); g.gain.exponentialRampToValueAtTime(.001,t+ms/1000); o.start(t); o.stop(t+ms/1000); } }catch(e){} };
   const clean = s => String(s||'').replace(/\s+/g,' ').trim().slice(0,28);
@@ -405,7 +439,9 @@
   };
 
   function renderHead(){
-    $('tTitle').textContent = S.cfg.title; $('tSub').textContent = S.cfg.sub;
+    $('tTitle').textContent = S.cfg.title; $('tSub').textContent = subText();
+    document.body.classList.toggle('dual', !!S.cfg.dual);
+    $('wall').classList.toggle('vleft', !!S.cfg.vleft);
     $('hudDist').textContent = 'Tempo ' + durShort();
     $('tmTitle').textContent = S.cfg.title;
     [['logo1','logo','Logo marca'],['logo2','logo2','Logo evento']].forEach(([id,k,ph]) => {
@@ -521,7 +557,32 @@
     S.current = S.queue.shift(); run = { state:'idle', t0:0, ms:0 };
     hideResult(); lastFinishedId=null; save(); renderAll();
   }
+  const pov = $('pov');
+  function startVideoRun(){
+    run = { state:'countdown', t0:0, ms:0 }; renderNow();
+    try { pov.currentTime = 0; } catch(e){}
+    const p = pov.play(); if (p) p.catch(() => { pov.muted = true; pov.play().catch(()=>{}); });
+    const INTRO = S.cfg.vintro, RUN = S.cfg.vrun;
+    const loop = () => {
+      if (run.state !== 'countdown' && run.state !== 'running') return;
+      const t = pov.currentTime;
+      if (t < INTRO){
+        if (run.state !== 'countdown'){ run.state = 'countdown'; renderNow(); }
+        $('timer').textContent = $('liveTime').textContent = fmt(RUN*1000);
+      } else {
+        if (run.state !== 'running'){ run.state = 'running'; renderNow(); }
+        run.ms = (t - INTRO) * 1000;
+        const left = Math.max(0, RUN*1000 - run.ms);
+        $('timer').textContent = $('liveTime').textContent = fmt(left);
+        if (left <= 0){ return stopRun(true); }
+      }
+      raf = requestAnimationFrame(loop);
+    };
+    loop();
+  }
+  pov.addEventListener('ended', () => { pov.pause(); try { pov.currentTime = 0; } catch(e){} });
   function startCountdown(){
+    if (useVideo()) return startVideoRun();
     run.state='countdown'; renderNow();
     const cd = $('cd'); cd.classList.add('on');
     const seq = ['3','2','1','Já!']; let k = 0;
@@ -548,7 +609,11 @@
   }
   function stopRun(auto){
     cancelAnimationFrame(raf);
-    run.ms = Math.min(DUR(), performance.now() - run.t0); run.state='input';
+    if (useVideo()){
+      run.ms = Math.min(DUR(), Math.max(0, (pov.currentTime - S.cfg.vintro) * 1000));
+      if (!auto){ try { pov.currentTime = S.cfg.vintro + S.cfg.vrun; } catch(e){} }  // pula para o fechamento "TEMPO!"
+    } else run.ms = Math.min(DUR(), performance.now() - run.t0);
+    run.state='input';
     if (auto) beep(1320, 600);
     renderNow(); $('distIn').value=''; setTimeout(() => $('distIn').focus(), 60);
   }
@@ -564,6 +629,7 @@
   $('entry').addEventListener('submit', e => { e.preventDefault(); saveDistance(); });
   function cancelRun(){
     cancelAnimationFrame(raf); $('cd').classList.remove('on');
+    if (videoOK){ pov.pause(); try { pov.currentTime = 0; } catch(e){} }
     if (S.current){ run = { state:'idle', t0:0, ms:0 }; renderNow(); }
     $('entry').classList.remove('on');
   }
@@ -616,7 +682,7 @@
 
   window.closeM = id => $(id).classList.remove('on');
   function openCfg(){
-    $('fTitle').value=S.cfg.title; $('fSub').value=S.cfg.sub; $('fDist').value=S.cfg.dur; $('fTopic').value=S.cfg.topic;
+    $('fTitle').value=S.cfg.title; $('fSub').value=S.cfg.sub; $('fDist').value=S.cfg.dur; $('fDual').checked=!!S.cfg.dual; $('fVLeft').checked=!!S.cfg.vleft; $('fVIntro').value=S.cfg.vintro; $('fVRun').value=S.cfg.vrun; $('fTopic').value=S.cfg.topic;
     $('linkCad').textContent=cadUrl(); fillLists(); $('cfgModal').classList.add('on');
   }
   function fillLists(){
@@ -633,7 +699,10 @@
   $('bClose').onclick = () => closeM('cfgModal');
   $('bSave').onclick = () => {
     S.cfg.title = $('fTitle').value.trim() || 'We do Hard Things. For the win.';
-    S.cfg.sub = $('fSub').value.trim();
+    S.cfg.sub = $('fSub').value.trim(); if (S.cfg.sub === subText()) S.cfg.sub = '';
+    S.cfg.dual = $('fDual').checked; S.cfg.vleft = $('fVLeft').checked;
+    S.cfg.vintro = Math.max(0, Math.min(60, parseFloat(String($('fVIntro').value).replace(',','.')) || 5));
+    S.cfg.vrun = Math.max(10, Math.min(600, parseInt($('fVRun').value,10) || 90));
     S.cfg.dur = Math.max(10, Math.min(3600, parseInt($('fDist').value,10) || 60));
     const nt = $('fTopic').value.trim().replace(/[^a-zA-Z0-9_-]/g,'');
     if (nt && nt !== S.cfg.topic){ S.cfg.topic = nt; S.lastId = null; S.cfg.pub = ''; S.cfg.priv = null; privKey = null; }
@@ -729,6 +798,29 @@
     else if (e.key==='f' || e.key==='F') full();
     else if (e.key==='n' || e.key==='N'){ if (run.state!=='running') { if (S.current && run.state!=='done') skip(); else callNext(); } }
   });
+
+  // vídeo guardado no navegador (IndexedDB) para não precisar carregar de novo
+  const idb = () => new Promise((res, rej) => { const q = indexedDB.open('ftwEsteiraVideo', 1); q.onupgradeneeded = () => q.result.createObjectStore('v'); q.onsuccess = () => res(q.result); q.onerror = () => rej(q.error); });
+  async function putVideo(blob, name){ const db = await idb(); return new Promise((res, rej) => { const tx = db.transaction('v','readwrite'); tx.objectStore('v').put({ blob, name }, 'pov'); tx.oncomplete = res; tx.onerror = () => rej(tx.error); }); }
+  async function getVideo(){ try { const db = await idb(); return await new Promise(res => { const q = db.transaction('v').objectStore('v').get('pov'); q.onsuccess = () => res(q.result); q.onerror = () => res(null); }); } catch(e){ return null; } }
+  function attachVideo(rec){
+    if (!rec || !rec.blob) return;
+    pov.src = URL.createObjectURL(rec.blob);
+    pov.onloadedmetadata = () => {
+      videoOK = true; $('vid').classList.add('ready');
+      try { pov.currentTime = 0.05; } catch(e){}
+      $('vInfo').textContent = (rec.name || 'vídeo') + ' · ' + Math.round(pov.duration) + ' s';
+      renderAll(); renderQR();
+    };
+  }
+  getVideo().then(attachVideo);
+  $('bVideo').onclick = () => $('fileVideo').click();
+  $('fileVideo').onchange = async e => {
+    const f = e.target.files[0]; if (!f) return;
+    $('vInfo').textContent = 'Carregando…';
+    try { await putVideo(f, f.name); } catch(err){ $('vInfo').textContent = 'Vídeo carregado só nesta sessão (sem espaço para guardar).'; }
+    attachVideo({ blob:f, name:f.name }); e.target.value = '';
+  };
 
   // controles e sorteio dentro do quadrado
   ['gear'].forEach(id => $('app').appendChild($(id)));
