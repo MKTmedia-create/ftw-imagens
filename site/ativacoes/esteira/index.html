@@ -160,8 +160,10 @@
   /* operação */
   .gear{position:absolute;top:calc(15 * var(--u));right:calc(1.8 * var(--u));width:calc(3.2 * var(--u));height:calc(3.2 * var(--u));background:#1d1d1d;border:1px solid #333;color:#777;cursor:pointer;opacity:.2;transition:opacity .3s var(--ease);z-index:6;font-size:calc(1.5 * var(--u))}
   .gear:hover{opacity:1}
+  body.mouse .gear{opacity:1;color:#000;background:var(--lime);border-color:var(--lime)}
+  body.mouse .ops{opacity:1}
   .ops{position:absolute;top:calc(19.5 * var(--u));right:calc(1.8 * var(--u));flex-direction:column;align-items:flex-end;display:flex;gap:calc(.4 * var(--u));opacity:0;transition:opacity .3s var(--ease);z-index:6}
-  body:hover .ops{opacity:1}
+
   .ops button{background:#1d1d1d;border:1px solid #333;color:#aaa;padding:calc(.6 * var(--u)) calc(1 * var(--u));font-size:calc(1 * var(--u));cursor:pointer;font-family:var(--mono);text-transform:uppercase;letter-spacing:.05em}
   .ops button:hover{color:var(--lime);border-color:var(--lime)}
   :focus-visible{outline:2px solid var(--lav);outline-offset:3px}
@@ -263,7 +265,7 @@
   </footer>
 </div>
 
-<div class="vid" id="vid"><video id="pov" playsinline preload="auto"></video><div class="ph"><b>Vídeo POV</b>Clique na ⚙ e carregue o vídeo do percurso<br>(DFTR_Percurso_POV_1x1_COLOR.mp4)</div></div>
+<div class="vid" id="vid"><video id="pov" playsinline preload="auto"></video><div class="ph"><b>Vídeo POV</b>Aperte C (ou mexa o mouse e clique na ⚙ verde) e carregue o vídeo do percurso<br>(DFTR_Percurso_POV_1x1_COLOR.mp4)</div></div>
 </div>
 
 <button class="gear" id="gear" title="Configurações" aria-label="Configurações">⚙</button>
@@ -272,6 +274,7 @@
   <button id="opCancel">Cancelar tentativa (Esc)</button>
   <button id="opFull">Tela cheia (F)</button>
   <button id="opTotem">QR do totem</button>
+  <button id="opCfg">Configurações (C)</button>
   <button id="opDraw">Sorteio (S)</button>
 </div>
 
@@ -779,7 +782,7 @@
     };
     tick();
   }
-  $('opDraw').onclick = openDraw; $('bDraw').onclick = openDraw;
+  $('opDraw').onclick = openDraw; $('opCfg').onclick = openCfg; $('bDraw').onclick = openDraw;
   $('drawGo').onclick = doDraw; $('drawClose').onclick = () => { if (!rolling) closeM('drawModal'); };
   $('bDrawReset').onclick = () => { S.drawn = []; save(); fillLists(); };
 
@@ -793,6 +796,7 @@
     if ($('cfgModal').classList.contains('on') || e.target.tagName==='INPUT') return;
     if ($('drawModal').classList.contains('on')){ if (e.code==='Space' || e.code==='Enter'){ e.preventDefault(); doDraw(); } else if (e.key==='Escape' && !rolling) closeM('drawModal'); return; }
     if (e.key==='s' || e.key==='S'){ openDraw(); return; }
+    if (e.key==='c' || e.key==='C'){ openCfg(); return; }
     if (e.code==='Space' || e.code==='Enter'){ e.preventDefault(); mainAction(); }
     else if (e.key==='Escape'){ if ($('totemModal').classList.contains('on')) closeM('totemModal'); else cancelRun(); }
     else if (e.key==='f' || e.key==='F') full();
@@ -821,6 +825,10 @@
     try { await putVideo(f, f.name); } catch(err){ $('vInfo').textContent = 'Vídeo carregado só nesta sessão (sem espaço para guardar).'; }
     attachVideo({ blob:f, name:f.name }); e.target.value = '';
   };
+
+  // controles aparecem quando o mouse mexe e somem sozinhos depois de 3 s
+  let mt = null;
+  addEventListener('mousemove', () => { document.body.classList.add('mouse'); clearTimeout(mt); mt = setTimeout(() => document.body.classList.remove('mouse'), 3000); });
 
   // controles e sorteio dentro do quadrado
   ['gear'].forEach(id => $('app').appendChild($(id)));
