@@ -108,7 +108,7 @@
   @keyframes pop{from{transform:scale(1.6);opacity:0}to{transform:none;opacity:1}}
 
   /* ranking (dobra verde do site) */
-  .board{background:var(--lime);color:#000;display:grid;grid-template-columns:1fr calc(27 * var(--u));grid-template-rows:auto auto 1fr;grid-template-areas:'head head' 'live cta' 'rk cta';min-height:0;position:relative}
+  .board{background:var(--lime);color:#000;display:grid;grid-template-columns:1fr;grid-template-rows:auto auto 1fr;grid-template-areas:'head' 'live' 'rk';min-height:0;position:relative}
   .bhead{grid-area:head} .live{grid-area:live} .rk{grid-area:rk} .cta{grid-area:cta}
   .board::before{content:"";position:absolute;top:0;bottom:0;left:calc(7 * var(--u));width:1px;background:var(--hairK);pointer-events:none}
   .bhead{display:flex;align-items:flex-end;justify-content:space-between;padding:calc(2.2 * var(--u)) calc(3 * var(--u)) calc(1.2 * var(--u)) calc(8.6 * var(--u));border-bottom:1px solid var(--hairK);position:relative}
@@ -141,7 +141,7 @@
   .empty-rk{padding:calc(4 * var(--u)) calc(2.6 * var(--u)) 0 calc(7 * var(--u));font-family:var(--narrow);font-weight:700;font-size:calc(2.4 * var(--u));line-height:1;text-transform:uppercase;color:var(--olive)}
   .empty-rk p{font-family:var(--mono);font-weight:400;font-size:calc(.9 * var(--u));color:#000;margin-top:calc(1 * var(--u));text-transform:none;line-height:1.5}
 
-  .cta{display:flex;flex-direction:column;justify-content:center;gap:calc(1.6 * var(--u));padding:calc(2 * var(--u)) calc(2.4 * var(--u));border-left:1px solid var(--hairK);background:var(--lime);position:relative;z-index:1}
+  .cta{display:none !important;flex-direction:column;justify-content:center;gap:calc(1.6 * var(--u));padding:calc(2 * var(--u)) calc(2.4 * var(--u));border-left:1px solid var(--hairK);background:var(--lime);position:relative;z-index:1}
   .cta .qr{width:calc(22 * var(--u));height:calc(22 * var(--u));background:#fff;padding:calc(.9 * var(--u));outline:2px solid #000}
   .cta .qr svg{width:100%;height:100%;display:block}
   .cta .tx{padding:0}
