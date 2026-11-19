@@ -302,7 +302,7 @@
     <label>Tela dupla: sistema + vídeo POV (1344 × 672)</label>
     <div class="rowf" style="margin-top:0;align-items:center">
       <label style="margin:0;display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;color:#ddd;font-size:14px"><input type="checkbox" id="fDual" style="width:auto"> Ligar tela dupla</label>
-      <label style="margin:0;display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;color:#ddd;font-size:14px"><input type="checkbox" id="fVLeft" style="width:auto"> Vídeo do lado esquerdo</label>
+      <label style="margin:0;display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;color:#ddd;font-size:14px"><input type="checkbox" id="fVLeft" style="width:auto"> Vídeo à esquerda (desmarque para inverter)</label>
       <button id="bVideo">Carregar vídeo…</button><span class="small" id="vInfo" style="margin:0"></span>
     </div>
     <input type="file" id="fileVideo" accept="video/*" style="display:none">
@@ -371,6 +371,7 @@
   if (!S.cfg.dur) S.cfg.dur = 60;
   if (!S.cfg.sub || S.cfg.sub==='1 km no menor tempo' || /^O máximo de distância em /.test(S.cfg.sub)) S.cfg.sub = '';
   if (S.cfg.dual === undefined) S.cfg.dual = true;
+  if (!S.cfg.lay2){ S.cfg.vleft = true; S.cfg.lay2 = 1; }  // padrão: vídeo à esquerda, sistema à direita
   if (!S.cfg.vintro) S.cfg.vintro = 5;
   if (!S.cfg.vrun) S.cfg.vrun = 90;
   S.results = (S.results||[]).filter(x => typeof x.dist === 'number');
