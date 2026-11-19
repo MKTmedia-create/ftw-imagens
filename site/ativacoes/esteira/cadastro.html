@@ -132,7 +132,7 @@
   async function waitNumber(ref){
     const t0 = Date.now();
     while (Date.now() - t0 < 120000){
-      await new Promise(r => setTimeout(r, 2000));
+      await new Promise(r => setTimeout(r, 4000));
       try{
         const res = await fetch(`https://ntfy.sh/${topic}/json?poll=1&since=${ref}`, { cache:'no-store' });
         const txt = await res.text();
@@ -141,6 +141,7 @@
           if (m.event !== 'message') continue;
           let d; try { d = JSON.parse(m.message); } catch(e){ continue; }
           if (d.t === 'num' && d.ref === ref) return d.n;
+          if (d.t === 'nums' && d.m && d.m[ref]) return d.m[ref];
         }
       }catch(e){}
     }

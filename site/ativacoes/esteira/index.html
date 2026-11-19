@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Archivo+Narrow:wght@400..700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script src="qr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.5.4/peerjs.min.js"></script>
 <style>
   :root{
     --u:min(1vw,1vh);
@@ -204,6 +205,12 @@
   .draw .acts button{background:var(--lime);color:#000;border:none;padding:calc(1.4 * var(--u)) calc(2.8 * var(--u));font-family:var(--narrow);font-weight:700;font-size:calc(2 * var(--u));text-transform:uppercase;cursor:pointer;transform:skewX(-14deg)}
   .draw .acts button.sec{background:#2a2a2a;color:var(--grey)}
   .draw .acts button span{display:inline-block;transform:skewX(14deg)}
+  .panelmode .ctrl-only, .panelmode .ops button:not(#opFull):not(#opCfg), .panelmode .entry button, .panelmode #entry input{display:none !important}
+  .panelmode .card > *:not(.pv){display:none !important}
+  .panelmode #bSave,.panelmode #bCsv,.panelmode #bReset,.panelmode .entry{display:none !important}
+  .ctrl-only{display:inline-flex;align-items:center;gap:calc(.6 * var(--u));margin-right:calc(1.4 * var(--u))}
+  label.ctrl-only,div.ctrl-only{display:flex}
+  .panelmode .go{visibility:hidden}
   @media (prefers-reduced-motion:reduce){ .track{animation:none} *{transition:none!important;animation-duration:1ms!important} }
 </style>
 </head>
@@ -217,7 +224,7 @@
       <div class="logo has" id="logo2" title="Clique para trocar o logo do evento"><img src="trail-logo.png" alt="Dunamis Farm Trail Run 26"></div>
     </div>
     <div class="ev"><span id="tTitle">We do Hard Things. For the win.</span><small id="tSub">O máximo de distância em 1 minuto</small></div>
-    <div class="status"><span class="sq" id="netDot"></span><span id="netTxt">Conectando</span></div>
+    <div class="status"><span class="ctrl-only"><span class="sq" id="panelDot"></span> <span id="panelTxt">Painel desconectado</span></span><span class="sq" id="netDot"></span><span id="netTxt">Conectando</span></div>
   </header>
 
   <main class="stage">
@@ -291,7 +298,7 @@
 
 <div class="modal" id="cfgModal">
   <div class="card">
-    <h3>Configurações</h3>
+    <h3 class="pv">Configurações</h3>
     <div class="small">Espaço ou Enter faz a ação principal: chamar e iniciar. O tempo para sozinho no fim; aí digite os metros do painel da esteira e aperte Enter.</div>
     <div class="two">
       <div><label>Título na TV</label><input id="fTitle" maxlength="40"></div>
@@ -299,12 +306,16 @@
     </div>
     <label>Subtítulo <span style="text-transform:none;letter-spacing:0">(vazio = automático pela duração)</span></label><input id="fSub" maxlength="50">
 
+    <label class="ctrl-only">Link do painel de LED (abra no computador que reproduz no painel)</label>
+    <div class="rowf ctrl-only" style="margin-top:0;align-items:center"><code id="panelLink" style="flex:1"></code><button id="bCopyPanel">Copiar link</button></div>
+    <div class="small ctrl-only">Tudo o que você fizer aqui aparece lá na hora. O vídeo e o som rodam no painel; carregue o vídeo uma vez lá também (tecla C).</div>
+
     <label>Tela dupla: sistema + vídeo POV (1344 × 672)</label>
     <div class="rowf" style="margin-top:0;align-items:center">
       <label style="margin:0;display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;color:#ddd;font-size:14px"><input type="checkbox" id="fDual" style="width:auto"> Ligar tela dupla</label>
       <label style="margin:0;display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;color:#ddd;font-size:14px"><input type="checkbox" id="fVLeft" style="width:auto"> Vídeo à esquerda (desmarque para inverter)</label>
-      <button id="bVideo">Carregar vídeo…</button><span class="small" id="vInfo" style="margin:0"></span>
     </div>
+    <div class="rowf pv" style="align-items:center"><button id="bVideo" class="pri">Carregar vídeo…</button><span class="small" id="vInfo" style="margin:0"></span></div>
     <input type="file" id="fileVideo" accept="video/*" style="display:none">
     <div class="two">
       <div><label>Início da corrida no vídeo (s)</label><input id="fVIntro" inputmode="decimal" maxlength="5"></div>
@@ -334,7 +345,7 @@
     <input id="fTopic">
     <div class="small">Os cadastros chegam por este código, criptografados: só este notebook abre WhatsApp e e‑mail. Trocar o código gera um QR novo. Link do cadastro: <code id="linkCad"></code></div>
 
-    <div class="rowf">
+    <div class="rowf pv">
       <button class="pri" id="bSave">Salvar</button>
       <button id="bCsv">Exportar resultados (CSV)</button>
       <button id="bClose">Fechar</button>
@@ -365,8 +376,13 @@
     cfg:{ title:'We do Hard Things. For the win.', sub:'O máximo de distância em 1 minuto', dur:60, topic:'ftw-esteira-' + rnd(10), logo:'', logo2:'' },
     queue:[], current:null, results:[], seen:[], lastId:null, seq:0, people:[], drawn:[]
   });
+  const QS = new URLSearchParams(location.search);
+  const PANEL = (QS.get('painel') || '').replace(/[^a-zA-Z0-9_-]/g,'');   // este computador só exibe (painel de LED)
+  const MOCK = QS.has('mock');
+  if (PANEL) document.documentElement.classList.add('panelmode');
   let S;
-  try { S = JSON.parse(localStorage.getItem(LS)) || blank(); } catch(e){ S = blank(); }
+  if (PANEL){ S = blank(); S.cfg.topic = PANEL; }
+  else { try { S = JSON.parse(localStorage.getItem(LS)) || blank(); } catch(e){ S = blank(); } }
   if (!S.cfg.title || S.cfg.title==='Desafio Esteira') S.cfg.title = 'We do Hard Things. For the win.';
   if (!S.cfg.dur) S.cfg.dur = 60;
   if (!S.cfg.sub || S.cfg.sub==='1 km no menor tempo' || /^O máximo de distância em /.test(S.cfg.sub)) S.cfg.sub = '';
@@ -376,7 +392,7 @@
   if (!S.cfg.vrun) S.cfg.vrun = 90;
   S.results = (S.results||[]).filter(x => typeof x.dist === 'number');
   S.seq = S.seq || 0; S.cfg.logo2 = S.cfg.logo2 || ''; S.people = S.people || []; S.drawn = S.drawn || [];
-  const save = () => { try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){} };
+  const save = () => { if (PANEL) return; try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){} };
   save();
 
   let run = { state:'idle', t0:0, ms:0 };
@@ -389,7 +405,7 @@
   const pad3 = n => String(n||0).padStart(3,'0');
   let videoOK = false;
   const useVideo = () => S.cfg.dual && videoOK;
-  const DUR = () => (useVideo() ? S.cfg.vrun : (S.cfg.dur||60)) * 1000;
+  const DUR = () => (S.cfg.dual ? S.cfg.vrun : (S.cfg.dur||60)) * 1000;
   const durLabel = () => { const d = DUR()/1000, m = Math.floor(d/60), s = d%60;
     if (!m) return d + ' segundos'; if (!s) return m===1 ? '1 minuto' : m+' minutos'; return m + 'min' + String(s).padStart(2,'0'); };
   const durShort = () => { const d = DUR()/1000, m = Math.floor(d/60), s = d%60; return !m ? d+' s' : !s ? m+' min' : m+'min'+String(s).padStart(2,'0'); };
@@ -397,7 +413,7 @@
   const mfmt = m => Number(m).toLocaleString('pt-BR') + ' m';
   // bipe (o navegador libera o som depois do primeiro clique/tecla do operador)
   let actx = null;
-  const beep = (f=880, ms=180, n=1) => { if (useVideo()) return; try{ actx = actx || new (window.AudioContext||window.webkitAudioContext)();
+  const beep = (f=880, ms=180, n=1) => { if (S.cfg.dual) return; try{ actx = actx || new (window.AudioContext||window.webkitAudioContext)();
     for (let i=0;i<n;i++){ const o=actx.createOscillator(), g=actx.createGain(), t=actx.currentTime + i*(ms/1000+.08);
       o.frequency.value=f; o.connect(g); g.connect(actx.destination); g.gain.setValueAtTime(.25,t); g.gain.exponentialRampToValueAtTime(.001,t+ms/1000); o.start(t); o.stop(t+ms/1000); } }catch(e){} };
   const clean = s => String(s||'').replace(/\s+/g,' ').trim().slice(0,28);
@@ -426,9 +442,15 @@
     return JSON.parse(new TextDecoder().decode(pt));
   }
   const shortName = full => { const w = clean(full).split(' ').filter(Boolean); return (w.length > 1 ? w[0] + ' ' + w[w.length-1] : w[0] || '').toUpperCase(); };
-  async function sendNumber(ref, n){
-    try { await fetch(`${NTFY}/${encodeURIComponent(S.cfg.topic)}`, { method:'POST', body: JSON.stringify({ t:'num', ref, n }) }); } catch(e){}
-  }
+  // números da sorte saem em lote a cada 6 s (o serviço gratuito limita mensagens por minuto e por dia)
+  let numBatch = {};
+  function sendNumber(ref, n){ numBatch[ref] = n; }
+  setInterval(async () => {
+    const keys = Object.keys(numBatch); if (!keys.length || PANEL) return;
+    const m = numBatch; numBatch = {};
+    try { const r = await fetch(`${NTFY}/${encodeURIComponent(S.cfg.topic)}`, { method:'POST', body: JSON.stringify({ t:'nums', m }) }); if (!r.ok) throw 0; }
+    catch(e){ Object.assign(numBatch, m); }
+  }, 6000);
   const ranked = () => [...S.results].sort((a,b) => b.dist - a.dist || a.at.localeCompare(b.at));
 
   const IC = {
@@ -472,6 +494,7 @@
     if (!running) $('liveTime').textContent = run.state==='input' ? '00:00.00' : c ? fmt(DUR()) : '--:--.--';
   }
   function renderNow(){
+    push();
     renderLive();
     const c = S.current || (run.state==='done' ? lastP : null), t = $('timer');
     $('curName').textContent = c ? c.nome : 'Aguardando';
@@ -495,6 +518,7 @@
   }
 
   function renderQueue(){
+    push();
     const q = $('queue'); q.innerHTML = '';
     const items = S.queue.length ? S.queue.slice(0,12).map((p,i) => [String(i+1).padStart(2,'0'), p.nome])
                                  : [['', 'Escaneie o QR e entre na fila'], ['', 'Ganhe seu número da sorte']];
@@ -509,15 +533,18 @@
   }
 
   function renderRank(){
+    push();
     const box = $('rk');
     const before = {}; box.querySelectorAll('.row[data-id]').forEach(el => before[el.dataset.id] = el.getBoundingClientRect().top);
     const r = ranked(); box.innerHTML = '';
-    $('rkCount').textContent = r.length + (r.length===1 ? ' participante' : ' participantes');
+    const tot = S.total ?? r.length;
+    $('rkCount').textContent = tot + (tot===1 ? ' participante' : ' participantes');
     const TOP = 10;
     const mk = (p, i) => {
       const d = document.createElement('div'); d.dataset.id = p.id;
-      d.className = 'row' + (i<3 ? ' p'+(i+1) : '') + (p.id===lastFinishedId ? ' hl' : '');
-      const a=document.createElement('span'); a.className='pos'; a.textContent=String(i+1).padStart(2,'0');
+      const P = p.pos || i+1;
+      d.className = 'row' + (P<=3 ? ' p'+P : '') + (p.id===lastFinishedId ? ' hl' : '');
+      const a=document.createElement('span'); a.className='pos'; a.textContent=String((p.pos||i+1)).padStart(2,'0');
       const n=document.createElement('span'); n.className='nm'; n.textContent=p.nome;
       const s=document.createElement('small'); s.textContent='nº '+pad3(p.n); n.appendChild(s);
       const t=document.createElement('span'); t.className='tm'; t.textContent=mfmt(p.dist);
@@ -549,12 +576,14 @@
     $('tmLink').textContent = url; $('linkCad').textContent = url;
   }
   function renderAll(){ renderHead(); renderNow(); renderQueue(); renderRank(); }
+  let curRes = null;
 
   function showResult(txt, lead){
+    curRes = { txt, lead }; push();
     const r = $('result'); r.textContent = txt; r.className = 'res' + (lead ? ' lead' : '');
     requestAnimationFrame(() => requestAnimationFrame(() => r.classList.add('on')));
   }
-  function hideResult(){ $('result').className = 'res'; }
+  function hideResult(){ curRes = null; push(); $('result').className = 'res'; }
 
   function callNext(){
     if (!S.queue.length) return;
@@ -562,14 +591,22 @@
     hideResult(); lastFinishedId=null; save(); renderAll();
   }
   const pov = $('pov');
-  function startVideoRun(){
-    run = { state:'countdown', t0:0, ms:0 }; renderNow();
-    try { pov.currentTime = 0; } catch(e){}
-    const p = pov.play(); if (p) p.catch(() => { pov.muted = true; pov.play().catch(()=>{}); });
+  // dual: a corrida segue a linha do tempo do vídeo (abertura + corrida). Sem vídeo neste computador, segue o relógio.
+  function startTimeline(offMs, id){
     const INTRO = S.cfg.vintro, RUN = S.cfg.vrun;
+    run = { state:'countdown', t0:0, ms:0, id: id || Date.now(), start: performance.now() - (offMs||0) };
+    let getT;
+    if (videoOK){
+      pov.muted = !PANEL && panelOn;          // com painel conectado, o som sai só no painel
+      try { pov.currentTime = (offMs||0)/1000; } catch(e){}
+      const p = pov.play(); if (p) p.catch(() => { pov.muted = true; pov.play().catch(()=>{}); });
+      getT = () => pov.currentTime;
+    } else getT = () => (performance.now() - run.start) / 1000;
+    run.getT = getT;
+    renderNow();
     const loop = () => {
       if (run.state !== 'countdown' && run.state !== 'running') return;
-      const t = pov.currentTime;
+      const t = getT();
       if (t < INTRO){
         if (run.state !== 'countdown'){ run.state = 'countdown'; renderNow(); }
         $('timer').textContent = $('liveTime').textContent = fmt(RUN*1000);
@@ -578,27 +615,29 @@
         run.ms = (t - INTRO) * 1000;
         const left = Math.max(0, RUN*1000 - run.ms);
         $('timer').textContent = $('liveTime').textContent = fmt(left);
-        if (left <= 0){ return stopRun(true); }
+        if (left <= 0){ return PANEL ? panelEnd() : stopRun(true); }
       }
       raf = requestAnimationFrame(loop);
     };
     loop();
   }
   pov.addEventListener('ended', () => { pov.pause(); try { pov.currentTime = 0; } catch(e){} });
-  function startCountdown(){
-    if (useVideo()) return startVideoRun();
-    run.state='countdown'; renderNow();
+  function startCountdown(offMs, id){
+    if (S.cfg.dual) return startTimeline(offMs, id);
+    run.state='countdown'; run.id = id || Date.now(); run.start = performance.now() - (offMs||0); renderNow();
+    if ((offMs||0) > 2400) return startRun(offMs - 2400, run.id);
     const cd = $('cd'); cd.classList.add('on');
     const seq = ['3','2','1','Já!']; let k = 0;
     const show = () => {
       if (run.state !== 'countdown' && k < 4){ cd.classList.remove('on'); return; }
-      if (k < seq.length){ cd.innerHTML = '<b></b>'; cd.firstChild.textContent = seq[k]; if (k===3){ beep(1320, 380); startRun(); } else beep(660, 140); k++; setTimeout(show, k===4 ? 550 : 800); }
+      if (k < seq.length){ cd.innerHTML = '<b></b>'; cd.firstChild.textContent = seq[k]; if (k===3){ beep(1320, 380); startRun(0, run.id); } else beep(660, 140); k++; setTimeout(show, k===4 ? 550 : 800); }
       else cd.classList.remove('on');
     };
     show();
   }
-  function startRun(){
-    run = { state:'running', t0:performance.now(), ms:0 }; renderNow();
+  function startRun(offMs, id){
+    const st = run.start;
+    run = { state:'running', t0:performance.now() - (offMs||0), ms:0, id: id || run.id || Date.now(), start: st ?? performance.now() }; renderNow();
     let warned = 0;
     const loop = () => {
       run.ms = performance.now() - run.t0;
@@ -606,20 +645,21 @@
       $('timer').textContent = $('liveTime').textContent = fmt(left);
       const sec = Math.ceil(left/1000);
       if (sec <= 3 && sec > 0 && warned !== sec){ warned = sec; beep(660, 120); }
-      if (left <= 0) return stopRun(true);
+      if (left <= 0) return PANEL ? panelEnd() : stopRun(true);
       if (run.state==='running') raf = requestAnimationFrame(loop);
     };
     loop();
   }
   function stopRun(auto){
     cancelAnimationFrame(raf);
-    if (useVideo()){
-      run.ms = Math.min(DUR(), Math.max(0, (pov.currentTime - S.cfg.vintro) * 1000));
-      if (!auto){ try { pov.currentTime = S.cfg.vintro + S.cfg.vrun; } catch(e){} }  // pula para o fechamento "TEMPO!"
+    if (S.cfg.dual){
+      run.ms = Math.min(DUR(), Math.max(0, ((run.getT ? run.getT() : 0) - S.cfg.vintro) * 1000));
+      if (!auto && videoOK){ try { pov.currentTime = S.cfg.vintro + S.cfg.vrun; } catch(e){} }  // pula para o fechamento "TEMPO!"
     } else run.ms = Math.min(DUR(), performance.now() - run.t0);
     run.state='input';
     if (auto) beep(1320, 600);
-    renderNow(); $('distIn').value=''; setTimeout(() => $('distIn').focus(), 60);
+    renderNow();
+    if (!PANEL){ $('distIn').value=''; setTimeout(() => $('distIn').focus(), 60); }
   }
   function saveDistance(){
     const m = parseInt(String($('distIn').value).replace(/\D/g,''), 10);
@@ -659,35 +699,39 @@
     if (!S.current && run.state!=='running' && run.state!=='countdown') renderNow();
   }
 
-  async function poll(){
+  // cadastros chegam por uma conexão contínua (1 requisição), em vez de consultar a cada poucos segundos
+  let es = null, esTimer = null, msgChain = Promise.resolve();
+  function subscribe(){
+    try { es && es.close(); } catch(e){}
     const since = S.lastId || 'all';
-    try {
-      const res = await fetch(`${NTFY}/${encodeURIComponent(S.cfg.topic)}/json?poll=1&since=${since}`, { cache:'no-store' });
-      if (!res.ok) throw new Error(res.status);
-      const txt = await res.text();
-      for (const line of txt.split('\n').filter(Boolean)){
-        let m; try { m = JSON.parse(line); } catch(e){ continue; }
-        if (m.event !== 'message') continue;
+    es = new EventSource(`${NTFY}/${encodeURIComponent(S.cfg.topic)}/sse?since=${since}`);
+    es.onopen = () => { $('netDot').className='sq ok'; $('netTxt').textContent='Cadastros online'; };
+    es.onmessage = ev => { let m; try { m = JSON.parse(ev.data); } catch(e){ return; } if (m.event !== 'message') return; msgChain = msgChain.then(() => handleMsg(m)); };
+    es.onerror = () => {
+      $('netDot').className='sq err'; $('netTxt').textContent='Reconectando · use o cadastro manual se preciso';
+      try { es.close(); } catch(e){} clearTimeout(esTimer); esTimer = setTimeout(subscribe, 4000);
+    };
+  }
+  async function handleMsg(m){
+    {
+      {
         S.lastId = m.id;
-        let d; try { d = JSON.parse(m.message); } catch(e){ continue; }
-        if (d.t !== 'cad2' || S.seen.includes(m.id)) continue;
-        let x; try { x = await decrypt(d); } catch(e){ continue; }
+        let d; try { d = JSON.parse(m.message); } catch(e){ return; }
+        if (d.t !== 'cad2' || S.seen.includes(m.id)) return;
+        let x; try { x = await decrypt(d); } catch(e){ return; }
         const full = clean(x.nome).slice(0,60);
-        if (!full) continue;
+        if (!full) return;
         addToQueue({ id:m.id, full, nome:shortName(full), wpp:String(x.wpp||'').replace(/\D/g,'').slice(0,13), email:String(x.email||'').trim().slice(0,80), ts:m.time });
       }
       save();
-      $('netDot').className='sq ok'; $('netTxt').textContent='Cadastros online';
-    } catch(e){
-      $('netDot').className='sq err'; $('netTxt').textContent='Sem conexão · use o cadastro manual';
     }
   }
-  ensureKeys().then(() => { renderQR(); poll(); setInterval(poll, 3000); });
+  if (!PANEL) ensureKeys().then(() => { renderQR(); subscribe(); });
 
   window.closeM = id => $(id).classList.remove('on');
   function openCfg(){
     $('fTitle').value=S.cfg.title; $('fSub').value=S.cfg.sub; $('fDist').value=S.cfg.dur; $('fDual').checked=!!S.cfg.dual; $('fVLeft').checked=!!S.cfg.vleft; $('fVIntro').value=S.cfg.vintro; $('fVRun').value=S.cfg.vrun; $('fTopic').value=S.cfg.topic;
-    $('linkCad').textContent=cadUrl(); fillLists(); $('cfgModal').classList.add('on');
+    $('linkCad').textContent=cadUrl(); $('panelLink').textContent=panelUrl(); fillLists(); $('cfgModal').classList.add('on');
   }
   function fillLists(){
     $('drawInfo').textContent = S.drawn.length ? S.drawn.length + ' já sorteado(s).' : '';
@@ -710,8 +754,8 @@
     S.cfg.dur = Math.max(10, Math.min(3600, parseInt($('fDist').value,10) || 60));
     const nt = $('fTopic').value.trim().replace(/[^a-zA-Z0-9_-]/g,'');
     if (nt && nt !== S.cfg.topic){ S.cfg.topic = nt; S.lastId = null; S.cfg.pub = ''; S.cfg.priv = null; privKey = null; }
-    ensureKeys().then(renderQR);
-    save(); renderAll(); renderQR(); closeM('cfgModal');
+    ensureKeys().then(() => { renderQR(); subscribe(); });
+    save(); renderAll(); renderQR(); closeM('cfgModal'); push(true);
   };
   $('bManual').onclick = () => {
     const n = clean($('fManual').value); if (!n) return;
@@ -760,34 +804,38 @@
     $('drawNum').textContent = '000'; $('drawNum').className = 'num rolling'; $('drawWho').textContent = '';
     $('drawMeta').textContent = el.length + (el.length===1 ? ' número participando' : ' números participando');
     $('drawGo').disabled = !el.length; $('drawModal').classList.add('on');
+    drawOpen = true; drawLast = null; push();
   }
   let rolling = false;
-  function doDraw(){
-    const el = eligible(); if (!el.length || rolling) return;
+  let drawOpen = false, drawLast = null;
+  function animateDraw(pool, win, left, done){
     rolling = true; $('drawWho').textContent = ''; $('drawNum').className = 'num rolling';
-    const pickIdx = crypto.getRandomValues(new Uint32Array(1))[0] % el.length, win = el[pickIdx];
     const t0 = performance.now(), D = 3200;
     const tick = () => {
       const k = (performance.now() - t0) / D;
-      if (k < 1){
-        $('drawNum').textContent = pad3(el[Math.floor(Math.random()*el.length)].n);
-        setTimeout(tick, 40 + 260 * k * k);
-      } else {
-        $('drawNum').textContent = pad3(win.n); $('drawNum').className = 'num';
-        $('drawWho').textContent = win.nome;
-        S.drawn.push(win.id); save(); rolling = false;
-        const left = eligible().length;
-        $('drawMeta').textContent = 'Sorteado · restam ' + left + (left===1 ? ' número' : ' números');
-        $('drawGo').disabled = !left;
+      if (k < 1){ $('drawNum').textContent = pad3(pool[Math.floor(Math.random()*pool.length)]); setTimeout(tick, 40 + 260 * k * k); }
+      else {
+        $('drawNum').textContent = pad3(win.n); $('drawNum').className = 'num'; $('drawWho').textContent = win.nome;
+        rolling = false; $('drawMeta').textContent = 'Sorteado · restam ' + left + (left===1 ? ' número' : ' números');
+        $('drawGo').disabled = !left; done && done();
       }
     };
     tick();
   }
+  function doDraw(){
+    const el = eligible(); if (!el.length || rolling || PANEL) return;
+    const win = el[crypto.getRandomValues(new Uint32Array(1))[0] % el.length];
+    S.drawn.push(win.id); save();
+    const pool = el.map(x => x.n).slice(0, 300), left = eligible().length;
+    drawLast = { n:win.n, nome:win.nome, left };
+    send({ t:'draw', pool, win:{ n:win.n, nome:win.nome }, left });
+    animateDraw(pool, win, left, () => push());
+  }
   $('opDraw').onclick = openDraw; $('opCfg').onclick = openCfg; $('bDraw').onclick = openDraw;
-  $('drawGo').onclick = doDraw; $('drawClose').onclick = () => { if (!rolling) closeM('drawModal'); };
+  $('drawGo').onclick = doDraw; $('drawClose').onclick = () => { if (!rolling){ closeM('drawModal'); drawOpen = false; push(); } };
   $('bDrawReset').onclick = () => { S.drawn = []; save(); fillLists(); };
 
-  $('mainBtn').onclick = mainAction;
+  $('mainBtn').onclick = () => { if (!PANEL) mainAction(); };
   $('opSkip').onclick = skip;
   $('opCancel').onclick = cancelRun;
   const full = () => { (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen()).catch(()=>{}); };
@@ -795,7 +843,8 @@
   $('opTotem').onclick = () => $('totemModal').classList.add('on');
   document.addEventListener('keydown', e => {
     if ($('cfgModal').classList.contains('on') || e.target.tagName==='INPUT') return;
-    if ($('drawModal').classList.contains('on')){ if (e.code==='Space' || e.code==='Enter'){ e.preventDefault(); doDraw(); } else if (e.key==='Escape' && !rolling) closeM('drawModal'); return; }
+    if (PANEL){ if (e.key==='f' || e.key==='F') full(); else if (e.key==='c' || e.key==='C') openCfg(); return; }
+    if ($('drawModal').classList.contains('on')){ if (e.code==='Space' || e.code==='Enter'){ e.preventDefault(); doDraw(); } else if (e.key==='Escape' && !rolling){ closeM('drawModal'); drawOpen = false; push(); } return; }
     if (e.key==='s' || e.key==='S'){ openDraw(); return; }
     if (e.key==='c' || e.key==='C'){ openCfg(); return; }
     if (e.code==='Space' || e.code==='Enter'){ e.preventDefault(); mainAction(); }
@@ -826,6 +875,131 @@
     try { await putVideo(f, f.name); } catch(err){ $('vInfo').textContent = 'Vídeo carregado só nesta sessão (sem espaço para guardar).'; }
     attachVideo({ blob:f, name:f.name }); e.target.value = '';
   };
+
+  // ---------- espelhamento: o controle manda tudo para o painel em tempo real ----------
+  const peerId = () => 'ftw-painel-' + String(S.cfg.topic).toLowerCase().replace(/[^a-z0-9-]/g,'');
+  const panelUrl = () => { const u = new URL(location.href); u.search = '?painel=' + encodeURIComponent(S.cfg.topic); u.hash = ''; return u.toString(); };
+  let conns = [], panelOn = false, pushT = null, peer = null, bc = null;
+  function send(obj){
+    if (PANEL) return;
+    const msg = JSON.stringify(obj);
+    if (bc) bc.postMessage(msg);
+    conns.forEach(c => { try { if (c.open) c.send(msg); } catch(e){} });
+  }
+  function snapshot(full){
+    const r = ranked(), hi = r.findIndex(x => x.id === lastFinishedId);
+    const pack = (x, i) => ({ id:x.id, nome:x.nome, n:x.n, dist:x.dist, at:x.at, pos:i+1 });
+    const res = r.slice(0,10).map(pack); if (hi >= 10) res.push(pack(r[hi], hi));
+    const o = { t:'snap',
+      cfg:{ title:S.cfg.title, sub:S.cfg.sub, dur:S.cfg.dur, dual:S.cfg.dual, vleft:S.cfg.vleft, vintro:S.cfg.vintro, vrun:S.cfg.vrun },
+      seq:S.seq, total:r.length, results:res, lastFinishedId,
+      queue:S.queue.slice(0,12).map(p => ({ id:p.id, nome:p.nome, n:p.n })),
+      current: S.current && { id:S.current.id, nome:S.current.nome, n:S.current.n },
+      last: lastP && { id:lastP.id, nome:lastP.nome, n:lastP.n, dist:lastP.dist },
+      run:{ state:run.state, id:run.id||0, el: (run.state==='countdown'||run.state==='running') ? Math.round(performance.now() - run.start) : 0 },
+      res: curRes, draw:{ open:drawOpen, last:drawLast } };
+    if (full){ o.logo = S.cfg.logo || ''; o.logo2 = S.cfg.logo2 || ''; }
+    return o;
+  }
+  function push(full){
+    if (PANEL || (!conns.length && !bc)) return;
+    clearTimeout(pushT); pushT = setTimeout(() => send(snapshot(full)), full ? 0 : 30);
+  }
+  function setPanelStatus(){
+    if (PANEL) return;
+    const n = conns.filter(c => c.open).length || (bc && bcSeen ? 1 : 0);
+    panelOn = n > 0; if (videoOK) pov.muted = panelOn;
+    $('panelTxt').textContent = panelOn ? 'Painel conectado' : 'Painel desconectado';
+    $('panelDot').className = 'sq ' + (panelOn ? 'ok' : 'err');
+    if (!videoOK) document.querySelector('#vid .ph').innerHTML = panelOn ? '<b>Vídeo no painel</b>O vídeo e o som estão rodando no computador do painel de LED.' : '<b>Vídeo POV</b>Abra o link do painel no computador do LED (tecla C → Link do painel).<br>Ou carregue o vídeo aqui para usar um computador só.';
+  }
+  let bcSeen = false;
+
+  // controle: conecta no painel e tenta de novo sozinho se cair
+  function controlConnect(){
+    if (MOCK){
+      bc = new BroadcastChannel(peerId());
+      bc.onmessage = ev => { let m; try { m = JSON.parse(ev.data); } catch(e){ return; } if (m.t==='hello'){ bcSeen = true; setPanelStatus(); send(snapshot(true)); } };
+      setPanelStatus(); return;
+    }
+    if (!window.Peer){ $('panelTxt').textContent = 'Painel: sem conexão'; return; }
+    peer = new Peer();
+    peer.on('open', () => tryConnect());
+    peer.on('disconnected', () => { try { peer.reconnect(); } catch(e){} });
+    peer.on('error', () => {});
+    setInterval(() => { if (!conns.some(c => c.open)) tryConnect(); }, 4000);
+    setInterval(() => { if (conns.some(c => c.open)) send(snapshot(false)); }, 8000);
+  }
+  function tryConnect(){
+    if (!peer || peer.disconnected) return;
+    conns = conns.filter(c => c.open);
+    const c = peer.connect(peerId(), { reliable:true, serialization:'raw' });
+    c.on('open', () => { conns.push(c); setPanelStatus(); send(snapshot(true)); });
+    c.on('data', d => { let m; try { m = JSON.parse(d); } catch(e){ return; } if (m.t==='hello') send(snapshot(true)); });
+    c.on('close', () => { conns = conns.filter(x => x !== c); setPanelStatus(); });
+    c.on('error', () => {});
+  }
+
+  // painel: recebe e espelha
+  let panelPending = null;
+  function panelEnd(){ run.state = 'input'; cancelAnimationFrame(raf); renderNow(); }
+  function applySnap(m){
+    Object.assign(S.cfg, m.cfg);
+    if (m.logo !== undefined){ S.cfg.logo = m.logo; S.cfg.logo2 = m.logo2; }
+    S.seq = m.seq; S.total = m.total; S.results = m.results; S.queue = m.queue; S.current = m.current;
+    lastP = m.last; lastFinishedId = m.lastFinishedId;
+    const R = m.run, mine = run.state==='countdown' || run.state==='running';
+    if ((R.state==='countdown' || R.state==='running') && R.id !== run.id){
+      cancelAnimationFrame(raf); startCountdown((R.el||0) + 120, R.id);
+    } else if (!(R.state==='countdown' || R.state==='running') && mine){
+      if (R.state==='input' && R.id===run.id){
+        const left = DUR() - (S.cfg.dual ? Math.max(0, ((run.getT ? run.getT() : 0) - S.cfg.vintro) * 1000) : performance.now() - run.t0);
+        if (left > 1500){ stopRun(false); }                         // encerrado antes da hora
+        else { clearTimeout(panelPending); panelPending = setTimeout(() => { if (run.state==='countdown' || run.state==='running') panelEnd(); }, 1500); }
+      } else { cancelRun(); run.state = R.state; run.id = R.id; }
+    } else if (!mine){ run.state = R.state; run.id = R.id; }
+    // resultado e sorteio
+    if (m.res){ if (!curRes || curRes.txt !== m.res.txt){ curRes = m.res; showResultLocal(m.res.txt, m.res.lead); } }
+    else if (curRes){ curRes = null; $('result').className = 'res'; }
+    if (m.draw && m.draw.open && !$('drawModal').classList.contains('on')){
+      $('drawNum').textContent = m.draw.last ? pad3(m.draw.last.n) : '000'; $('drawNum').className = 'num' + (m.draw.last ? '' : ' rolling');
+      $('drawWho').textContent = m.draw.last ? m.draw.last.nome : ''; $('drawMeta').textContent = '';
+      $('drawModal').classList.add('on');
+    } else if (m.draw && !m.draw.open && !rolling) $('drawModal').classList.remove('on');
+    renderHead(); renderQueue(); renderRank(); if (!(run.state==='countdown' || run.state==='running')) renderNow();
+  }
+  function showResultLocal(txt, lead){ const r = $('result'); r.textContent = txt; r.className = 'res' + (lead ? ' lead' : ''); requestAnimationFrame(() => requestAnimationFrame(() => r.classList.add('on'))); }
+  function onPanelMsg(raw){
+    let m; try { m = typeof raw === 'string' ? JSON.parse(raw) : raw; } catch(e){ return; }
+    if (m.t === 'snap') applySnap(m);
+    else if (m.t === 'draw'){ $('drawModal').classList.add('on'); animateDraw(m.pool, m.win, m.left); }
+  }
+  function panelListen(){
+    const badge = $('netTxt');
+    if (MOCK){
+      bc = new BroadcastChannel(peerId()); bc.onmessage = ev => { badge.textContent = 'Espelhando o controle'; $('netDot').className='sq ok'; onPanelMsg(ev.data); };
+      bc.postMessage(JSON.stringify({ t:'hello' })); return;
+    }
+    if (!window.Peer){ badge.textContent = 'Sem conexão com o controle'; return; }
+    const startPeer = () => {
+      peer = new Peer(peerId());
+      peer.on('open', () => { badge.textContent = 'Aguardando o controle'; $('netDot').className='sq'; });
+      peer.on('connection', c => {
+        c.on('open', () => { badge.textContent = 'Espelhando o controle'; $('netDot').className='sq ok'; try { c.send(JSON.stringify({ t:'hello' })); } catch(e){} });
+        c.on('data', onPanelMsg);
+        c.on('close', () => { badge.textContent = 'Controle desconectado'; $('netDot').className='sq err'; });
+      });
+      peer.on('disconnected', () => { try { peer.reconnect(); } catch(e){} });
+      peer.on('error', err => {
+        if (err && err.type === 'unavailable-id'){ badge.textContent = 'Este painel já está aberto em outra aba'; $('netDot').className='sq err'; }
+        else { badge.textContent = 'Reconectando…'; setTimeout(() => { try { peer.destroy(); } catch(e){} startPeer(); }, 3000); }
+      });
+    };
+    startPeer();
+  }
+  if (PANEL) panelListen(); else controlConnect();
+  $('panelLink') && ($('panelLink').textContent = panelUrl());
+  $('bCopyPanel') && ($('bCopyPanel').onclick = () => { navigator.clipboard.writeText(panelUrl()).then(() => $('bCopyPanel').textContent = 'Copiado').catch(()=>{}); });
 
   // controles aparecem quando o mouse mexe e somem sozinhos depois de 3 s
   let mt = null;
