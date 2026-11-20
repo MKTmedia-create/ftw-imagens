@@ -276,12 +276,51 @@
     .mbar .m-main:disabled{background:#2c2c2c;color:#777}
     .mbar .m-row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
     .mbar .m-row button{height:44px;font-size:15px;background:#232323;color:var(--grey);border:1px solid #3a3a3a}
-    html:not(.panelmode) .entry.on{position:fixed;left:10px;right:10px;top:auto;bottom:140px;z-index:9;padding:14px;gap:10px;flex-wrap:wrap}
+    html:not(.panelmode) .entry.on{display:none !important;position:fixed;left:10px;right:10px;top:auto;bottom:140px;z-index:9;padding:14px;gap:10px;flex-wrap:wrap}
     html:not(.panelmode) .entry label{font-size:18px;width:100%} html:not(.panelmode) .entry label small{font-size:12px}
     html:not(.panelmode) .entry input{font-size:40px;padding:6px 10px}
     html:not(.panelmode) .entry .unit{font-size:28px}
     html:not(.panelmode) .entry button{height:56px;font-size:20px;padding:0 18px}
     html:not(.panelmode) .draw .acts button{font-size:20px;padding:14px 22px}
+  }
+
+  /* ===== Tela própria do celular ===== */
+  #mob{display:none}
+  @media (max-width: 900px){
+    html:not(.panelmode) #wall{display:none !important}
+    html:not(.panelmode) body{display:block;padding:0 0 150px;overflow:auto;background:var(--ink);font-size:15px}
+    html:not(.panelmode) #mob{display:block;padding:12px 12px 0;color:var(--grey);font-family:var(--mono)}
+    .mb-status{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em;padding:4px 2px 12px}
+    .mb-status span{display:flex;align-items:center;gap:6px} .mb-status b{color:var(--grey);font-weight:700}
+    .mb-status .sq{width:8px;height:8px}
+    .mb-now{background:var(--bar);border-top:4px solid var(--lime);padding:14px 14px 16px}
+    .mb-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+    .mb-lbl{background:var(--lime);color:#000;font-family:var(--narrow);font-weight:700;text-transform:uppercase;font-size:15px;padding:3px 8px}
+    .mb-bib{font-size:12px;color:var(--lime);font-weight:700}
+    .mb-name{font-family:var(--narrow);font-weight:700;text-transform:uppercase;font-size:34px;line-height:1;color:#f2f2f2;margin:12px 0 4px;word-break:break-word}
+    .mb-name.empty{color:#555}
+    .mb-timer{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 70;font-weight:300;font-size:64px;line-height:1;font-variant-numeric:tabular-nums;color:var(--grey)}
+    .mb-timer.running{color:var(--lime)}
+    .mb-res{margin-top:8px;font-family:var(--narrow);font-weight:700;text-transform:uppercase;font-size:18px;color:#000;background:var(--lime);display:none;padding:4px 8px;width:max-content;max-width:100%}
+    .mb-res.on{display:block}
+    .mb-entry{display:none;margin-top:14px;border-top:1px solid #3a3a3a;padding-top:14px}
+    .mb-entry.on{display:block}
+    .mb-entry label{display:block;font-family:var(--narrow);font-weight:700;text-transform:uppercase;font-size:18px;color:var(--orange);margin-bottom:8px}
+    .mb-in{display:flex;align-items:center;gap:8px}
+    .mb-in input{flex:1;min-width:0;background:#141414;border:2px solid var(--lime);color:var(--lime);font-family:"Archivo",sans-serif;font-size:44px;padding:6px 12px;text-align:right;outline:none;border-radius:0}
+    .mb-in span{font-family:var(--narrow);font-weight:700;font-size:30px}
+    .mb-entry button{margin-top:10px;width:100%;height:58px;border:none;background:var(--lime);color:#000;font-family:var(--narrow);font-weight:700;font-size:22px;text-transform:uppercase}
+    .mb-sec{margin-top:16px}
+    .mb-sec h3{font-family:var(--narrow);font-weight:700;text-transform:uppercase;font-size:20px;color:#f2f2f2;margin-bottom:6px}
+    .mb-sec h3 small{font-family:var(--mono);font-weight:400;font-size:11px;color:var(--mute)}
+    .mb-sec ol{list-style:none;border:1px solid #2c2c2c}
+    .mb-sec li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 12px;border-bottom:1px solid #222;font-size:14px}
+    .mb-sec li:last-child{border-bottom:none}
+    .mb-sec li b{font-family:var(--narrow);font-weight:700;font-size:18px;text-transform:uppercase;color:#f2f2f2;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .mb-sec li .k{color:var(--lime);font-weight:700;min-width:44px}
+    .mb-sec li .v{font-weight:700;color:var(--grey);white-space:nowrap}
+    .mb-sec li.first{background:#16210f} .mb-sec li.empty{color:var(--mute);justify-content:center}
+    html:not(.panelmode) .draw{position:fixed !important;--u:1vw}
   }
   @media (prefers-reduced-motion:reduce){ .track{animation:none} *{transition:none!important;animation-duration:1ms!important} }
 </style>
@@ -354,6 +393,22 @@
 <div class="vid" id="vid"><video id="pov" playsinline preload="auto"></video><div class="ph"><b>Vídeo POV</b>Aperte C (ou mexa o mouse e clique na ⚙ verde) e carregue o vídeo do percurso<br>(DFTR_Percurso_POV_1x1_COLOR.mp4)</div></div>
 </div>
 
+<main id="mob" aria-label="Controle pelo celular">
+  <div class="mb-status"><span><i class="sq" id="mbPanelDot"></i><b id="mbPanel">Painel</b></span><span><i class="sq" id="mbNetDot"></i><b id="mbNet">Cadastros</b></span><span><b id="mbCount">000</b> cadastrados</span></div>
+  <section class="mb-now">
+    <div class="mb-top"><span class="mb-lbl" id="mbLbl">Na esteira</span><span class="mb-bib" id="mbBib"></span></div>
+    <div class="mb-name" id="mbName">Aguardando</div>
+    <div class="mb-timer" id="mbTimer">00:00.00</div>
+    <div class="mb-res" id="mbRes"></div>
+    <form id="mbEntry" class="mb-entry" autocomplete="off">
+      <label for="mbDist">Metros no painel da esteira</label>
+      <div class="mb-in"><input id="mbDist" inputmode="numeric" pattern="[0-9]*" maxlength="5" placeholder="000"><span>m</span></div>
+      <button type="submit">Registrar distância</button>
+    </form>
+  </section>
+  <section class="mb-sec"><h3>Fila <small id="mbQn"></small></h3><ol id="mbQueue"></ol></section>
+  <section class="mb-sec"><h3>Ranking <small id="mbRn"></small></h3><ol id="mbRank" class="rk-list"></ol></section>
+</main>
 <nav class="mbar" id="mbar">
   <button class="m-main" id="mMain">Chamar próximo</button>
   <div class="m-row"><button id="mSkip">Pular</button><button id="mCancel">Cancelar</button><button id="mDraw">Sorteio</button><button id="mCfg">⚙ Config</button></div>
@@ -1092,6 +1147,53 @@
   $('panelLink') && ($('panelLink').textContent = panelUrl());
   $('bCopyPanel') && ($('bCopyPanel').onclick = () => { navigator.clipboard.writeText(panelUrl()).then(() => $('bCopyPanel').textContent = 'Copiado').catch(()=>{}); });
 
+  // ---------- tela do celular (espelha o estado do controle) ----------
+  const MOB = matchMedia('(max-width: 900px)');
+  let mobKey = '', mobFocused = false;
+  function renderMobile(){
+    if (PANEL || !MOB.matches) return;
+    $('mbLbl').textContent = $('lblNow').textContent;
+    const cur = S.current || (run.state==='done' ? lastP : null);
+    $('mbName').textContent = cur ? cur.full || cur.nome : 'Aguardando';
+    $('mbName').className = 'mb-name' + (cur ? '' : ' empty');
+    $('mbBib').textContent = cur ? 'Nº da sorte ' + pad3(cur.n) : '';
+    $('mbTimer').textContent = $('timer').textContent;
+    $('mbTimer').className = 'mb-timer' + (run.state==='running' ? ' running' : '');
+    const res = $('result'); $('mbRes').textContent = res.textContent; $('mbRes').className = 'mb-res' + (res.classList.contains('on') ? ' on' : '');
+    const inp = run.state === 'input';
+    $('mbEntry').className = 'mb-entry' + (inp ? ' on' : '');
+    if (inp && !mobFocused){ mobFocused = true; $('mbDist').value = ''; setTimeout(() => $('mbDist').focus(), 50); }
+    if (!inp) mobFocused = false;
+    $('mbPanel').textContent = $('panelTxt').textContent; $('mbPanelDot').className = $('panelDot').className;
+    $('mbNet').textContent = $('netTxt').textContent; $('mbNetDot').className = $('netDot').className;
+    $('mbCount').textContent = pad3(S.seq);
+    const rk = ranked();
+    const key = JSON.stringify([S.queue.map(p => p.id), rk.map(p => p.id + p.dist)]);
+    if (key === mobKey) return; mobKey = key;
+    const q = $('mbQueue'); q.innerHTML = '';
+    $('mbQn').textContent = S.queue.length ? S.queue.length + ' esperando' : '';
+    if (!S.queue.length){ const li = document.createElement('li'); li.className = 'empty'; li.textContent = 'Ninguém na fila'; q.appendChild(li); }
+    S.queue.slice(0, 30).forEach((p, i) => {
+      const li = document.createElement('li'); if (!i) li.className = 'first';
+      const k = document.createElement('span'); k.className = 'k'; k.textContent = i ? (i+1) + 'º' : 'Próx.';
+      const b = document.createElement('b'); b.textContent = p.full || p.nome;
+      const v = document.createElement('span'); v.className = 'v'; v.textContent = 'nº ' + pad3(p.n);
+      li.append(k, b, v); q.appendChild(li);
+    });
+    const rl = $('mbRank'); rl.innerHTML = '';
+    $('mbRn').textContent = rk.length ? rk.length + (rk.length===1 ? ' participante' : ' participantes') : '';
+    if (!rk.length){ const li = document.createElement('li'); li.className = 'empty'; li.textContent = 'Ninguém correu ainda'; rl.appendChild(li); }
+    rk.slice(0, 20).forEach((p, i) => {
+      const li = document.createElement('li'); if (!i) li.className = 'first';
+      const k = document.createElement('span'); k.className = 'k'; k.textContent = (i+1) + 'º';
+      const b = document.createElement('b'); b.textContent = p.full || p.nome;
+      const v = document.createElement('span'); v.className = 'v'; v.textContent = mfmt(p.dist);
+      li.append(k, b, v); rl.appendChild(li);
+    });
+  }
+  (function mobLoop(){ renderMobile(); setTimeout(mobLoop, run.state==='running' || run.state==='countdown' ? 60 : 300); })();
+  $('mbEntry').addEventListener('submit', e => { e.preventDefault(); $('distIn').value = $('mbDist').value; saveDistance(); $('mbDist').blur(); });
+
   // controles aparecem quando o mouse mexe e somem sozinhos depois de 3 s
   let mt = null;
   addEventListener('mousemove', () => { document.body.classList.add('mouse'); clearTimeout(mt); mt = setTimeout(() => document.body.classList.remove('mouse'), 3000); });
@@ -1099,7 +1201,7 @@
   // controles e sorteio dentro do quadrado
   ['gear'].forEach(id => $('app').appendChild($(id)));
   $('app').appendChild(document.querySelector('.ops'));
-  $('app').appendChild($('drawModal'));
+  if (!(MOB.matches && !PANEL)) $('app').appendChild($('drawModal'));
   renderAll(); renderQR();
 })();
 </script>
