@@ -475,6 +475,11 @@
       <div><label>Resultados</label><div class="list" id="rList"></div></div>
     </div>
 
+    <label>Recuperar cadastros de um arquivo de backup</label>
+    <div class="rowf" style="margin-top:0;align-items:center"><button id="bImport">Importar arquivo (.ndjson / .json)…</button><span class="small" id="impInfo" style="margin:0"></span></div>
+    <input type="file" id="fileImport" accept=".ndjson,.json,.txt,application/json,text/plain" style="display:none">
+    <div class="small">Use o arquivo baixado do link de mensagens (ntfy). Só funciona no computador e navegador que geraram o link do cadastro; cadastros repetidos são ignorados.</div>
+
     <label>Sorteio</label>
     <div class="small">Participa quem completou a corrida. Cada número sorteado sai da lista. <span id="drawInfo"></span></div>
     <div class="rowf" style="margin-top:8px"><button id="bDraw" class="pri">Abrir sorteio</button><button id="bDrawReset" class="dang">Limpar sorteados</button></div>
@@ -1146,6 +1151,29 @@
   if (PANEL) panelListen(); else controlConnect();
   $('panelLink') && ($('panelLink').textContent = panelUrl());
   $('bCopyPanel') && ($('bCopyPanel').onclick = () => { navigator.clipboard.writeText(panelUrl()).then(() => $('bCopyPanel').textContent = 'Copiado').catch(()=>{}); });
+
+  // ---------- importar backup de cadastros ----------
+  $('bImport').onclick = () => $('fileImport').click();
+  $('fileImport').onchange = async e => {
+    const f = e.target.files[0]; if (!f) return; e.target.value = '';
+    const info = $('impInfo'); info.textContent = 'Lendo…';
+    let txt = await f.text(), lines = [];
+    try { const j = JSON.parse(txt); lines = Array.isArray(j) ? j : [j]; }
+    catch(_){ lines = txt.split(/\r?\n/).filter(Boolean).map(l => { try { return JSON.parse(l); } catch(e){ return null; } }).filter(Boolean); }
+    const before = S.people.length; let tot = 0, fail = 0;
+    for (const m of lines){
+      if (!m || m.event !== 'message') continue;
+      let d; try { d = JSON.parse(m.message); } catch(e){ continue; }
+      if (d.t !== 'cad2') continue; tot++;
+      if (S.seen.includes(m.id)) continue;
+      try { await decrypt(d); } catch(e){ fail++; continue; }
+      const keep = S.lastId; await handleMsg(m); if (keep) S.lastId = keep;
+    }
+    save(); renderAll();
+    const added = S.people.length - before;
+    info.textContent = `${tot} cadastros no arquivo · ${added} importados` + (fail ? ` · ${fail} não abriram (chave de outro computador)` : '');
+    fillLists();
+  };
 
   // ---------- tela do celular (espelha o estado do controle) ----------
   const MOB = matchMedia('(max-width: 900px)');
