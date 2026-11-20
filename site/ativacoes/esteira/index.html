@@ -197,7 +197,7 @@
   .draw{position:absolute;inset:0;background:#000;z-index:9;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--grey)}
   .draw.on{display:flex}
   .draw .tag{font-size:calc(2.4 * var(--u))}
-  .draw .num{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 70;font-weight:250;font-size:calc(30 * var(--u));line-height:.85;color:var(--lime);font-variant-numeric:tabular-nums;margin:calc(2 * var(--u)) 0 calc(1 * var(--u))}
+  .draw .num{font-family:"Archivo",sans-serif;font-variation-settings:"wdth" 70;font-weight:250;font-size:calc(21 * var(--u));line-height:.85;color:var(--lime);font-variant-numeric:tabular-nums;margin:calc(2 * var(--u)) 0 calc(1 * var(--u))}
   .draw .num.rolling{color:#3d3d3d}
   .draw .who{font-family:var(--narrow);font-weight:700;font-size:calc(6.4 * var(--u));text-transform:uppercase;color:#f2f2f2;min-height:calc(5 * var(--u));line-height:1}
   .draw .meta{font-size:calc(1.3 * var(--u));color:var(--mute);margin-top:calc(1.4 * var(--u));letter-spacing:.06em;text-transform:uppercase}
@@ -546,6 +546,8 @@
     return String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0') + '.' + String(c).padStart(2,'0');
   };
   const pad3 = n => String(n||0).padStart(3,'0');
+  function luckyFromId(id){ let h = 2166136261 >>> 0; for (const ch of String(id)){ h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619) >>> 0; } return String(100000 + (h % 900000)); }
+  const LN = p => p ? (p.lucky || luckyFromId(p.id || p.n)) : '';
   let videoOK = false;
   const useVideo = () => S.cfg.dual && videoOK;
   const DUR = () => (S.cfg.dual ? S.cfg.vrun : (S.cfg.dur||60)) * 1000;
@@ -644,7 +646,7 @@
     $('curName').textContent = c ? c.nome : 'Aguardando';
     $('curName').className = 'name' + (c ? '' : ' empty');
     $('curBib').innerHTML = '';
-    if (c){ const b=document.createElement('b'); b.textContent='Nº da sorte '+pad3(c.n); $('curBib').append(b); }
+    if (c){ const b=document.createElement('b'); b.textContent='Nº da sorte '+LN(c); $('curBib').append(b); }
     fitName();
     t.className = 'timer' + (run.state==='running' ? ' running' : (run.state==='done' || run.state==='input') ? ' done' : S.current ? ' ready' : '');
     if (run.state === 'done' && lastP) t.textContent = mfmt(lastP.dist);
@@ -694,7 +696,7 @@
       d.className = 'row' + (P<=3 ? ' p'+P : '') + (p.id===lastFinishedId ? ' hl' : '');
       const a=document.createElement('span'); a.className='pos'; a.textContent=String((p.pos||i+1)).padStart(2,'0');
       const n=document.createElement('span'); n.className='nm'; n.textContent=p.nome;
-      const s=document.createElement('small'); s.textContent='nº '+pad3(p.n); n.appendChild(s);
+      const s=document.createElement('small'); s.textContent='nº '+LN(p); n.appendChild(s);
       const t=document.createElement('span'); t.className='tm'; t.textContent=mfmt(p.dist);
       d.append(a,n,t); return d;
     };
@@ -840,8 +842,8 @@
     if (!p || !p.nome) return;
     if (S.seen.includes(p.id)) return;
     S.seen.push(p.id); if (S.seen.length>3000) S.seen = S.seen.slice(-2000);
-    p.n = ++S.seq;
-    S.people.push({ id:p.id, n:p.n, full:p.full||p.nome, nome:p.nome, wpp:p.wpp||'', email:p.email||'', anome:p.anome||'', awpp:p.awpp||'', at:new Date().toISOString() });
+    p.n = ++S.seq; p.lucky = LN(p);
+    S.people.push({ id:p.id, n:p.n, full:p.full||p.nome, nome:p.nome, wpp:p.wpp||'', email:p.email||'', anome:p.anome||'', awpp:p.awpp||'', lucky:p.lucky, at:new Date().toISOString() });
     S.queue.push(p); save(); renderQueue(); renderHead();
     if (!String(p.id).startsWith('m-')) sendNumber(p.id, p.n);
     if (!S.current && run.state!=='running' && run.state!=='countdown') renderNow();
@@ -931,7 +933,7 @@
     const rk = ranked();
     S.people.forEach(p => {
       const i = rk.findIndex(x => x.id===p.id), res = rk[i];
-      rows.push([pad3(p.n), p.full, p.wpp, p.email, p.anome||'', p.awpp||'', res?'sim':'nao', res?i+1:'', res?res.dist:'', res?(res.ms/1000).toFixed(1):'', p.at, S.drawn.includes(p.id)?'sim':'']);
+      rows.push([LN(p), p.full, p.wpp, p.email, p.anome||'', p.awpp||'', res?'sim':'nao', res?i+1:'', res?res.dist:'', res?(res.ms/1000).toFixed(1):'', p.at, S.drawn.includes(p.id)?'sim':'']);
     });
     const csv = '﻿' + rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(';')).join('\n');
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
@@ -961,9 +963,9 @@
     const t0 = performance.now(), D = 3200;
     const tick = () => {
       const k = (performance.now() - t0) / D;
-      if (k < 1){ $('drawNum').textContent = pad3(pool[Math.floor(Math.random()*pool.length)]); setTimeout(tick, 40 + 260 * k * k); }
+      if (k < 1){ $('drawNum').textContent = String(pool[Math.floor(Math.random()*pool.length)]); setTimeout(tick, 40 + 260 * k * k); }
       else {
-        $('drawNum').textContent = pad3(win.n); $('drawNum').className = 'num'; $('drawWho').textContent = win.nome;
+        $('drawNum').textContent = String(win.n); $('drawNum').className = 'num'; $('drawWho').textContent = win.nome;
         rolling = false; $('drawMeta').textContent = 'Sorteado · restam ' + left + (left===1 ? ' número' : ' números');
         $('drawGo').disabled = !left; done && done();
       }
@@ -974,10 +976,10 @@
     const el = eligible(); if (!el.length || rolling || PANEL) return;
     const win = el[crypto.getRandomValues(new Uint32Array(1))[0] % el.length];
     S.drawn.push(win.id); save();
-    const pool = el.map(x => x.n).slice(0, 300), left = eligible().length;
-    drawLast = { n:win.n, nome:win.nome, left };
-    send({ t:'draw', pool, win:{ n:win.n, nome:win.nome }, left });
-    animateDraw(pool, win, left, () => push());
+    const pool = el.map(LN).slice(0, 300), left = eligible().length;
+    drawLast = { n:LN(win), nome:win.nome, left };
+    send({ t:'draw', pool, win:{ n:LN(win), nome:win.nome }, left });
+    animateDraw(pool, { n:LN(win), nome:win.nome }, left, () => push());
   }
   $('opDraw').onclick = openDraw; $('opCfg').onclick = openCfg; $('bDraw').onclick = openDraw;
   $('drawGo').onclick = doDraw; $('drawClose').onclick = () => { if (!rolling){ closeM('drawModal'); drawOpen = false; push(); } };
@@ -1039,14 +1041,14 @@
   }
   function snapshot(full){
     const r = ranked(), hi = r.findIndex(x => x.id === lastFinishedId);
-    const pack = (x, i) => ({ id:x.id, nome:x.nome, n:x.n, dist:x.dist, at:x.at, pos:i+1 });
+    const pack = (x, i) => ({ id:x.id, nome:x.nome, n:x.n, lucky:LN(x), dist:x.dist, at:x.at, pos:i+1 });
     const res = r.slice(0,10).map(pack); if (hi >= 10) res.push(pack(r[hi], hi));
     const o = { t:'snap',
       cfg:{ title:S.cfg.title, sub:S.cfg.sub, dur:S.cfg.dur, dual:S.cfg.dual, vleft:S.cfg.vleft, vintro:S.cfg.vintro, vrun:S.cfg.vrun },
       seq:S.seq, total:r.length, results:res, lastFinishedId,
-      queue:S.queue.slice(0,12).map(p => ({ id:p.id, nome:p.nome, n:p.n })),
-      current: S.current && { id:S.current.id, nome:S.current.nome, n:S.current.n },
-      last: lastP && { id:lastP.id, nome:lastP.nome, n:lastP.n, dist:lastP.dist },
+      queue:S.queue.slice(0,12).map(p => ({ id:p.id, nome:p.nome, n:p.n, lucky:LN(p) })),
+      current: S.current && { id:S.current.id, nome:S.current.nome, n:S.current.n, lucky:LN(S.current) },
+      last: lastP && { id:lastP.id, nome:lastP.nome, n:lastP.n, lucky:LN(lastP), dist:lastP.dist },
       run:{ state:run.state, id:run.id||0, el: (run.state==='countdown'||run.state==='running') ? Math.round(performance.now() - run.start) : 0 },
       res: curRes, draw:{ open:drawOpen, last:drawLast } };
     if (full){ o.logo = S.cfg.logo || ''; o.logo2 = S.cfg.logo2 || ''; }
@@ -1113,7 +1115,7 @@
     if (m.res){ if (!curRes || curRes.txt !== m.res.txt){ curRes = m.res; showResultLocal(m.res.txt, m.res.lead); } }
     else if (curRes){ curRes = null; $('result').className = 'res'; }
     if (m.draw && m.draw.open && !$('drawModal').classList.contains('on')){
-      $('drawNum').textContent = m.draw.last ? pad3(m.draw.last.n) : '000'; $('drawNum').className = 'num' + (m.draw.last ? '' : ' rolling');
+      $('drawNum').textContent = m.draw.last ? String(m.draw.last.n) : '000000'; $('drawNum').className = 'num' + (m.draw.last ? '' : ' rolling');
       $('drawWho').textContent = m.draw.last ? m.draw.last.nome : ''; $('drawMeta').textContent = '';
       $('drawModal').classList.add('on');
     } else if (m.draw && !m.draw.open && !rolling) $('drawModal').classList.remove('on');
@@ -1184,7 +1186,7 @@
     const cur = S.current || (run.state==='done' ? lastP : null);
     $('mbName').textContent = cur ? cur.full || cur.nome : 'Aguardando';
     $('mbName').className = 'mb-name' + (cur ? '' : ' empty');
-    $('mbBib').textContent = cur ? 'Nº da sorte ' + pad3(cur.n) : '';
+    $('mbBib').textContent = cur ? 'Nº da sorte ' + LN(cur) : '';
     $('mbTimer').textContent = $('timer').textContent;
     $('mbTimer').className = 'mb-timer' + (run.state==='running' ? ' running' : '');
     const res = $('result'); $('mbRes').textContent = res.textContent; $('mbRes').className = 'mb-res' + (res.classList.contains('on') ? ' on' : '');
@@ -1205,7 +1207,7 @@
       const li = document.createElement('li'); if (!i) li.className = 'first';
       const k = document.createElement('span'); k.className = 'k'; k.textContent = i ? (i+1) + 'º' : 'Próx.';
       const b = document.createElement('b'); b.textContent = p.full || p.nome;
-      const v = document.createElement('span'); v.className = 'v'; v.textContent = 'nº ' + pad3(p.n);
+      const v = document.createElement('span'); v.className = 'v'; v.textContent = 'nº ' + LN(p);
       li.append(k, b, v); q.appendChild(li);
     });
     const rl = $('mbRank'); rl.innerHTML = '';
