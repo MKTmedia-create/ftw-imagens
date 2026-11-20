@@ -211,6 +211,57 @@
   .ctrl-only{display:inline-flex;align-items:center;gap:calc(.6 * var(--u));margin-right:calc(1.4 * var(--u))}
   label.ctrl-only,div.ctrl-only{display:flex}
   .panelmode .go{visibility:hidden}
+
+  /* ===== Layout para painéis em V: tudo que importa no alto ===== */
+  .app{grid-template-rows:calc(8.4 * var(--u)) calc(41 * var(--u)) calc(7.2 * var(--u)) 1fr}
+  .stage{grid-template-rows:none;grid-template-columns:55fr 45fr}
+  .lane{padding:calc(2.6 * var(--u)) calc(3.2 * var(--u)) calc(2 * var(--u))}
+  .lane::before,.hud.tl,.hud.br{display:none}
+  .hud.tr{top:calc(1.4 * var(--u));right:calc(1.6 * var(--u))}
+  .now{gap:calc(0.8 * var(--u));justify-content:flex-start;padding-top:calc(1.2 * var(--u))}
+  .tag{font-size:calc(1.8 * var(--u))}
+  .bib{font-size:calc(1.2 * var(--u))} .bib b{font-size:calc(1.6 * var(--u))}
+  .name{font-size:calc(6 * var(--u))}
+  .timer{font-size:calc(12.2 * var(--u));margin:calc(0.4 * var(--u)) 0 0}
+  .ctl{min-height:calc(5 * var(--u));gap:calc(1.6 * var(--u))}
+  .go{height:calc(4.8 * var(--u))} .go em{font-size:calc(2.3 * var(--u))} .go svg{width:calc(1.6 * var(--u));height:calc(1.6 * var(--u))}
+  .go span{padding:0 calc(2.4 * var(--u)) 0 calc(1.8 * var(--u));gap:calc(0.9 * var(--u))}
+  .res{font-size:calc(1.9 * var(--u));white-space:nowrap}
+  .board{grid-template-columns:1fr;grid-template-rows:auto 1fr;grid-template-areas:'head' 'rk'}
+  .live{display:none !important}
+  .board::before{left:calc(5.2 * var(--u))}
+  .bhead{padding:calc(1.6 * var(--u)) calc(2 * var(--u)) calc(0.9 * var(--u)) calc(6.4 * var(--u))}
+  .bhead h2{font-size:calc(3.8 * var(--u))}
+  .bhead .meta{font-size:calc(0.95 * var(--u))}
+  .pix{top:calc(1.2 * var(--u));left:calc(1.2 * var(--u));grid-template-columns:repeat(4,calc(0.8 * var(--u)))} .pix i{width:calc(0.8 * var(--u));height:calc(0.8 * var(--u))}
+  .row{grid-template-columns:calc(5.2 * var(--u)) 1fr auto;padding-right:calc(1.8 * var(--u))}
+  .row .pos{font-size:calc(2.6 * var(--u))}
+  .row .nm{font-size:calc(2.1 * var(--u));padding-left:calc(1.2 * var(--u))}
+  .row .nm small{display:none}
+  .row .tm{font-size:calc(1.9 * var(--u))}
+  .row.sep{flex:0 0 calc(1.6 * var(--u));height:calc(1.6 * var(--u));font-size:calc(0.8 * var(--u))}
+  /* faixa do próximo, logo abaixo da área principal */
+  .tape{border-top:2px solid #000}
+  .tape .lbl{font-size:calc(2.2 * var(--u));padding:0 calc(1.8 * var(--u))}
+  .nextName{flex:none;max-width:calc(42 * var(--u));padding:0 calc(2 * var(--u));font-family:var(--narrow);font-weight:700;font-size:calc(3.4 * var(--u));text-transform:uppercase;color:var(--lime);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center;height:100%;background:#0b0b0b}
+  .nextName.empty{color:var(--mute);font-size:calc(2.2 * var(--u))}
+  .trackWrap{flex:1;overflow:hidden;height:100%;display:flex;align-items:center;border-left:1px solid #222}
+  .track span{font-size:calc(1.8 * var(--u))} .track span b{font-size:calc(1.1 * var(--u))}
+  /* parte de baixo (pouca visibilidade): só marca */
+  .brandzone{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(0.6 * var(--u));background:var(--bar);overflow:hidden;
+    background-image:linear-gradient(var(--hair) 1px,transparent 1px),linear-gradient(90deg,var(--hair) 1px,transparent 1px);background-size:calc(9.5 * var(--u)) calc(9.5 * var(--u))}
+  .bz-line1,.bz-line2{font-family:var(--narrow);font-weight:700;text-transform:uppercase;font-size:calc(6.4 * var(--u));line-height:.95;color:#f2f2f2}
+  .bz-line2{color:var(--lime)}
+  .bz-logos{display:flex;align-items:center;gap:calc(2 * var(--u));margin-top:calc(2 * var(--u));height:calc(7 * var(--u))}
+  .bz-logos img{height:100%;width:auto} .bz-logos span{font-family:var(--narrow);color:var(--mute);font-size:calc(2.4 * var(--u))}
+  .bz-pix{position:absolute;top:calc(2 * var(--u));left:calc(2 * var(--u));display:grid;grid-template-columns:repeat(4,calc(0.9 * var(--u)))} .bz-pix i{width:calc(0.9 * var(--u));height:calc(0.9 * var(--u))}
+  .bz-pix i:nth-child(-n+4):nth-child(odd),.bz-pix i:nth-child(n+5):nth-child(even){background:var(--lav)}
+  /* entrada da distância (só no controle) cobre a zona de marca */
+  .entry{left:calc(2 * var(--u));right:calc(2 * var(--u));bottom:auto;top:calc(30 * var(--u));padding:calc(1.2 * var(--u)) calc(1.6 * var(--u));gap:calc(1.2 * var(--u))}
+  .entry label{font-size:calc(1.8 * var(--u))} .entry label small{font-size:calc(0.9 * var(--u))}
+  .entry input{font-size:calc(3.8 * var(--u))} .entry .unit{font-size:calc(2.6 * var(--u))}
+  .entry button{height:calc(4.6 * var(--u));font-size:calc(1.7 * var(--u))}
+  .gear{top:calc(10 * var(--u))} .ops{top:calc(14 * var(--u))}
   @media (prefers-reduced-motion:reduce){ .track{animation:none} *{transition:none!important;animation-duration:1ms!important} }
 </style>
 </head>
@@ -267,9 +318,16 @@
   </main>
 
   <footer class="tape">
-    <div class="lbl">Próximos</div>
-    <div class="track" id="queue"></div>
+    <div class="lbl">Próximo</div>
+    <div class="nextName" id="nextName">Fila livre</div>
+    <div class="trackWrap"><div class="track" id="queue"></div></div>
   </footer>
+  <section class="brandzone" aria-hidden="true">
+    <div class="bz-pix"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="bz-line1">We do Hard Things.</div>
+    <div class="bz-line2">For the win.</div>
+    <div class="bz-logos"><img src="ftw-logo.png" alt=""><span>×</span><img src="trail-logo.png" alt=""></div>
+  </section>
 </div>
 
 <div class="vid" id="vid"><video id="pov" playsinline preload="auto"></video><div class="ph"><b>Vídeo POV</b>Aperte C (ou mexa o mouse e clique na ⚙ verde) e carregue o vídeo do percurso<br>(DFTR_Percurso_POV_1x1_COLOR.mp4)</div></div>
@@ -520,8 +578,11 @@
   function renderQueue(){
     push();
     const q = $('queue'); q.innerHTML = '';
-    const items = S.queue.length ? S.queue.slice(0,12).map((p,i) => [String(i+1).padStart(2,'0'), p.nome])
-                                 : [['', 'Escaneie o QR e entre na fila'], ['', 'Ganhe seu número da sorte']];
+    const nx = $('nextName');
+    if (S.queue.length){ nx.textContent = S.queue[0].nome; nx.className = 'nextName'; } else { nx.textContent = 'Fila livre · escaneie o QR'; nx.className = 'nextName empty'; }
+    const rest = S.queue.slice(1, 12);
+    const items = rest.length ? rest.map((p,i) => [String(i+2).padStart(2,'0'), p.nome])
+                              : [['', S.queue.length ? 'Depois: fila livre' : 'Entre na fila pelo QR do totem'], ['', 'We do Hard Things. For the win.']];
     const make = () => items.forEach(([n,nm]) => {
       const s = document.createElement('span');
       if (n){ const b=document.createElement('b'); b.textContent=n; s.appendChild(b); }
@@ -539,7 +600,8 @@
     const r = ranked(); box.innerHTML = '';
     const tot = S.total ?? r.length;
     $('rkCount').textContent = tot + (tot===1 ? ' participante' : ' participantes');
-    const TOP = 10;
+    const hiI = r.findIndex(p => p.id===lastFinishedId);
+    const TOP = hiI >= 5 ? 4 : 5;
     const mk = (p, i) => {
       const d = document.createElement('div'); d.dataset.id = p.id;
       const P = p.pos || i+1;
