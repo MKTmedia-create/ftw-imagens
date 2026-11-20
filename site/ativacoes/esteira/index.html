@@ -755,7 +755,7 @@
     if (S.seen.includes(p.id)) return;
     S.seen.push(p.id); if (S.seen.length>3000) S.seen = S.seen.slice(-2000);
     p.n = ++S.seq;
-    S.people.push({ id:p.id, n:p.n, full:p.full||p.nome, nome:p.nome, wpp:p.wpp||'', email:p.email||'', at:new Date().toISOString() });
+    S.people.push({ id:p.id, n:p.n, full:p.full||p.nome, nome:p.nome, wpp:p.wpp||'', email:p.email||'', anome:p.anome||'', awpp:p.awpp||'', at:new Date().toISOString() });
     S.queue.push(p); save(); renderQueue(); renderHead();
     if (!String(p.id).startsWith('m-')) sendNumber(p.id, p.n);
     if (!S.current && run.state!=='running' && run.state!=='countdown') renderNow();
@@ -783,7 +783,7 @@
         let x; try { x = await decrypt(d); } catch(e){ return; }
         const full = clean(x.nome).slice(0,60);
         if (!full) return;
-        addToQueue({ id:m.id, full, nome:shortName(full), wpp:String(x.wpp||'').replace(/\D/g,'').slice(0,13), email:String(x.email||'').trim().slice(0,80), ts:m.time });
+        addToQueue({ id:m.id, full, nome:shortName(full), wpp:String(x.wpp||'').replace(/\D/g,'').slice(0,13), email:String(x.email||'').trim().slice(0,80), anome:clean(x.anome||'').slice(0,60), awpp:String(x.awpp||'').replace(/\D/g,'').slice(0,13), ts:m.time });
       }
       save();
     }
@@ -841,11 +841,11 @@
     rd.readAsDataURL(f); e.target.value='';
   };
   $('bCsv').onclick = () => {
-    const rows = [['numero_sorte','nome_completo','whatsapp','email','correu','posicao','distancia_m','tempo_corrido_s','cadastro_em','sorteado']];
+    const rows = [['numero_sorte','nome_completo','whatsapp','email','indicacao_nome','indicacao_whatsapp','correu','posicao','distancia_m','tempo_corrido_s','cadastro_em','sorteado']];
     const rk = ranked();
     S.people.forEach(p => {
       const i = rk.findIndex(x => x.id===p.id), res = rk[i];
-      rows.push([pad3(p.n), p.full, p.wpp, p.email, res?'sim':'nao', res?i+1:'', res?res.dist:'', res?(res.ms/1000).toFixed(1):'', p.at, S.drawn.includes(p.id)?'sim':'']);
+      rows.push([pad3(p.n), p.full, p.wpp, p.email, p.anome||'', p.awpp||'', res?'sim':'nao', res?i+1:'', res?res.dist:'', res?(res.ms/1000).toFixed(1):'', p.at, S.drawn.includes(p.id)?'sim':'']);
     });
     const csv = '﻿' + rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(';')).join('\n');
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv],{type:'text/csv'}));

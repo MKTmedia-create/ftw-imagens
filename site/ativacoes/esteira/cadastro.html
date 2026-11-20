@@ -39,6 +39,9 @@
   input.mono{font-family:var(--mono);font-weight:400;font-size:17px;text-transform:none}
   input::placeholder{color:#555}
   input:focus{border-color:var(--lime)}
+  .friend{border:1px dashed #3a3a3a;padding:4px 16px 18px;margin-top:28px}
+  .friend legend{font-family:var(--narrow);font-weight:700;font-size:18px;text-transform:uppercase;color:var(--lime);padding:0 8px}
+  .friend legend span{font-family:var(--mono);font-weight:400;font-size:11px;color:var(--mute);text-transform:none}
   .chk{display:flex;gap:12px;align-items:flex-start;margin-top:22px;font-size:12px;line-height:1.55;color:var(--mute);cursor:pointer;text-transform:none;letter-spacing:0}
   .chk input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;border:1px solid #555;background:var(--bar);margin-top:1px;cursor:pointer;display:grid;place-items:center;transition:background .3s var(--ease)}
   .chk input:checked{background:var(--lime);border-color:var(--lime)}
@@ -80,9 +83,17 @@
     <input type="tel" id="wpp" class="mono" maxlength="16" placeholder="(11) 91234-5678" autocomplete="tel-national" inputmode="numeric" enterkeyhint="next">
 
     <label for="email">E-mail</label>
-    <input type="email" id="email" class="mono" maxlength="80" placeholder="voce@email.com" autocomplete="email" autocapitalize="off" spellcheck="false" enterkeyhint="send">
+    <input type="email" id="email" class="mono" maxlength="80" placeholder="voce@email.com" autocomplete="email" autocapitalize="off" spellcheck="false" enterkeyhint="next">
 
-    <label class="chk"><input type="checkbox" id="ok"><span>Autorizo a exibição do meu nome e tempo no ranking e o uso do meu nome, WhatsApp e e-mail pela FTW Suplementos para contato sobre esta ação, o sorteio e ofertas. Posso pedir a exclusão a qualquer momento.</span></label>
+    <fieldset class="friend">
+      <legend>Indique um amigo <span>(opcional)</span></legend>
+      <label for="anome">Nome do amigo</label>
+      <input type="text" id="anome" maxlength="60" placeholder="Nome e sobrenome" autocomplete="off" autocapitalize="words" enterkeyhint="next">
+      <label for="awpp">WhatsApp do amigo</label>
+      <input type="tel" id="awpp" class="mono" maxlength="16" placeholder="(11) 91234-5678" autocomplete="off" inputmode="numeric" enterkeyhint="send">
+    </fieldset>
+
+    <label class="chk"><input type="checkbox" id="ok"><span>Autorizo a exibição do meu nome e tempo no ranking e o uso do meu nome, WhatsApp e e-mail pela FTW Suplementos para contato sobre esta ação, o sorteio e ofertas. Se indiquei um amigo, confirmo que ele concorda em receber um convite da FTW Suplementos. Posso pedir a exclusão a qualquer momento.</span></label>
 
     <button type="submit" class="go" id="go"><span><em>Entrar na fila</em><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h15M13 5l7 7-7 7"/></svg></span></button>
     <div class="err" id="err" role="alert"></div>
@@ -121,13 +132,14 @@
   }
 
   // máscara de WhatsApp
-  $('wpp').addEventListener('input', e => {
+  const mask = e => {
     let d = e.target.value.replace(/\D/g,'').slice(0,11), o = d;
     if (d.length > 2) o = '(' + d.slice(0,2) + ') ' + d.slice(2);
     if (d.length > 7) o = '(' + d.slice(0,2) + ') ' + d.slice(2, d.length-4) + '-' + d.slice(-4);
     e.target.value = o;
-  });
-  ['nome','wpp'].forEach((id,i,a) => $(id).addEventListener('keydown', e => { if (e.key==='Enter'){ e.preventDefault(); $(i===0?'wpp':'email').focus(); } }));
+  };
+  $('wpp').addEventListener('input', mask); $('awpp').addEventListener('input', mask);
+  [['nome','wpp'],['wpp','email'],['email','anome'],['anome','awpp']].forEach(([a,b]) => $(a).addEventListener('keydown', e => { if (e.key==='Enter'){ e.preventDefault(); $(b).focus(); } }));
 
   async function waitNumber(ref){
     const t0 = Date.now();
@@ -157,10 +169,16 @@
     if (nome.split(' ').length < 2 || nome.length < 5) return err('Digite seu nome completo, com sobrenome.', 'nome');
     if (wpp.length < 10 || wpp.length > 11) return err('Confira o WhatsApp: DDD + número, ex. (11) 91234-5678.', 'wpp');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return err('Confira o e-mail: falta o @ ou o domínio.', 'email');
+    const anome = $('anome').value.replace(/\s+/g,' ').trim(), awpp = $('awpp').value.replace(/\D/g,'');
+    if (anome || awpp){
+      if (anome.length < 2) return err('Indicação: digite o nome do amigo, ou apague o WhatsApp dele.', 'anome');
+      if (awpp.length < 10 || awpp.length > 11) return err('Indicação: confira o WhatsApp do amigo, com DDD.', 'awpp');
+      if (awpp === wpp) return err('Indicação: o WhatsApp do amigo é igual ao seu.', 'awpp');
+    }
     if (!$('ok').checked) return err('Marque a autorização para participar do ranking e do sorteio.');
     $('go').disabled = true; btnLabel.textContent = 'Enviando'; $('err').textContent = '';
     try{
-      const body = JSON.stringify(await seal({ nome, wpp, email }));
+      const body = JSON.stringify(await seal({ nome, wpp, email, anome, awpp }));
       const r = await fetch('https://ntfy.sh/' + topic, { method:'POST', body });
       if (!r.ok) throw new Error(r.status);
       const sent = await r.json();
