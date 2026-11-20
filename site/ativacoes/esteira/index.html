@@ -262,6 +262,27 @@
   .entry input{font-size:calc(3.8 * var(--u))} .entry .unit{font-size:calc(2.6 * var(--u))}
   .entry button{height:calc(4.6 * var(--u));font-size:calc(1.7 * var(--u))}
   .gear{top:calc(10 * var(--u))} .ops{top:calc(14 * var(--u))}
+
+  /* ===== Modo celular (controle em tela pequena) ===== */
+  .mbar{display:none}
+  @media (max-width: 900px){
+    html:not(.panelmode) body{flex-direction:column;justify-content:flex-start;--u:1vw !important;padding-bottom:150px}
+    html:not(.panelmode) .vid{display:none !important}
+    html:not(.panelmode) .gear, html:not(.panelmode) .ops{display:none !important}
+    html:not(.panelmode) .mbar{display:flex;flex-direction:column;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:8;padding:10px 10px calc(10px + env(safe-area-inset-bottom));background:#0b0b0b;border-top:2px solid var(--lime)}
+    .mbar button{font-family:var(--narrow);font-weight:700;text-transform:uppercase;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+    .mbar .m-main{height:64px;font-size:26px;background:var(--lime);color:#000}
+    .mbar .m-main.stop{background:var(--orange)}
+    .mbar .m-main:disabled{background:#2c2c2c;color:#777}
+    .mbar .m-row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+    .mbar .m-row button{height:44px;font-size:15px;background:#232323;color:var(--grey);border:1px solid #3a3a3a}
+    html:not(.panelmode) .entry.on{position:fixed;left:10px;right:10px;top:auto;bottom:140px;z-index:9;padding:14px;gap:10px;flex-wrap:wrap}
+    html:not(.panelmode) .entry label{font-size:18px;width:100%} html:not(.panelmode) .entry label small{font-size:12px}
+    html:not(.panelmode) .entry input{font-size:40px;padding:6px 10px}
+    html:not(.panelmode) .entry .unit{font-size:28px}
+    html:not(.panelmode) .entry button{height:56px;font-size:20px;padding:0 18px}
+    html:not(.panelmode) .draw .acts button{font-size:20px;padding:14px 22px}
+  }
   @media (prefers-reduced-motion:reduce){ .track{animation:none} *{transition:none!important;animation-duration:1ms!important} }
 </style>
 </head>
@@ -333,6 +354,10 @@
 <div class="vid" id="vid"><video id="pov" playsinline preload="auto"></video><div class="ph"><b>Vídeo POV</b>Aperte C (ou mexa o mouse e clique na ⚙ verde) e carregue o vídeo do percurso<br>(DFTR_Percurso_POV_1x1_COLOR.mp4)</div></div>
 </div>
 
+<nav class="mbar" id="mbar">
+  <button class="m-main" id="mMain">Chamar próximo</button>
+  <div class="m-row"><button id="mSkip">Pular</button><button id="mCancel">Cancelar</button><button id="mDraw">Sorteio</button><button id="mCfg">⚙ Config</button></div>
+</nav>
 <button class="gear" id="gear" title="Configurações" aria-label="Configurações">⚙</button>
 <div class="ops">
   <button id="opSkip">Pular participante (N)</button>
@@ -520,6 +545,7 @@
     const b = $('mainBtn'); b.className = 'go' + (cls ? ' '+cls : ''); b.disabled = !!disabled;
     b.innerHTML = '<span><em></em>' + (icon ? IC[icon] : '') + '</span>';
     b.querySelector('em').textContent = label;
+    const m = $('mMain'); if (m){ m.textContent = label; m.disabled = !!disabled; m.className = 'm-main' + (cls ? ' '+cls : ''); }
   };
 
   function renderHead(){
@@ -898,6 +924,9 @@
   $('bDrawReset').onclick = () => { S.drawn = []; save(); fillLists(); };
 
   $('mainBtn').onclick = () => { if (!PANEL) mainAction(); };
+  $('mMain').onclick = () => { if (!PANEL) mainAction(); };
+  $('mSkip').onclick = () => skip(); $('mCancel').onclick = () => cancelRun();
+  $('mDraw').onclick = () => openDraw(); $('mCfg').onclick = () => openCfg();
   $('opSkip').onclick = skip;
   $('opCancel').onclick = cancelRun;
   const full = () => { (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen()).catch(()=>{}); };
