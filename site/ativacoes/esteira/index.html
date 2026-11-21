@@ -180,6 +180,10 @@
   .card button{background:#2e2e2e;border:1px solid #444;color:#eee;padding:10px 14px;cursor:pointer;font-family:var(--narrow);font-weight:700;font-size:15px;text-transform:uppercase}
   .card button.pri{background:var(--lime);border-color:var(--lime);color:#000}
   .card button.dang{color:var(--orange);border-color:#5a2a1f;background:transparent}
+  .resetBox{margin-top:14px;border:1px solid var(--orange);padding:14px;display:flex;flex-direction:column;gap:6px}
+  .resetBox b{font-family:var(--narrow);font-size:20px;text-transform:uppercase;color:#fff} .resetBox span{font-size:13px;color:var(--grey)}
+  .tabLock{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;text-align:center;padding:24px;color:#fff;font-family:var(--narrow)}
+  .tabLock.on{display:flex} .tabLock b{display:block;font-size:30px;text-transform:uppercase;color:var(--orange);margin-bottom:10px} .tabLock span{font-family:var(--mono);font-size:14px;line-height:1.6;color:var(--grey)}
   .card .small{font-size:12px;color:var(--mute);margin-top:6px;line-height:1.5}
   .card code{background:#141414;padding:2px 6px;font-size:11px;word-break:break-all;color:var(--lime)}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -409,6 +413,7 @@
   <section class="mb-sec"><h3>Fila <small id="mbQn"></small></h3><ol id="mbQueue"></ol></section>
   <section class="mb-sec"><h3>Ranking <small id="mbRn"></small></h3><ol id="mbRank" class="rk-list"></ol></section>
 </main>
+<div class="tabLock" id="tabLock"><div><b>Controle aberto em outra aba</b><span>Esta aba foi pausada para não misturar os dados.<br>Use a aba mais recente e feche esta.</span></div></div>
 <nav class="mbar" id="mbar">
   <button class="m-main" id="mMain">Chamar próximo</button>
   <div class="m-row"><button id="mSkip">Pular</button><button id="mCancel">Cancelar</button><button id="mDraw">Sorteio</button><button id="mCfg">⚙ Config</button></div>
@@ -494,6 +499,11 @@
       <button id="bClose">Fechar</button>
       <button class="dang" id="bReset">Zerar ranking e fila</button>
     </div>
+    <div class="pv resetBox" id="resetBox" style="display:none">
+      <b>Zerar o ranking e a fila do telão?</b>
+      <span>Os leads (nomes, WhatsApp, e-mails) continuam salvos e saem no CSV.</span>
+      <div class="rowf" style="margin-top:10px"><button class="pri" id="bResetYes">Sim, zerar agora</button><button id="bResetNo">Cancelar</button></div>
+    </div>
   </div>
 </div>
 
@@ -522,6 +532,7 @@
   const QS = new URLSearchParams(location.search);
   const PANEL = (QS.get('painel') || '').replace(/[^a-zA-Z0-9_-]/g,'');   // este computador só exibe (painel de LED)
   const MOCK = QS.has('mock');
+  let tabLocked = false;
   if (PANEL) document.documentElement.classList.add('panelmode');
   let S;
   if (PANEL){ S = blank(); S.cfg.topic = PANEL; }
@@ -535,7 +546,7 @@
   if (!S.cfg.vrun) S.cfg.vrun = 90;
   S.results = (S.results||[]).filter(x => typeof x.dist === 'number');
   S.seq = S.seq || 0; S.cfg.logo2 = S.cfg.logo2 || ''; S.people = S.people || []; S.drawn = S.drawn || [];
-  const save = () => { if (PANEL) return; try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){} };
+  const save = () => { if (PANEL || tabLocked) return; try { localStorage.setItem(LS, JSON.stringify(S)); } catch(e){} };
   save();
 
   let run = { state:'idle', t0:0, ms:0 };
@@ -939,11 +950,15 @@
     const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
     a.download = 'participantes-esteira-' + new Date().toISOString().slice(0,10) + '.csv'; a.click();
   };
-  $('bReset').onclick = () => {
-    const btn = $('bReset');
-    if (btn.dataset.armed){ S.queue=[]; S.results=[]; S.current=null; S.seq=0; S.people=[]; S.drawn=[]; run={state:'idle',t0:0,ms:0}; lastFinishedId=null; lastP=null; save(); renderAll(); fillLists(); hideResult(); btn.textContent='Zerar ranking e fila'; delete btn.dataset.armed; return; }
-    btn.dataset.armed='1'; btn.textContent='Clique de novo para confirmar';
-    setTimeout(()=>{ delete btn.dataset.armed; btn.textContent='Zerar ranking e fila'; }, 4000);
+  // zerar: limpa ranking, fila e sorteados; os leads ficam guardados para o CSV
+  $('bReset').onclick = () => { $('resetBox').style.display = 'flex'; $('resetBox').scrollIntoView({ block:'nearest' }); };
+  $('bResetNo').onclick = () => { $('resetBox').style.display = 'none'; };
+  $('bResetYes').onclick = () => {
+    cancelAnimationFrame(raf); $('cd').classList.remove('on');
+    S.queue=[]; S.results=[]; S.current=null; S.drawn=[]; run={state:'idle',t0:0,ms:0}; lastFinishedId=null; lastP=null;
+    save(); hideResult(); renderAll(); fillLists(); push(true); mobKey = '';
+    $('resetBox').style.display = 'none';
+    $('bReset').textContent = 'Zerado ✓'; setTimeout(() => $('bReset').textContent = 'Zerar ranking e fila', 2500);
   };
 
   // ---------- sorteio ----------
@@ -1176,6 +1191,21 @@
     info.textContent = `${tot} cadastros no arquivo · ${added} importados` + (fail ? ` · ${fail} não abriram (chave de outro computador)` : '');
     fillLists();
   };
+
+  // ---------- uma aba só: se o controle abrir em outra aba, esta trava ----------
+  if (!PANEL && !MOCK && 'BroadcastChannel' in window){
+    const tabId = Math.random().toString(36).slice(2);
+    const tc = new BroadcastChannel('ftw-esteira-controle');
+    tc.onmessage = ev => {
+      if (ev.data && ev.data.t === 'claim' && ev.data.id !== tabId && !tabLocked){
+        tabLocked = true;
+        try { es && es.close(); } catch(e){}
+        try { peer && peer.destroy(); } catch(e){}
+        $('tabLock').classList.add('on');
+      }
+    };
+    tc.postMessage({ t:'claim', id:tabId });
+  }
 
   // ---------- tela do celular (espelha o estado do controle) ----------
   const MOB = matchMedia('(max-width: 900px)');
