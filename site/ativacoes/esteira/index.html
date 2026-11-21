@@ -480,10 +480,11 @@
       <div><label>Resultados</label><div class="list" id="rList"></div></div>
     </div>
 
-    <label>Recuperar cadastros de um arquivo de backup</label>
-    <div class="rowf" style="margin-top:0;align-items:center"><button id="bImport">Importar arquivo (.ndjson / .json)…</button><span class="small" id="impInfo" style="margin:0"></span></div>
+    <label>Recuperar cadastros (leads)</label>
+    <div class="rowf" style="margin-top:0;align-items:center"><button class="pri" id="bRecover">Recuperar cadastros das últimas 12h</button><button id="bImport">Importar arquivo (.ndjson / .json)…</button></div>
+    <div class="small" id="impInfo" style="color:var(--lime)"></div>
     <input type="file" id="fileImport" accept=".ndjson,.json,.txt,application/json,text/plain" style="display:none">
-    <div class="small">Use o arquivo baixado do link de mensagens (ntfy). Só funciona no computador e navegador que geraram o link do cadastro; cadastros repetidos são ignorados.</div>
+    <div class="small">Traz de volta para a lista de leads quem se cadastrou (sem colocar na fila do telão). Só abre cadastros feitos pelo link deste aparelho/navegador. Repetidos são ignorados.</div>
 
     <label>Sorteio</label>
     <div class="small">Participa quem completou a corrida. Cada número sorteado sai da lista. <span id="drawInfo"></span></div>
@@ -895,6 +896,7 @@
     $('linkCad').textContent=cadUrl(); $('panelLink').textContent=panelUrl(); fillLists(); $('cfgModal').classList.add('on');
   }
   function fillLists(){
+    $('impInfo').dataset.n = S.people.length;
     $('drawInfo').textContent = S.drawn.length ? S.drawn.length + ' já sorteado(s).' : '';
     const q=$('qList'); q.innerHTML='';
     if (!S.queue.length) q.innerHTML='<div style="color:#777">Fila vazia</div>';
@@ -1169,27 +1171,43 @@
   $('panelLink') && ($('panelLink').textContent = panelUrl());
   $('bCopyPanel') && ($('bCopyPanel').onclick = () => { navigator.clipboard.writeText(panelUrl()).then(() => $('bCopyPanel').textContent = 'Copiado').catch(()=>{}); });
 
-  // ---------- importar backup de cadastros ----------
-  $('bImport').onclick = () => $('fileImport').click();
-  $('fileImport').onchange = async e => {
-    const f = e.target.files[0]; if (!f) return; e.target.value = '';
-    const info = $('impInfo'); info.textContent = 'Lendo…';
-    let txt = await f.text(), lines = [];
-    try { const j = JSON.parse(txt); lines = Array.isArray(j) ? j : [j]; }
-    catch(_){ lines = txt.split(/\r?\n/).filter(Boolean).map(l => { try { return JSON.parse(l); } catch(e){ return null; } }).filter(Boolean); }
-    const before = S.people.length; let tot = 0, fail = 0;
+  // ---------- recuperar cadastros para a lista de leads (sem colocar na fila do telão) ----------
+  async function importLeads(lines, origem){
+    const info = $('impInfo');
+    const have = new Set(S.people.map(p => p.id)); let tot = 0, added = 0, fail = 0;
     for (const m of lines){
       if (!m || m.event !== 'message') continue;
       let d; try { d = JSON.parse(m.message); } catch(e){ continue; }
       if (d.t !== 'cad2') continue; tot++;
-      if (S.seen.includes(m.id)) continue;
-      try { await decrypt(d); } catch(e){ fail++; continue; }
-      const keep = S.lastId; await handleMsg(m); if (keep) S.lastId = keep;
+      if (have.has(m.id)) continue;
+      let x; try { x = await decrypt(d); } catch(e){ fail++; continue; }
+      const full = clean(x.nome).slice(0,60); if (!full) continue;
+      const at = m.time ? new Date(m.time*1000).toISOString() : new Date().toISOString();
+      S.people.push({ id:m.id, n:++S.seq, full, nome:shortName(full), wpp:String(x.wpp||'').replace(/\D/g,'').slice(0,13), email:String(x.email||'').trim().slice(0,80),
+        anome:clean(x.anome||'').slice(0,60), awpp:String(x.awpp||'').replace(/\D/g,'').slice(0,13), lucky:luckyFromId(m.id), at });
+      have.add(m.id); if (!S.seen.includes(m.id)) S.seen.push(m.id); added++;
     }
-    save(); renderAll();
-    const added = S.people.length - before;
-    info.textContent = `${tot} cadastros no arquivo · ${added} importados` + (fail ? ` · ${fail} não abriram (chave de outro computador)` : '');
-    fillLists();
+    S.people.sort((a,b) => String(a.at).localeCompare(String(b.at)));
+    save(); renderAll(); fillLists(); mobKey = '';
+    info.textContent = `${origem}: ${tot} cadastros encontrados · ${added} recuperados para a lista de leads` + (fail ? ` · ${fail} não abriram (são de outro aparelho/navegador)` : '') + '. Agora use "Exportar resultados (CSV)".';
+  }
+  $('bRecover').onclick = async () => {
+    const info = $('impInfo'); info.textContent = 'Buscando cadastros das últimas 12 horas…';
+    try {
+      const res = await fetch(`${NTFY}/${encodeURIComponent(S.cfg.topic)}/json?poll=1&since=12h`, { cache:'no-store' });
+      if (!res.ok) throw new Error(res.status);
+      const lines = (await res.text()).split('\n').filter(Boolean).map(l => { try { return JSON.parse(l); } catch(e){ return null; } }).filter(Boolean);
+      await importLeads(lines, 'Últimas 12h');
+    } catch(e){ info.textContent = 'Não consegui buscar agora (' + e.message + '). Espere 1 minuto e tente de novo.'; }
+  };
+  $('bImport').onclick = () => $('fileImport').click();
+  $('fileImport').onchange = async e => {
+    const f = e.target.files[0]; if (!f) return; e.target.value = '';
+    $('impInfo').textContent = 'Lendo…';
+    let txt = await f.text(), lines = [];
+    try { const j = JSON.parse(txt); lines = Array.isArray(j) ? j : [j]; }
+    catch(_){ lines = txt.split(/\r?\n/).filter(Boolean).map(l => { try { return JSON.parse(l); } catch(e){ return null; } }).filter(Boolean); }
+    await importLeads(lines, 'Arquivo');
   };
 
   // ---------- uma aba só: se o controle abrir em outra aba, esta trava ----------
